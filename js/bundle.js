@@ -133,11 +133,11 @@ var sidebarLinks = document.querySelectorAll('.sidebarNavigation__link');
 
 var openMenu = function openMenu() {
   TweenMax.to(sidebar, 0.4, {
-    width: '80vw'
+    width: '70vw'
   });
   TweenMax.to(sidebarOv, 0.4, {
     opacity: 1,
-    width: '20vw',
+    width: '30vw',
     delay: 0.2
   });
   TweenMax.to(closeSidebar, 0.4, {

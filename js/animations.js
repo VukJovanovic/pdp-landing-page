@@ -6,8 +6,8 @@ const sidebar = document.querySelector('.sidebar');
 const closeSidebar = document.querySelector('.sidebar__close');
 const sidebarLinks = document.querySelectorAll('.sidebarNavigation__link');
 const openMenu = () => {
-  TweenMax.to(sidebar, 0.4, { width: '80vw' });
-  TweenMax.to(sidebarOv, 0.4, { opacity: 1, width: '20vw', delay: 0.2 });
+  TweenMax.to(sidebar, 0.4, { width: '70vw' });
+  TweenMax.to(sidebarOv, 0.4, { opacity: 1, width: '30vw', delay: 0.2 });
   TweenMax.to(closeSidebar, 0.4, { opacity: 1, y: 0, delay: 0.4 });
 
   let delay = 0.5;
