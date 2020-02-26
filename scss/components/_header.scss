@@ -17,6 +17,11 @@
   }
 }
 
+.headerFixed {
+  position: fixed;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.6);
+}
+
 // styles for desktop navigation
 .desktopNavigation {
   display: flex;

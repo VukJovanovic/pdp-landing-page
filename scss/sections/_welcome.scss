@@ -42,6 +42,9 @@
     color: $color-neutral;
     display: flex;
     flex-direction: column;
+    @media only screen and (max-width: 1070px) {
+      margin-top: 2rem;
+    }
     &-text {
       font-size: $paragraph-1;
       font-weight: $light;
