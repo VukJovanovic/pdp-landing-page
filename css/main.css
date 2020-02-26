@@ -30,19 +30,22 @@ a {
   border-bottom: 1px solid #de3c4b;
 }
 
-.header {
+.header,
+.welcome {
   display: grid;
   grid-template-columns: minmax(130px, 1fr) minmax(-webkit-min-content, 1520px) minmax(130px, 1fr);
   grid-template-columns: minmax(130px, 1fr) minmax(min-content, 1520px) minmax(130px, 1fr);
 }
 @media only screen and (max-width: 1300px) {
-  .header {
+  .header,
+.welcome {
     grid-template-columns: minmax(70px, 1fr) minmax(-webkit-min-content, 1520px) minmax(70px, 1fr);
     grid-template-columns: minmax(70px, 1fr) minmax(min-content, 1520px) minmax(70px, 1fr);
   }
 }
 @media only screen and (max-width: 700px) {
-  .header {
+  .header,
+.welcome {
     grid-template-columns: minmax(30px, 1fr) minmax(-webkit-min-content, 1520px) minmax(30px, 1fr);
     grid-template-columns: minmax(30px, 1fr) minmax(min-content, 1520px) minmax(30px, 1fr);
   }
@@ -50,6 +53,49 @@ a {
 
 .header__content {
   grid-column: 2/3;
+}
+
+.welcome__content {
+  grid-column: 2/3;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: -webkit-max-content -webkit-max-content;
+  grid-template-rows: max-content max-content;
+  align-content: center;
+  grid-column-gap: 4rem;
+}
+@media only screen and (max-width: 1070px) {
+  .welcome__content {
+    grid-template-columns: 1fr;
+    grid-template-rows: -webkit-max-content;
+    grid-template-rows: max-content;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    grid-row-gap: 2rem;
+  }
+}
+.welcome__video {
+  grid-row: 1/-1;
+}
+@media only screen and (max-width: 1070px) {
+  .welcome__video {
+    grid-row: 2/3;
+  }
+}
+.welcome__cta {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+@media only screen and (max-width: 1070px) {
+  .welcome__cta {
+    grid-column: 1/-1;
+    grid-row: 3/4;
+  }
+}
+@media only screen and (max-width: 1070px) {
+  .welcome__text {
+    grid-row: 1;
+  }
 }
 
 .header {
@@ -151,6 +197,23 @@ a {
   background-color: #de3c4b;
 }
 
+.welcome__cta-btn {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 2rem;
+  color: #f7ebec;
+  font-weight: 300;
+  border-radius: 5px;
+  padding: 1rem 2rem;
+  background-color: #de3c4b;
+  transition: transform 0.4s ease-out;
+}
+.welcome__cta-btn:hover {
+  transform: translateY(-7px);
+}
+
 .sidebar {
   position: fixed;
   top: 0;
@@ -161,18 +224,34 @@ a {
   background-color: #022e43;
   z-index: 22;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 .sidebar__close {
   position: absolute;
-  top: 2.5rem;
-  right: 3rem;
+  top: 3rem;
+  right: 3.5rem;
   opacity: 0;
   transform: translateY(-10px);
 }
 .sidebar__close img {
   width: 2rem;
+}
+
+.sidebar__social {
+  display: flex;
+  margin-top: 7rem;
+}
+.sidebar__social-link {
+  opacity: 0;
+  margin-right: 2rem;
+}
+.sidebar__social-link:last-child {
+  margin-right: 0;
+}
+.sidebar__social-link img {
+  width: 3rem;
 }
 
 .sidebarNavigation {
@@ -209,6 +288,54 @@ a {
   width: 100vw;
   min-height: 100vh;
   background-color: #0a202e;
+}
+.welcome__video {
+  height: 40rem;
+  max-width: 60rem;
+  background-color: #022e43;
+}
+@media only screen and (max-width: 1070px) {
+  .welcome__video {
+    height: 30rem;
+  }
+}
+.welcome__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #f7ebec;
+}
+.welcome__text-heading {
+  font-size: 4.5rem;
+  font-weight: 400;
+  font-family: "Source Sans Pro", sans-serif;
+  margin-bottom: 3rem;
+}
+.welcome__text-paragraph {
+  font-size: 1.8rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: 2rem;
+}
+.welcome__text-quote {
+  font-size: 2.5rem;
+  color: #de3c4b;
+  font-weight: 400;
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: 3rem;
+}
+.welcome__cta {
+  color: #f7ebec;
+  display: flex;
+  flex-direction: column;
+}
+.welcome__cta-text {
+  font-size: 1.8rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: 3rem;
 }
 
 /*# sourceMappingURL=/main.css.map */

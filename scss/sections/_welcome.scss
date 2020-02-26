@@ -2,4 +2,52 @@
   width: 100vw;
   min-height: 100vh;
   background-color: $color-primary;
+
+  &__video {
+    height: 40rem;
+    max-width: 60rem;
+    background-color: $color-secondary;
+    @media only screen and (max-width: 1070px) {
+      height: 30rem;
+    }
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: $color-neutral;
+    &-heading {
+      font-size: $heading-1;
+      font-weight: $bold;
+      font-family: $font-source-sans;
+      margin-bottom: 3rem;
+    }
+    &-paragraph {
+      font-size: $paragraph-1;
+      font-weight: $light;
+      letter-spacing: 1px;
+      font-family: $font-open-sans;
+      margin-bottom: 2rem;
+    }
+    &-quote {
+      font-size: $paragraph-danger;
+      color: $color-danger;
+      font-weight: $bold;
+      font-family: $font-open-sans;
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__cta {
+    color: $color-neutral;
+    display: flex;
+    flex-direction: column;
+    &-text {
+      font-size: $paragraph-1;
+      font-weight: $light;
+      letter-spacing: 1px;
+      font-family: $font-open-sans;
+      margin-bottom: 3rem;
+    }
+  }
 }

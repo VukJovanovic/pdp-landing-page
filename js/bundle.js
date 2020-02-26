@@ -130,6 +130,7 @@ var sidebarOv = document.querySelector('.sidebarOverlay');
 var sidebar = document.querySelector('.sidebar');
 var closeSidebar = document.querySelector('.sidebar__close');
 var sidebarLinks = document.querySelectorAll('.sidebarNavigation__link');
+var sidebarSocialLinks = document.querySelectorAll('.sidebar__social-link');
 
 var openMenu = function openMenu() {
   TweenMax.to(sidebar, 0.4, {
@@ -155,6 +156,15 @@ var openMenu = function openMenu() {
     });
     delay += 0.1;
   }
+
+  for (var _i = 0; _i < sidebarSocialLinks.length; _i++) {
+    TweenMax.to(sidebarSocialLinks[_i], 0.4, {
+      opacity: 1,
+      y: 0,
+      delay: delay
+    });
+    delay += 0.1;
+  }
 };
 
 exports.openMenu = openMenu;
@@ -172,19 +182,28 @@ var closeMenu = function closeMenu() {
     delay += 0.1;
   }
 
+  for (var _i2 = sidebarSocialLinks.length - 1; _i2 >= 0; _i2--) {
+    TweenMax.to(sidebarSocialLinks[_i2], 0.4, {
+      opacity: 0,
+      y: '-10px',
+      delay: delay
+    });
+    delay += 0.1;
+  }
+
   TweenMax.to(closeSidebar, 0.4, {
     opacity: 0,
     y: '-10px',
-    delay: 0.5
+    delay: 0.8
   });
   TweenMax.to(sidebarOv, 0.4, {
     opacity: 0,
     width: '0',
-    delay: 0.5
+    delay: 0.9
   });
   TweenMax.to(sidebar, 0.4, {
     width: '0',
-    delay: 0.6
+    delay: 0.9
   });
 };
 
@@ -211,6 +230,12 @@ if (closeSidebar) {
     e.preventDefault();
     (0, _animations.closeMenu)();
   });
+}
+
+var sidebarOverlay = document.querySelector('.sidebarOverlay');
+
+if (sidebarOverlay) {
+  sidebarOverlay.addEventListener('click', _animations.closeMenu);
 }
 },{"./animations":"animations.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -240,7 +265,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50807" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53719" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

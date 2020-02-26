@@ -16,3 +16,8 @@ if (closeSidebar) {
     closeMenu();
   });
 }
+
+const sidebarOverlay = document.querySelector('.sidebarOverlay');
+if (sidebarOverlay) {
+  sidebarOverlay.addEventListener('click', closeMenu);
+}

@@ -1,6 +1,7 @@
 // Common grid styles for multiple components
 // Grid layout that is the same for all main sections
-.header {
+.header,
+.welcome {
   display: grid;
   grid-template-columns: minmax(130px, 1fr) minmax(min-content, 1520px) minmax(
       130px,
@@ -25,5 +26,44 @@
 .header {
   &__content {
     grid-column: 2 / 3;
+  }
+}
+
+// Grid layout for welcome section
+.welcome {
+  &__content {
+    grid-column: 2 / 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: max-content max-content;
+    align-content: center;
+    grid-column-gap: 4rem;
+
+    @media only screen and (max-width: 1070px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: max-content;
+      padding-top: 10rem;
+      padding-bottom: 10rem;
+      grid-row-gap: 2rem;
+    }
+  }
+  &__video {
+    grid-row: 1 / -1;
+    @media only screen and (max-width: 1070px) {
+      grid-row: 2 / 3;
+    }
+  }
+  &__cta {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    @media only screen and (max-width: 1070px) {
+      grid-column: 1 / -1;
+      grid-row: 3 / 4;
+    }
+  }
+  @media only screen and (max-width: 1070px) {
+    &__text {
+      grid-row: 1;
+    }
   }
 }

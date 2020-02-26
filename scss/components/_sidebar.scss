@@ -8,16 +8,32 @@
   background-color: $color-secondary;
   z-index: $sidebar-index;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   &__close {
     position: absolute;
-    top: 2.5rem;
-    right: 3rem;
+    top: 3rem;
+    right: 3.5rem;
     opacity: 0;
     transform: translateY(-10px);
     img {
       width: 2rem;
+    }
+  }
+}
+
+.sidebar__social {
+  display: flex;
+  margin-top: 7rem;
+  &-link {
+    opacity: 0;
+    margin-right: 2rem;
+    &:last-child {
+      margin-right: 0;
+    }
+    img {
+      width: 3rem;
     }
   }
 }
