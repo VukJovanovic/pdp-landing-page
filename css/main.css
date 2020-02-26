@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400|Source+Sans+Pro:300,400&display=swap");
+html {
+  width: 100%;
+  height: 100%;
+  font-size: 62.5%;
+  overflow: hidden;
+}
+
+body {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+.hoverUnderline:hover {
+  border-bottom: 1px solid #de3c4b;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: minmax(130px, 1fr) minmax(-webkit-min-content, 1520px) minmax(130px, 1fr);
+  grid-template-columns: minmax(130px, 1fr) minmax(min-content, 1520px) minmax(130px, 1fr);
+}
+@media only screen and (max-width: 1300px) {
+  .header {
+    grid-template-columns: minmax(70px, 1fr) minmax(-webkit-min-content, 1520px) minmax(70px, 1fr);
+    grid-template-columns: minmax(70px, 1fr) minmax(min-content, 1520px) minmax(70px, 1fr);
+  }
+}
+@media only screen and (max-width: 700px) {
+  .header {
+    grid-template-columns: minmax(30px, 1fr) minmax(-webkit-min-content, 1520px) minmax(30px, 1fr);
+    grid-template-columns: minmax(30px, 1fr) minmax(min-content, 1520px) minmax(30px, 1fr);
+  }
+}
+
+.header__content {
+  grid-column: 2/3;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 8rem;
+  background-color: #0a202e;
+}
+.header__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__content-logo {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.5rem;
+  color: #f7ebec;
+}
+
+.desktopNavigation {
+  display: flex;
+  list-style: none;
+}
+@media only screen and (max-width: 800px) {
+  .desktopNavigation {
+    display: none;
+  }
+}
+.desktopNavigation__item {
+  margin-right: 3rem;
+}
+.desktopNavigation__item:last-child {
+  margin-right: 0;
+}
+.desktopNavigation__item-link {
+  font-weight: 400;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.5rem;
+  color: #f7ebec;
+}
+
+.mobileNavigation {
+  display: none;
+}
+@media only screen and (max-width: 800px) {
+  .mobileNavigation {
+    display: flex;
+    align-items: center;
+  }
+}
+.mobileNavigation__burger {
+  display: block;
+  margin-left: 3rem;
+}
+.mobileNavigation__burger span {
+  height: 3px;
+  display: block;
+  background-color: #f7ebec;
+  width: 30px;
+  border-radius: 2px;
+  margin-bottom: 5px;
+}
+.mobileNavigation__burger span:last-child {
+  margin-bottom: 0;
+}
+.mobileNavigation__burger span:nth-child(2) {
+  width: 25px;
+}
+
+.logInBtn {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.5rem;
+  color: #f7ebec;
+  border-radius: 5px;
+  border: 2px solid #022e43;
+  padding: 0.5rem 2rem;
+  transition: background-color 0.4s;
+}
+.logInBtn:hover {
+  background-color: #022e43;
+}
+
+.sidebarLoginBtn {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 2rem;
+  color: #f7ebec;
+  border-radius: 5px;
+  border: 2px solid #de3c4b;
+  padding: 0.5rem 2rem;
+}
+
+.getStartedBtn {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.5rem;
+  color: #f7ebec;
+  border-radius: 5px;
+  padding: 1rem 2rem;
+  background-color: #de3c4b;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  right: 0;
+  height: 100vh;
+  width: 0;
+  background-color: #022e43;
+  z-index: 22;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sidebar__close {
+  position: absolute;
+  top: 2.5rem;
+  right: 3rem;
+  opacity: 0;
+  transform: translateY(-10px);
+}
+.sidebar__close img {
+  width: 3rem;
+}
+
+.sidebarNavigation {
+  list-style: none;
+}
+.sidebarNavigation__item {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+.sidebarNavigation__item:last-child {
+  margin-bottom: 0;
+}
+.sidebarNavigation__link {
+  opacity: 0;
+  transform: translateY(-10px);
+  color: #f7ebec;
+  font-size: 2rem;
+  font-weight: 400;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.sidebarOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  opacity: 0;
+  height: 100vh;
+  background-color: rgba(18, 22, 25, 0.2);
+  z-index: 21;
+}
+
+.welcome {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #0a202e;
+}
+
+/*# sourceMappingURL=/main.css.map */

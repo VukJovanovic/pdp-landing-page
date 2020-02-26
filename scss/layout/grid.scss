@@ -1,0 +1,29 @@
+// Common grid styles for multiple components
+// Grid layout that is the same for all main sections
+.header {
+  display: grid;
+  grid-template-columns: minmax(130px, 1fr) minmax(min-content, 1520px) minmax(
+      130px,
+      1fr
+    );
+
+  @media only screen and (max-width: 1300px) {
+    grid-template-columns: minmax(70px, 1fr) minmax(min-content, 1520px) minmax(
+        70px,
+        1fr
+      );
+  }
+  @media only screen and (max-width: 700px) {
+    grid-template-columns: minmax(30px, 1fr) minmax(min-content, 1520px) minmax(
+        30px,
+        1fr
+      );
+  }
+}
+
+// Grid layout for HEADER
+.header {
+  &__content {
+    grid-column: 2 / 3;
+  }
+}

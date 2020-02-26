@@ -1,0 +1,30 @@
+.logInBtn {
+  font-family: $font-source-sans;
+  font-size: $small;
+  color: $font-secondary;
+  border-radius: 5px;
+  border: 2px solid $color-secondary;
+  padding: 0.5rem 2rem;
+  transition: background-color 0.4s;
+  &:hover {
+    background-color: $color-secondary;
+  }
+}
+
+.sidebarLoginBtn {
+  font-family: $font-source-sans;
+  font-size: $big;
+  color: $font-secondary;
+  border-radius: 5px;
+  border: 2px solid $color-danger;
+  padding: 0.5rem 2rem;
+}
+
+.getStartedBtn {
+  font-family: $font-source-sans;
+  font-size: $small;
+  color: $font-secondary;
+  border-radius: 5px;
+  padding: 1rem 2rem;
+  background-color: $color-danger;
+}

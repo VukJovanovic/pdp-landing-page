@@ -1,0 +1,13 @@
+@import './base/reset';
+@import './base/variables';
+@import './base/typography';
+@import './base/helperClasses';
+@import './layout/grid.scss';
+
+// Components
+@import './components/header';
+@import './components/buttons';
+@import './components/sidebar';
+
+// Sections
+@import './sections/welcome';

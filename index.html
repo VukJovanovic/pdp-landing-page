@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Purpose Driven Planner | Start planning your day</title>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <a href="#" class="sidebar__close"
+        ><img src="./img/cancel.svg" alt=""
+      /></a>
+      <ul class="sidebarNavigation">
+        <li class="sidebarNavigation__item">
+          <a href="#" class="sidebarNavigation__link">About</a>
+        </li>
+        <li class="sidebarNavigation__item">
+          <a href="#" class="sidebarNavigation__link">Pricing</a>
+        </li>
+        <li class="sidebarNavigation__item">
+          <a href="#" class="sidebarNavigation__link">Contact</a>
+        </li>
+        <li class="sidebarNavigation__item">
+          <a href="#" class="sidebarNavigation__link sidebarLoginBtn">Log In</a>
+        </li>
+      </ul>
+    </div>
+    <div class="sidebarOverlay"></div>
+    <!-- Header -->
+    <header class="header">
+      <div class="header__content">
+        <a href="#" class="header__content-logo">Logo</a>
+        <nav class="header__content-nav">
+          <!-- Desktop navigation -->
+          <ul class="desktopNavigation">
+            <li class="desktopNavigation__item">
+              <a href="#" class="desktopNavigation__item-link hoverUnderline"
+                >About</a
+              >
+            </li>
+            <li class="desktopNavigation__item">
+              <a href="#" class="desktopNavigation__item-link hoverUnderline"
+                >Pricing</a
+              >
+            </li>
+            <li class="desktopNavigation__item">
+              <a href="#" class="desktopNavigation__item-link hoverUnderline"
+                >Contact</a
+              >
+            </li>
+            <li class="desktopNavigation__item">
+              <a href="#" class="desktopNavigation__item-link logInBtn"
+                >Log In</a
+              >
+            </li>
+            <li class="desktopNavigation__item">
+              <a href="#" class="desktopNavigation__item-link getStartedBtn"
+                >Get Started</a
+              >
+            </li>
+          </ul>
+          <!-- Mobile navigation -->
+          <div class="mobileNavigation">
+            <a href="#" class="getStartedBtn">Get Started</a>
+            <a href="#" class="mobileNavigation__burger" id="mobileBurger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </a>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- Welcome section -->
+    <section class="welcome"></section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="./js/bundle.js"></script>
+  </body>
+</html>
