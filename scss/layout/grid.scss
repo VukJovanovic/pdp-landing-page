@@ -2,7 +2,8 @@
 // Grid layout that is the same for all main sections
 .header,
 .welcome,
-.about {
+.about,
+.howItWorks {
   display: grid;
   grid-template-columns: minmax(130px, 1fr) minmax(min-content, 1520px) minmax(
       130px,
@@ -96,5 +97,33 @@
   }
   &__cta {
     grid-column: 1 / -1;
+  }
+}
+
+// Grid layout for how it works section
+.howItWorks {
+  &__content {
+    grid-column: 2 / 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 2rem;
+
+    @media only screen and (max-width: 1024px) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @media only screen and (max-width: 580px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__heading {
+    grid-column: 1 / -1;
+  }
+
+  &__card {
+    &:nth-child(4) {
+      @media only screen and (max-width: 1024px) {
+        grid-column: 1 / -1;
+      }
+    }
   }
 }

@@ -4,9 +4,7 @@
   padding: 10rem 0;
   position: relative;
   z-index: 0;
-  @media only screen and(max-width: 800px) {
-    padding: 10rem 0 0 0;
-  }
+  overflow: hidden;
   &__shape {
     position: absolute;
     top: 5rem;
