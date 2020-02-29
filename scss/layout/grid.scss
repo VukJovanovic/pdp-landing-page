@@ -3,7 +3,8 @@
 .header,
 .welcome,
 .about,
-.howItWorks {
+.howItWorks,
+.testimonials {
   display: grid;
   grid-template-columns: minmax(130px, 1fr) minmax(min-content, 1520px) minmax(
       130px,
@@ -123,6 +124,33 @@
     &:nth-child(4) {
       @media only screen and (max-width: 1024px) {
         grid-column: 1 / -1;
+      }
+    }
+  }
+}
+
+// Testimonials grid layout
+.testimonials {
+  &__content {
+    grid-column: 2 / 3;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2rem;
+
+    @media only screen and (max-width: 1024px) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @media only screen and (max-width: 580px) {
+      grid-template-columns: 1fr;
+    }
+    .testimonial__card {
+      &:nth-child(3) {
+        @media only screen and (max-width: 1024px) {
+          grid-column: 1 / -1;
+        }
       }
     }
   }
