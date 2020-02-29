@@ -1,0 +1,100 @@
+.faq {
+  width: 100vw;
+  height: max-content;
+  background-color: $color-primary;
+  padding: 15rem 0rem;
+  @media only screen and (max-width: 800px) {
+    padding: 5rem 0rem;
+  }
+
+  &__container {
+    width: 100%;
+    &-heading {
+      border-left: 1px solid $color-secondary;
+      padding-left: 2rem;
+      margin-bottom: 8rem;
+      &-h2 {
+        font-family: $font-source-sans;
+        font-size: $heading-2;
+        letter-spacing: $heading-letter-spacing;
+        color: $font-secondary;
+        font-weight: $bold;
+      }
+      &-h3 {
+        font-family: $font-source-sans;
+        font-size: $heading-3;
+        color: $font-danger;
+        font-weight: $light;
+      }
+    }
+    .faq__tabs {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+
+      .faq__tab {
+        overflow: hidden;
+        width: 100%;
+        margin-bottom: 1rem;
+        input {
+          position: absolute;
+          opacity: 0;
+          z-index: -1;
+        }
+        label {
+          background-color: $color-secondary;
+          font-family: $font-source-sans;
+          color: $font-secondary;
+          font-size: $paragraph-2;
+          font-weight: $light;
+          display: flex;
+          justify-content: space-between;
+          padding: 2rem;
+          border-bottom: 1px solid $color-primary;
+          cursor: pointer;
+          &::after {
+            content: '\276F';
+            width: 1em;
+            height: 1em;
+            text-align: center;
+            transition: all 0.35s;
+          }
+        }
+        .faq-first {
+          border-radius: 10px 10px 0 0;
+        }
+        .faq-last {
+          border-bottom: none;
+          border-radius: 0 0 10px 10px;
+        }
+        &-answer {
+          max-height: 0;
+          overflow: hidden;
+          display: none;
+          padding: 0 2rem;
+          transition: all 1s;
+
+          p {
+            font-family: $font-open-sans;
+            font-size: $paragraph-1;
+            color: $font-secondary;
+            font-weight: $light;
+          }
+        }
+
+        input:checked {
+          + label {
+            &::after {
+              transform: rotate(90deg);
+            }
+          }
+          ~ .faq__tab-answer {
+            max-height: 100%;
+            display: block;
+            padding: 2rem;
+          }
+        }
+      }
+    }
+  }
+}

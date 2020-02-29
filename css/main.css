@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400|Source+Sans+Pro:300,400&display=swap");
 html {
   width: 100%;
@@ -33,7 +34,8 @@ a {
 .welcome,
 .about,
 .howItWorks,
-.testimonials {
+.testimonials,
+.faq {
   display: grid;
   grid-template-columns: minmax(130px, 1fr) minmax(-webkit-min-content, 1520px) minmax(130px, 1fr);
   grid-template-columns: minmax(130px, 1fr) minmax(min-content, 1520px) minmax(130px, 1fr);
@@ -43,7 +45,8 @@ a {
 .welcome,
 .about,
 .howItWorks,
-.testimonials {
+.testimonials,
+.faq {
     grid-template-columns: minmax(70px, 1fr) minmax(-webkit-min-content, 1520px) minmax(70px, 1fr);
     grid-template-columns: minmax(70px, 1fr) minmax(min-content, 1520px) minmax(70px, 1fr);
   }
@@ -53,7 +56,8 @@ a {
 .welcome,
 .about,
 .howItWorks,
-.testimonials {
+.testimonials,
+.faq {
     grid-template-columns: minmax(30px, 1fr) minmax(-webkit-min-content, 1520px) minmax(30px, 1fr);
     grid-template-columns: minmax(30px, 1fr) minmax(min-content, 1520px) minmax(30px, 1fr);
   }
@@ -186,6 +190,10 @@ a {
   .testimonials__cards .testimonial__card:nth-child(3) {
     grid-column: 1/-1;
   }
+}
+
+.faq__container {
+  grid-column: 2/3;
 }
 
 .header {
@@ -710,6 +718,103 @@ a {
 .testimonials__cards .testimonial__card-text {
   font-weight: 300;
   margin-bottom: 3rem;
+}
+
+.faq {
+  width: 100vw;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  background-color: #0a202e;
+  padding: 15rem 0rem;
+}
+@media only screen and (max-width: 800px) {
+  .faq {
+    padding: 5rem 0rem;
+  }
+}
+.faq__container {
+  width: 100%;
+}
+.faq__container-heading {
+  border-left: 1px solid #022e43;
+  padding-left: 2rem;
+  margin-bottom: 8rem;
+}
+.faq__container-heading-h2 {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 4rem;
+  letter-spacing: 2px;
+  color: #f7ebec;
+  font-weight: 400;
+}
+.faq__container-heading-h3 {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 2.5rem;
+  color: #de3c4b;
+  font-weight: 300;
+}
+.faq__container .faq__tabs {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.faq__container .faq__tabs .faq__tab {
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.faq__container .faq__tabs .faq__tab input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+.faq__container .faq__tabs .faq__tab label {
+  background-color: #022e43;
+  font-family: "Source Sans Pro", sans-serif;
+  color: #f7ebec;
+  font-size: 2rem;
+  font-weight: 300;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  border-bottom: 1px solid #0a202e;
+  cursor: pointer;
+}
+.faq__container .faq__tabs .faq__tab label::after {
+  content: "❯";
+  width: 1em;
+  height: 1em;
+  text-align: center;
+  transition: all 0.35s;
+}
+.faq__container .faq__tabs .faq__tab .faq-first {
+  border-radius: 10px 10px 0 0;
+}
+.faq__container .faq__tabs .faq__tab .faq-last {
+  border-bottom: none;
+  border-radius: 0 0 10px 10px;
+}
+.faq__container .faq__tabs .faq__tab-answer {
+  max-height: 0;
+  overflow: hidden;
+  display: none;
+  padding: 0 2rem;
+  transition: all 1s;
+}
+.faq__container .faq__tabs .faq__tab-answer p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.8rem;
+  color: #f7ebec;
+  font-weight: 300;
+}
+.faq__container .faq__tabs .faq__tab input:checked + label::after {
+  transform: rotate(90deg);
+}
+.faq__container .faq__tabs .faq__tab input:checked ~ .faq__tab-answer {
+  max-height: 100%;
+  display: block;
+  padding: 2rem;
 }
 
 /*# sourceMappingURL=/main.css.map */
