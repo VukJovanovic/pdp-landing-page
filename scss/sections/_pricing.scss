@@ -44,8 +44,8 @@
       padding-top: 2rem;
       text-align: center;
       background-color: $color-primary;
-      border-radius: 10px 10px 100% 100%;
-      margin-bottom: 3rem;
+      border-radius: 0 0 100% 100%;
+      margin: 0rem 3rem 3rem 3rem;
     }
 
     &-plan {
@@ -54,6 +54,7 @@
       font-weight: $light;
       color: $font-secondary;
       padding-bottom: 2rem;
+      margin: 0 3rem;
       border-bottom: 1px solid $color-danger;
     }
     &-price {

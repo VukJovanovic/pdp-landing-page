@@ -179,9 +179,11 @@
   }
 
   &__card {
-    &:nth-child(3) {
-      grid-column: 1 / -1;
-      justify-self: center;
+    @media only screen and (max-width: 1230px) {
+      &:nth-child(3) {
+        grid-column: 1 / -1;
+        justify-self: center;
+      }
     }
   }
 }
