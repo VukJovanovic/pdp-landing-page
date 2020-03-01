@@ -39,6 +39,24 @@ if (sidebarOverlay) {
   sidebarOverlay.addEventListener('click', closeMenu);
 }
 
+// Disable scrolling on mobile menu and overlay
+const sideBar = document.querySelector('.sidebar');
+
+sidebar.addEventListener(
+  'touchmove',
+  function(e) {
+    e.preventDefault();
+  },
+  false
+);
+sidebarOverlay.addEventListener(
+  'touchmove',
+  function(e) {
+    e.preventDefault();
+  },
+  false
+);
+
 // navigation functionality
 const aboutBtnDesktop = document.getElementById('aboutBtn-desktop');
 const pricingBtnDesktop = document.getElementById('pricingBtn-desktop');

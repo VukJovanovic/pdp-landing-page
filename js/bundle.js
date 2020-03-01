@@ -2116,8 +2116,16 @@ var sidebarOverlay = document.querySelector('.sidebarOverlay');
 
 if (sidebarOverlay) {
   sidebarOverlay.addEventListener('click', _animations.closeMenu);
-} // navigation functionality
+} // Disable scrolling on mobile menu and overlay
 
+
+var sideBar = document.querySelector('.sidebar');
+sidebar.addEventListener('touchmove', function (e) {
+  e.preventDefault();
+}, false);
+sidebarOverlay.addEventListener('touchmove', function (e) {
+  e.preventDefault();
+}, false); // navigation functionality
 
 var aboutBtnDesktop = document.getElementById('aboutBtn-desktop');
 var pricingBtnDesktop = document.getElementById('pricingBtn-desktop');
