@@ -487,6 +487,11 @@ a {
   z-index: 0;
   overflow: hidden;
 }
+@media only screen and (max-width: 800px) {
+  .about {
+    padding: 6rem 0;
+  }
+}
 .about__shape {
   position: absolute;
   top: 5rem;
@@ -618,6 +623,11 @@ a {
   height: -moz-max-content;
   height: max-content;
 }
+@media only screen and (max-width: 800px) {
+  .howItWorks {
+    padding: 6rem 0;
+  }
+}
 .howItWorks__heading {
   border-left: 1px solid #de3c4b;
   padding-left: 2rem;
@@ -697,6 +707,11 @@ a {
 .testimonials {
   padding: 10rem 0;
 }
+@media only screen and (max-width: 800px) {
+  .testimonials {
+    padding: 6rem 0;
+  }
+}
 .testimonials__heading {
   border-left: 1px solid #0a202e;
   padding-left: 2rem;
@@ -761,7 +776,7 @@ a {
 }
 @media only screen and (max-width: 800px) {
   .faq {
-    padding: 5rem 0rem;
+    padding: 6rem 0;
   }
 }
 .faq__container {
@@ -850,6 +865,11 @@ a {
 
 .pricing {
   padding: 10rem 0;
+}
+@media only screen and (max-width: 800px) {
+  .pricing {
+    padding: 6rem 0;
+  }
 }
 .pricing__heading {
   border-left: 1px solid #0a202e;

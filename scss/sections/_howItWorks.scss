@@ -4,6 +4,10 @@
   width: 100vw;
   height: max-content;
 
+  @media only screen and(max-width: 800px) {
+    padding: 6rem 0;
+  }
+
   &__heading {
     border-left: 1px solid $color-danger;
     padding-left: 2rem;

@@ -1,6 +1,9 @@
 .testimonials {
   padding: 10rem 0;
 
+  @media only screen and(max-width: 800px) {
+    padding: 6rem 0;
+  }
   &__heading {
     border-left: 1px solid $color-primary;
     padding-left: 2rem;
