@@ -40,16 +40,16 @@ if (sidebarOverlay) {
 }
 
 // Disable scrolling on mobile menu and overlay
-const sideBar = document.querySelector('.sidebar');
-
-sidebar.addEventListener(
+const sidebarFixScroll = document.querySelector('.sidebar');
+const sidebarOverlayFixScroll = document.querySelector('.sidebarOverlay');
+sidebarFixScroll.addEventListener(
   'touchmove',
   function(e) {
     e.preventDefault();
   },
   false
 );
-sidebarOverlay.addEventListener(
+sidebarOverlayFixScroll.addEventListener(
   'touchmove',
   function(e) {
     e.preventDefault();

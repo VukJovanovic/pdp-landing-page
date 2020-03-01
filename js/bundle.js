@@ -2119,11 +2119,12 @@ if (sidebarOverlay) {
 } // Disable scrolling on mobile menu and overlay
 
 
-var sideBar = document.querySelector('.sidebar');
-sidebar.addEventListener('touchmove', function (e) {
+var sidebarFixScroll = document.querySelector('.sidebar');
+var sidebarOverlayFixScroll = document.querySelector('.sidebarOverlay');
+sidebarFixScroll.addEventListener('touchmove', function (e) {
   e.preventDefault();
 }, false);
-sidebarOverlay.addEventListener('touchmove', function (e) {
+sidebarOverlayFixScroll.addEventListener('touchmove', function (e) {
   e.preventDefault();
 }, false); // navigation functionality
 
