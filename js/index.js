@@ -1,4 +1,5 @@
 import _ from 'underscore';
+import jump from 'jump.js';
 import { openMenu, closeMenu } from './animations';
 
 // fixed header functionality
@@ -38,4 +39,26 @@ if (sidebarOverlay) {
   sidebarOverlay.addEventListener('click', closeMenu);
 }
 
-// slider functionality
+// navigation functionality
+const aboutBtnDesktop = document.getElementById('aboutBtn-desktop');
+const pricingBtnDesktop = document.getElementById('pricingBtn-desktop');
+const aboutBtnMobile = document.getElementById('aboutBtn-mobile');
+const pricingBtnMobile = document.getElementById('pricingBtn-mobile');
+
+aboutBtnDesktop.addEventListener('click', () => {
+  jump('.about');
+});
+
+pricingBtnDesktop.addEventListener('click', () => {
+  jump('.pricing');
+});
+
+// mobile navigation
+aboutBtnMobile.addEventListener('click', () => {
+  closeMenu();
+  jump('.about');
+});
+pricingBtnMobile.addEventListener('click', () => {
+  closeMenu();
+  jump('.pricing');
+});
