@@ -5,7 +5,8 @@
 .about,
 .howItWorks,
 .testimonials,
-.faq {
+.faq,
+.pricing {
   display: grid;
   grid-template-columns: minmax(130px, 1fr) minmax(min-content, 1520px) minmax(
       130px,
@@ -153,6 +154,34 @@
           grid-column: 1 / -1;
         }
       }
+    }
+  }
+}
+
+// Grid layout for pricing section
+.pricing {
+  &__content {
+    grid-column: 2 / 3;
+  }
+  &__cards {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+
+    @media only screen and (max-width: 1230px) {
+      grid-template-columns: repeat(2, max-content);
+      grid-row-gap: 4rem;
+    }
+    @media only screen and (max-width: 860px) {
+      grid-template-columns: max-content;
+      grid-row-gap: 4rem;
+    }
+  }
+
+  &__card {
+    &:nth-child(3) {
+      grid-column: 1 / -1;
+      justify-self: center;
     }
   }
 }
