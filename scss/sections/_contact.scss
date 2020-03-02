@@ -1,0 +1,95 @@
+.contact {
+  padding: 10rem 0;
+  &__content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__heading {
+    border-bottom: 1px solid $color-secondary;
+    padding-bottom: 2rem;
+    margin-bottom: 5rem;
+    text-align: center;
+    &-h2 {
+      font-family: $font-source-sans;
+      font-size: $heading-2;
+      letter-spacing: $heading-letter-spacing;
+      color: $font-primary;
+      font-weight: $bold;
+    }
+    &-h3 {
+      font-family: $font-source-sans;
+      font-size: $heading-3;
+      color: $font-danger;
+      font-weight: $light;
+    }
+  }
+  &__form {
+    &-group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 2rem;
+    }
+    &-label {
+      color: $font-primary;
+      font-family: $font-source-sans;
+      font-size: $paragraph-1;
+      font-weight: $light;
+      margin-bottom: 1rem;
+    }
+    &-input {
+      height: 5rem;
+      width: 45rem;
+      padding: 1.5rem 2rem;
+      border: none;
+      outline: none;
+      border-radius: 5px;
+      font-size: $paragraph-1;
+      font-family: $font-open-sans;
+      font-weight: $light;
+      box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.3);
+
+      @media only screen and (max-width: 800px) {
+        width: 40rem;
+      }
+      @media only screen and (max-width: 500px) {
+        width: 30rem;
+      }
+      &:focus {
+        border-bottom: 2px solid $color-primary;
+      }
+    }
+    textarea {
+      padding: 1.5rem 2rem;
+      border: none;
+      outline: none;
+      border-radius: 5px;
+      height: 15rem;
+      font-size: $paragraph-1;
+      font-family: $font-open-sans;
+      font-weight: $light;
+      box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.3);
+      resize: none;
+      &:focus {
+        border-bottom: 2px solid $color-primary;
+      }
+    }
+    &-btn {
+      height: 5rem;
+      margin-top: 2rem;
+      cursor: pointer;
+      border: none;
+      background-color: $color-primary;
+      border-radius: 5px;
+      color: $font-secondary;
+      font-family: $font-source-sans;
+      font-size: $paragraph-1;
+      outline: none;
+      transition: 0.4s all;
+      &:hover {
+        transform: translateY(-5px);
+      }
+    }
+  }
+}

@@ -6,7 +6,8 @@
 .howItWorks,
 .testimonials,
 .faq,
-.pricing {
+.pricing,
+.contact {
   display: grid;
   grid-template-columns: minmax(130px, 1fr) minmax(min-content, 1520px) minmax(
       130px,
@@ -191,6 +192,13 @@
 // Grid styles for FAQ section
 .faq {
   &__container {
+    grid-column: 2 / 3;
+  }
+}
+
+// grid layout for contact section
+.contact {
+  &__content {
     grid-column: 2 / 3;
   }
 }
