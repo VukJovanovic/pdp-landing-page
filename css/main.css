@@ -352,6 +352,33 @@ a {
   transform: translateY(-7px);
 }
 
+.btn__scrollTop {
+  position: fixed;
+  bottom: 5rem;
+  right: 3rem;
+  z-index: 23;
+  background-color: #de3c4b;
+  border-radius: 5px;
+  padding: 1rem;
+  opacity: 0;
+  transition: 0.4s ease;
+}
+@media only screen and (max-width: 800px) {
+  .btn__scrollTop {
+    bottom: 3rem;
+    right: 2rem;
+  }
+}
+.btn__scrollTop img {
+  transform: rotate(-90deg);
+  width: 3rem;
+}
+
+.btn__scrollTop-show {
+  display: block;
+  opacity: 1;
+}
+
 .sidebar {
   position: fixed;
   top: 0;

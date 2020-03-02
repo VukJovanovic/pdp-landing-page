@@ -2080,7 +2080,8 @@ var _animations = require("./animations");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// fixed header functionality
+var buttonScrollTop = document.querySelector('.btn__scrollTop'); // fixed header functionality
+
 var checkHeader = _underscore.default.throttle(function () {
   // Detect scroll position
   var scrollPosition = Math.round(window.scrollY); // If we scrolled we add class to our navigation bar
@@ -2089,6 +2090,13 @@ var checkHeader = _underscore.default.throttle(function () {
     document.querySelector('.header').classList.add('headerFixed');
   } else {
     document.querySelector('.header').classList.remove('headerFixed');
+  } // Show button that scrolls on top of the page when you click it
+
+
+  if (scrollPosition > 50) {
+    buttonScrollTop.classList.add('btn__scrollTop-show');
+  } else {
+    buttonScrollTop.classList.remove('btn__scrollTop-show');
   }
 }, 300);
 
@@ -2132,20 +2140,29 @@ var aboutBtnDesktop = document.getElementById('aboutBtn-desktop');
 var pricingBtnDesktop = document.getElementById('pricingBtn-desktop');
 var aboutBtnMobile = document.getElementById('aboutBtn-mobile');
 var pricingBtnMobile = document.getElementById('pricingBtn-mobile');
-aboutBtnDesktop.addEventListener('click', function () {
+aboutBtnDesktop.addEventListener('click', function (e) {
+  e.preventDefault();
   (0, _jump.default)('.about');
 });
-pricingBtnDesktop.addEventListener('click', function () {
+pricingBtnDesktop.addEventListener('click', function (e) {
+  e.preventDefault();
   (0, _jump.default)('.pricing');
 }); // mobile navigation
 
-aboutBtnMobile.addEventListener('click', function () {
+aboutBtnMobile.addEventListener('click', function (e) {
+  e.preventDefault();
   (0, _animations.closeMenu)();
   (0, _jump.default)('.about');
 });
-pricingBtnMobile.addEventListener('click', function () {
+pricingBtnMobile.addEventListener('click', function (e) {
+  e.preventDefault();
   (0, _animations.closeMenu)();
   (0, _jump.default)('.pricing');
+}); // Scroll top button fucntionality
+
+buttonScrollTop.addEventListener('click', function (e) {
+  e.preventDefault();
+  (0, _jump.default)('.welcome');
 });
 },{"underscore":"../node_modules/underscore/underscore.js","jump.js":"../node_modules/jump.js/dist/jump.module.js","./animations":"animations.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -2175,7 +2192,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51106" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53915" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

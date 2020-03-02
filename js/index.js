@@ -2,6 +2,8 @@ import _ from 'underscore';
 import jump from 'jump.js';
 import { openMenu, closeMenu } from './animations';
 
+const buttonScrollTop = document.querySelector('.btn__scrollTop');
+
 // fixed header functionality
 const checkHeader = _.throttle(() => {
   // Detect scroll position
@@ -12,6 +14,13 @@ const checkHeader = _.throttle(() => {
     document.querySelector('.header').classList.add('headerFixed');
   } else {
     document.querySelector('.header').classList.remove('headerFixed');
+  }
+
+  // Show button that scrolls on top of the page when you click it
+  if (scrollPosition > 50) {
+    buttonScrollTop.classList.add('btn__scrollTop-show');
+  } else {
+    buttonScrollTop.classList.remove('btn__scrollTop-show');
   }
 }, 300);
 
@@ -63,20 +72,30 @@ const pricingBtnDesktop = document.getElementById('pricingBtn-desktop');
 const aboutBtnMobile = document.getElementById('aboutBtn-mobile');
 const pricingBtnMobile = document.getElementById('pricingBtn-mobile');
 
-aboutBtnDesktop.addEventListener('click', () => {
+aboutBtnDesktop.addEventListener('click', e => {
+  e.preventDefault();
   jump('.about');
 });
 
-pricingBtnDesktop.addEventListener('click', () => {
+pricingBtnDesktop.addEventListener('click', e => {
+  e.preventDefault();
   jump('.pricing');
 });
 
 // mobile navigation
-aboutBtnMobile.addEventListener('click', () => {
+aboutBtnMobile.addEventListener('click', e => {
+  e.preventDefault();
   closeMenu();
   jump('.about');
 });
-pricingBtnMobile.addEventListener('click', () => {
+pricingBtnMobile.addEventListener('click', e => {
+  e.preventDefault();
   closeMenu();
   jump('.pricing');
+});
+
+// Scroll top button fucntionality
+buttonScrollTop.addEventListener('click', e => {
+  e.preventDefault();
+  jump('.welcome');
 });
