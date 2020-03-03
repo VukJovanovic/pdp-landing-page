@@ -2140,6 +2140,8 @@ var aboutBtnDesktop = document.getElementById('aboutBtn-desktop');
 var pricingBtnDesktop = document.getElementById('pricingBtn-desktop');
 var aboutBtnMobile = document.getElementById('aboutBtn-mobile');
 var pricingBtnMobile = document.getElementById('pricingBtn-mobile');
+var contactBtnDesktop = document.getElementById('contactBtn-desktop');
+var contactBtnMobile = document.getElementById('contactBtn-mobile');
 aboutBtnDesktop.addEventListener('click', function (e) {
   e.preventDefault();
   (0, _jump.default)('.about');
@@ -2147,6 +2149,10 @@ aboutBtnDesktop.addEventListener('click', function (e) {
 pricingBtnDesktop.addEventListener('click', function (e) {
   e.preventDefault();
   (0, _jump.default)('.pricing');
+});
+contactBtnDesktop.addEventListener('click', function (e) {
+  e.preventDefault();
+  (0, _jump.default)('.contact');
 }); // mobile navigation
 
 aboutBtnMobile.addEventListener('click', function (e) {
@@ -2158,6 +2164,11 @@ pricingBtnMobile.addEventListener('click', function (e) {
   e.preventDefault();
   (0, _animations.closeMenu)();
   (0, _jump.default)('.pricing');
+});
+contactBtnMobile.addEventListener('click', function (e) {
+  e.preventDefault();
+  (0, _animations.closeMenu)();
+  (0, _jump.default)('.contact');
 }); // Scroll top button fucntionality
 
 buttonScrollTop.addEventListener('click', function (e) {
@@ -2192,7 +2203,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53915" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52341" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

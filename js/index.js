@@ -71,6 +71,8 @@ const aboutBtnDesktop = document.getElementById('aboutBtn-desktop');
 const pricingBtnDesktop = document.getElementById('pricingBtn-desktop');
 const aboutBtnMobile = document.getElementById('aboutBtn-mobile');
 const pricingBtnMobile = document.getElementById('pricingBtn-mobile');
+const contactBtnDesktop = document.getElementById('contactBtn-desktop');
+const contactBtnMobile = document.getElementById('contactBtn-mobile');
 
 aboutBtnDesktop.addEventListener('click', e => {
   e.preventDefault();
@@ -80,6 +82,11 @@ aboutBtnDesktop.addEventListener('click', e => {
 pricingBtnDesktop.addEventListener('click', e => {
   e.preventDefault();
   jump('.pricing');
+});
+
+contactBtnDesktop.addEventListener('click', e => {
+  e.preventDefault();
+  jump('.contact');
 });
 
 // mobile navigation
@@ -92,6 +99,11 @@ pricingBtnMobile.addEventListener('click', e => {
   e.preventDefault();
   closeMenu();
   jump('.pricing');
+});
+contactBtnMobile.addEventListener('click', e => {
+  e.preventDefault();
+  closeMenu();
+  jump('.contact');
 });
 
 // Scroll top button fucntionality

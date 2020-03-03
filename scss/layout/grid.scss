@@ -198,7 +198,18 @@
 
 // grid layout for contact section
 .contact {
+  &__heading {
+    grid-column: 2 / 3;
+  }
   &__content {
     grid-column: 2 / 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15rem;
+
+    @media only screen and(max-width: 800px) {
+      grid-template-columns: 1fr;
+      grid-gap: 5rem;
+    }
   }
 }
