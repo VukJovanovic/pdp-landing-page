@@ -15,17 +15,10 @@
       padding-left: 2rem;
       margin-bottom: 8rem;
       &-h2 {
-        font-family: $font-source-sans;
-        font-size: $heading-2;
-        letter-spacing: $heading-letter-spacing;
-        color: $font-secondary;
-        font-weight: $bold;
+        @include heading-2-dark;
       }
       &-h3 {
-        font-family: $font-source-sans;
-        font-size: $heading-3;
-        color: $font-danger;
-        font-weight: $light;
+        @include heading-3-dark;
       }
     }
     .faq__tabs {

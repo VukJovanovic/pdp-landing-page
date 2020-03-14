@@ -1,0 +1,72 @@
+.benefits {
+  width: 100%;
+  padding: 10rem 0;
+  background-color: $color-primary;
+  &__heading {
+    border-left: 1px solid $color-danger;
+    padding-left: 2rem;
+    margin-bottom: 10rem;
+    &-h2 {
+      @include heading-2-dark;
+    }
+    &-h3 {
+      @include heading-3-dark;
+    }
+  }
+
+  &__card {
+    border-right: 1px solid $color-secondary;
+    padding: 2rem;
+
+    &:last-child {
+      border-right: none;
+    }
+
+    // when grdi colapses in two columns we want the third card to be in the middle
+    &:nth-child(3) {
+      @media only screen and (max-width: 1024px) {
+        width: 40rem;
+        justify-self: center;
+        border-top: 1px solid $color-primary;
+        margin-top: 2rem;
+      }
+    }
+
+    // when grid colapses in 2 columns we delete the right border of the card
+    @media only screen and (max-width: 1024px) {
+      &:nth-child(2) {
+        border-right: none;
+      }
+    }
+    // when grid colapses in one column we delete all the right borders and add bottom borders
+    @media only screen and (max-width: 580px) {
+      &:nth-child(1) {
+        border-right: none;
+      }
+      border-bottom: 1px solid $color-primary;
+      &:last-child {
+        border-bottom: none;
+      }
+      &:nth-child(3) {
+        width: 100%;
+        border-top: none;
+        margin-top: 0;
+      }
+    }
+
+    &-heading {
+      display: flex;
+      align-items: center;
+      margin-bottom: 2rem;
+      img {
+        width: 5rem;
+      }
+      h4 {
+        @include heading-4-dark;
+      }
+    }
+    &-paragraph {
+      @include paragraph-dark;
+    }
+  }
+}

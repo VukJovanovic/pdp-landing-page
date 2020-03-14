@@ -20,7 +20,7 @@
       font-size: $heading-1;
       font-weight: $bold;
       font-family: $font-source-sans;
-      margin-bottom: 3rem;
+      margin-bottom: 1.5rem;
     }
     &-paragraph {
       font-size: $paragraph-1;
@@ -51,6 +51,10 @@
       letter-spacing: 1px;
       font-family: $font-open-sans;
       margin-bottom: 3rem;
+    }
+    &-btn {
+      @include button;
+      background-color: $color-danger;
     }
   }
 }

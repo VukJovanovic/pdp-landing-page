@@ -30,21 +30,6 @@
   // box-shadow: 4px 4px 15px 1px $color-dark;
 }
 
-.welcome__cta-btn {
-  width: max-content;
-  font-family: $font-source-sans;
-  font-size: $paragraph-2;
-  color: $font-secondary;
-  font-weight: $light;
-  border-radius: 5px;
-  padding: 1rem 2rem;
-  background-color: $color-danger;
-  transition: transform 0.4s ease-out;
-  &:hover {
-    transform: translateY(-7px);
-  }
-}
-
 .btn__scrollTop {
   position: fixed;
   bottom: 5rem;
@@ -63,7 +48,7 @@
 
   img {
     transform: rotate(-90deg);
-    width: 3rem;
+    width: 2rem;
   }
 }
 .btn__scrollTop-show {

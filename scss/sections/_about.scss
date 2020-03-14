@@ -9,83 +9,37 @@
   @media only screen and(max-width: 800px) {
     padding: 6rem 0;
   }
-  &__shape {
-    position: absolute;
-    top: 5rem;
-    left: 0;
-    height: 100%;
-    width: 30vw;
-    background-color: $color-neutral;
-    z-index: 1;
-    @media only screen and(max-width: 800px) {
-      width: 50vw;
-    }
-  }
   &__content {
     z-index: 2;
   }
   &__heading {
     border-left: 1px solid $color-primary;
     padding-left: 2rem;
-    margin-bottom: 5rem;
+    margin-bottom: 10rem;
     &-h2 {
-      font-family: $font-source-sans;
-      font-size: $heading-2;
-      letter-spacing: $heading-letter-spacing;
-      color: $color-dark;
-      font-weight: $bold;
+      @include heading-2-light;
     }
     &-h3 {
-      font-family: $font-source-sans;
-      font-size: $heading-3;
-      color: $font-danger;
-      font-weight: $light;
+      @include heading-3-light;
     }
   }
 
   //   styles for text paragraphs in about section
   &__text {
-    &-h2 {
-      font-family: $font-source-sans;
-      font-size: $heading-2;
-      letter-spacing: $heading-letter-spacing;
-      color: $color-danger;
-      font-weight: $bold;
-      margin-bottom: 5rem;
-      text-align: right;
-      padding-right: 2rem;
-      border-right: 1px solid $color-danger;
-
-      @media only screen and(max-width: 800px) {
-        padding-right: 0;
-        border-right: none;
-        padding-left: 2rem;
-        border-left: 1px solid $color-primary;
-        text-align: left;
-      }
-    }
     &-p {
-      font-size: $paragraph-1;
-      font-weight: $light;
-      font-family: $font-open-sans;
-      line-height: 3rem;
-      margin-bottom: 2rem;
-      color: &color-dark;
-      &:last-child {
-        margin-bottom: 0;
-      }
+      @include paragraph-light;
     }
   }
-  &__text-2 {
-    text-align: justify;
-    @media only screen and(max-width: 800px) {
-      text-align: left;
-      margin: 5rem 0;
+  &__cta {
+    margin-top: 5rem;
+    &-text {
+      @include paragraph-light;
+      font-weight: $bold;
     }
-  }
-
-  &__imageContainer-1 {
-    margin-bottom: 15rem;
+    &-btn {
+      @include button;
+      background-color: $color-primary;
+    }
   }
   &__imageContainer {
     display: flex;
@@ -101,27 +55,6 @@
     img {
       width: 25rem;
       height: 40rem;
-    }
-  }
-
-  &__cta {
-    margin-top: 10rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    @media only screen and (max-width: 800px) {
-      margin-top: 0;
-    }
-    &-p {
-      margin-bottom: 2rem;
-      font-size: $paragraph-2;
-      font-family: $font-source-sans;
-      font-weight: $bold;
-      color: $color-dark;
-      @media only screen and (max-width: 800px) {
-        text-align: center;
-        margin-bottom: 2.5rem;
-      }
     }
   }
 }

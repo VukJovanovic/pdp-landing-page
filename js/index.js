@@ -90,11 +90,11 @@ contactBtnDesktop.addEventListener('click', e => {
 });
 
 // mobile navigation
-aboutBtnMobile.addEventListener('click', e => {
-  e.preventDefault();
-  closeMenu();
-  jump('.about');
-});
+// aboutBtnMobile.addEventListener('click', e => {
+//   e.preventDefault();
+//   closeMenu();
+//   jump('.about');
+// });
 pricingBtnMobile.addEventListener('click', e => {
   e.preventDefault();
   closeMenu();

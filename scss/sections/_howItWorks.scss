@@ -14,79 +14,42 @@
     margin-bottom: 10rem;
 
     &-h2 {
-      font-family: $font-source-sans;
-      font-size: $heading-2;
-      letter-spacing: $heading-letter-spacing;
-      color: $color-neutral;
-      font-weight: $bold;
+      @include heading-2-dark;
     }
     &-h3 {
-      font-family: $font-source-sans;
-      font-size: $heading-3;
-      color: $font-danger;
-      font-weight: $light;
+      @include heading-3-dark;
     }
   }
-
-  &__card {
-    border-right: 1px solid $color-danger;
-    padding: 2rem;
-
-    &:last-child {
-      border-right: none;
+  .howItWork__image {
+    display: flex;
+    justify-content: center;
+    img {
+      width: 25rem;
+      height: 40rem;
     }
-
-    // when grdi colapses in two columns we want the third card to be in the middle
-    &:nth-child(4) {
-      @media only screen and (max-width: 1024px) {
-        width: 40rem;
-        justify-self: center;
-        border-top: 1px solid $color-danger;
-        margin-top: 2rem;
-      }
+  }
+  .howItWork__text {
+    @media only screen and(max-width: 1024px) {
+      margin-bottom: 5rem;
     }
-
-    // when grid colapses in 2 columns we delete the right border of the card
-    @media only screen and (max-width: 1024px) {
-      &:nth-child(3) {
-        border-right: none;
-      }
+  }
+  .howItWork__text-block {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4rem;
+  }
+  .howItWork__text-image {
+    width: 6rem;
+    margin-right: 3rem;
+  }
+  .howItWork__text-content {
+    h4 {
+      @include heading-4-dark;
+      margin-bottom: 1rem;
+      margin-left: 0;
     }
-    // when grid colapses in one column we delete all the right borders and add bottom borders
-    @media only screen and (max-width: 580px) {
-      &:nth-child(2) {
-        border-right: none;
-      }
-      border-bottom: 1px solid $color-danger;
-      &:last-child {
-        border-bottom: none;
-      }
-      &:nth-child(4) {
-        width: 100%;
-        border-top: none;
-        margin-top: 0;
-      }
-    }
-    &-heading {
-      display: flex;
-      align-items: center;
-      margin-bottom: 2rem;
-      img {
-        width: 5rem;
-      }
-      h4 {
-        font-size: $heading-4;
-        font-family: $font-source-sans;
-        font-weight: $bold;
-        color: $color-neutral;
-        margin-left: 3rem;
-      }
-    }
-    &-text {
-      font-size: $paragraph-1;
-      font-family: $font-open-sans;
-      font-weight: $light;
-      color: $color-neutral;
+    p {
+      @include paragraph-dark;
     }
   }
 }

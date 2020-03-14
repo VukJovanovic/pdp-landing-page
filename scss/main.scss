@@ -4,6 +4,9 @@
 @import './base/helperClasses';
 @import './layout/grid.scss';
 
+// Mixins
+@import './utils/mixins';
+
 // Components
 @import './components/header';
 @import './components/buttons';
@@ -11,6 +14,8 @@
 
 // Sections
 @import './sections/welcome';
+@import './sections/benefits';
+@import './sections/features';
 @import './sections/about';
 @import './sections/howItWorks';
 @import './sections/testimonials';

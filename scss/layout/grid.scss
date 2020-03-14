@@ -2,12 +2,13 @@
 // Grid layout that is the same for all main sections
 .header,
 .welcome,
+.benefits,
 .about,
 .howItWorks,
 .testimonials,
 .faq,
 .pricing,
-.contact {
+.features {
   display: grid;
   grid-template-columns: minmax(130px, 1fr) minmax(min-content, 1520px) minmax(
       130px,
@@ -53,14 +54,19 @@
       grid-row-gap: 2rem;
     }
   }
+  &__text {
+    grid-column: 1 / 2;
+  }
   &__video {
     grid-row: 1 / -1;
+    grid-column: 2 / 3;
     @media only screen and (max-width: 1070px) {
       grid-row: 2 / 3;
+      grid-column: 1 / -1;
     }
   }
   &__cta {
-    grid-column: 2 / 3;
+    grid-column: 1 / 2;
     grid-row: 2 / 3;
     @media only screen and (max-width: 1070px) {
       grid-column: 1 / -1;
@@ -80,7 +86,6 @@
     grid-column: 2 / 3;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(4, max-content);
     @media only screen and(max-width: 1024px) {
       grid-template-columns: 2fr 1fr;
       grid-gap: 4rem;
@@ -91,25 +96,24 @@
       grid-gap: 0;
     }
   }
-  &__imageContainer-2 {
-    @media only screen and(max-width: 800px) {
-      grid-row: 5 / 6;
-    }
-  }
   &__heading {
     grid-column: 1 / -1;
   }
   &__cta {
-    grid-column: 1 / -1;
+    grid-column: 1 / 2;
   }
 }
 
-// Grid layout for how it works section
-.howItWorks {
+// Grid layout for benefits section
+.benefits {
   &__content {
     grid-column: 2 / 3;
+  }
+
+  &__cards {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
     column-gap: 2rem;
 
     @media only screen and (max-width: 1024px) {
@@ -118,17 +122,56 @@
     @media only screen and (max-width: 580px) {
       grid-template-columns: 1fr;
     }
+    .benefits__card {
+      &:nth-child(3) {
+        @media only screen and (max-width: 1024px) {
+          grid-column: 1 / -1;
+        }
+      }
+    }
+  }
+}
+
+// Grid layout for features section
+.features {
+  &__content {
+    grid-column: 2 / 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    @media only screen and(max-width: 1024px) {
+      grid-template-columns: 1fr;
+    }
   }
   &__heading {
     grid-column: 1 / -1;
   }
-
-  &__card {
-    &:nth-child(4) {
-      @media only screen and (max-width: 1024px) {
-        grid-column: 1 / -1;
-      }
+  &__images {
+    @media only screen and(max-width: 1024px) {
+      grid-row: 3 / 4;
     }
+  }
+  &__container {
+    @media only screen and(max-width: 1024px) {
+      grid-row: 2 / 3;
+      margin-bottom: 5rem;
+    }
+  }
+}
+
+// Grid layout for how it works section
+.howItWorks {
+  &__content {
+    grid-column: 2 / 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    @media only screen and(max-width: 1024px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__heading {
+    grid-column: 1 / -1;
   }
 }
 
@@ -163,28 +206,12 @@
 .pricing {
   &__content {
     grid-column: 2 / 3;
-  }
-  &__cards {
-    justify-content: center;
     display: grid;
-    grid-template-columns: repeat(3, max-content);
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
 
-    @media only screen and (max-width: 1230px) {
-      grid-template-columns: repeat(2, max-content);
-      grid-row-gap: 4rem;
-    }
-    @media only screen and (max-width: 860px) {
-      grid-template-columns: max-content;
-      grid-row-gap: 4rem;
-    }
-  }
-
-  &__card {
-    @media only screen and (max-width: 1230px) {
-      &:nth-child(3) {
-        grid-column: 1 / -1;
-        justify-self: center;
-      }
+    @media only screen and (max-width: 1024px) {
+      grid-template-columns: 1fr;
     }
   }
 }
@@ -193,23 +220,5 @@
 .faq {
   &__container {
     grid-column: 2 / 3;
-  }
-}
-
-// grid layout for contact section
-.contact {
-  &__heading {
-    grid-column: 2 / 3;
-  }
-  &__content {
-    grid-column: 2 / 3;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 15rem;
-
-    @media only screen and(max-width: 800px) {
-      grid-template-columns: 1fr;
-      grid-gap: 5rem;
-    }
   }
 }

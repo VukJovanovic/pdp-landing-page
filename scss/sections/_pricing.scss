@@ -8,94 +8,27 @@
     padding-left: 2rem;
     margin-bottom: 10rem;
     &-h2 {
-      font-family: $font-source-sans;
-      font-size: $heading-2;
-      letter-spacing: $heading-letter-spacing;
-      color: $color-primary;
-      font-weight: $bold;
+      @include heading-2-light;
     }
     &-h3 {
-      font-family: $font-source-sans;
-      font-size: $heading-3;
-      color: $font-danger;
-      font-weight: $light;
+      @include heading-3-light;
     }
   }
-
+  &__text {
+    &-p {
+      @include paragraph-light;
+    }
+  }
   &__card {
-    border-radius: 10px;
+    justify-self: right;
     width: 35rem;
-    // background-color: $color-secondary;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
-    // padding: 2rem;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    margin-right: 2rem;
-    transition: transform 0.4s ease;
+    height: 50rem;
+    border-radius: 10px;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.3);
 
-    &:hover {
-      transform: translateY(-10px);
-      z-index: 2;
-    }
-    &-heading {
-      padding-top: 2rem;
-      text-align: center;
-      background-color: $color-primary;
-      border-radius: 0 0 100% 100%;
-      margin: 0rem 3rem 3rem 3rem;
-    }
-
-    &-plan {
-      font-family: $font-source-sans;
-      font-size: $heading-2;
-      font-weight: $light;
-      color: $font-secondary;
-      padding-bottom: 2rem;
-      margin: 0 3rem;
-      border-bottom: 1px solid $color-secondary;
-    }
-    &-price {
-      margin: 3rem 0;
-      font-family: $font-open-sans;
-      font-size: 4rem;
-      font-weight: $light;
-      color: $font-secondary;
-    }
-    &-feature {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 1.5rem;
-      img {
-        width: 2rem;
-        margin-right: 2rem;
-      }
-      p {
-        font-family: $font-open-sans;
-        font-size: $paragraph-1;
-        color: $font-primary;
-        font-weight: $light;
-      }
-    }
-    &-cta {
-      margin: 3rem 0;
-      background-color: $color-danger;
-      font-family: $font-source-sans;
-      font-size: $paragraph-2;
-      padding: 1.5rem 2rem;
-      color: $font-secondary;
-      width: 20rem;
-      text-align: center;
-      border-radius: 5px;
-      align-self: center;
-      box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
-      transition: transform 0.4s;
-      &:hover {
-        transform: translateY(-5px);
-      }
+    @media only screen and (max-width: 1024px) {
+      justify-self: center;
+      margin-top: 5rem;
     }
   }
 }
