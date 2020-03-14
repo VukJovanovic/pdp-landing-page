@@ -2,10 +2,16 @@
   width: 100%;
   padding: 10rem 0;
   background-color: $color-primary;
+  @media only screen and(max-width: 800px) {
+    padding: 6rem 0;
+  }
   &__heading {
     border-left: 1px solid $color-danger;
     padding-left: 2rem;
     margin-bottom: 10rem;
+    @media only screen and(max-width: 800px) {
+      margin-bottom: 6rem;
+    }
     &-h2 {
       @include heading-2-dark;
     }
