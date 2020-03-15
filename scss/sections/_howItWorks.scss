@@ -37,23 +37,27 @@
     }
   }
   .howItWork__text-block {
-    display: flex;
-    align-items: center;
     margin-bottom: 4rem;
     @media only screen and(max-width: 1024px) {
       padding: 0 2rem;
     }
   }
-  .howItWork__text-image {
-    width: 6rem;
-    margin-right: 3rem;
-  }
-  .howItWork__text-content {
+  .howItWork__text-heading {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
     h4 {
       @include heading-4-dark;
       margin-bottom: 1rem;
       margin-left: 0;
     }
+  }
+  .howItWork__text-image {
+    width: 5rem;
+    margin-right: 3rem;
+  }
+
+  .howItWork__text-content {
     p {
       @include paragraph-dark;
     }
