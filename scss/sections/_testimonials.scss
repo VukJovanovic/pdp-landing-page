@@ -1,64 +1,68 @@
 .testimonials {
   padding: 10rem 0;
-
+  width: 100vw;
+  background-color: $color-primary;
   @media only screen and(max-width: 800px) {
     padding: 6rem 0;
   }
   &__heading {
-    border-left: 1px solid $color-primary;
-    padding-left: 2rem;
+    text-align: center;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid $color-secondary;
+    width: max-content;
+    margin: 0 auto;
     margin-bottom: 10rem;
     @media only screen and(max-width: 800px) {
       margin-bottom: 6rem;
     }
     &-h2 {
-      font-family: $font-source-sans;
-      font-size: $heading-2;
-      letter-spacing: $heading-letter-spacing;
-      color: $color-primary;
-      font-weight: $bold;
+      @include heading-2-dark;
     }
     &-h3 {
-      font-family: $font-source-sans;
-      font-size: $heading-3;
-      color: $font-danger;
-      font-weight: $light;
+      @include heading-3-dark;
     }
   }
-
-  &__cards {
-    .testimonial__card {
-      background-color: $color-primary;
-      position: relative;
-      border-radius: 10px;
-      padding: 3rem;
-      &:nth-child(3) {
-        @media only screen and (max-width: 1024px) {
-          width: 40rem;
-          justify-self: center;
-        }
-        @media only screen and (max-width: 580px) {
-          width: 100%;
-        }
-      }
-      img {
-        position: absolute;
-        top: 2rem;
-        left: 2rem;
-        z-index: 1;
-        width: 9rem;
-      }
-      p {
-        position: relative;
-        z-index: 2;
-        font-size: $paragraph-1;
-        font-family: $font-open-sans;
-        color: $font-secondary;
-      }
-      &-text {
-        font-weight: $light;
-        margin-bottom: 3rem;
-      }
+  &__content {
+    margin: 0 auto;
+    max-width: 1520px;
+    padding: 0 130px;
+  }
+  .owl-dots {
+    text-align: center;
+    padding-top: 4rem;
+  }
+  .owl-dots button.owl-dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: inline-block;
+    background: $color-neutral;
+    margin: 0 5px;
+  }
+  .owl-dots button.owl-dot.active {
+    background-color: $color-danger;
+  }
+  .owl-dots button.owl-dot:focus {
+    outline: none;
+  }
+  .carousel__item {
+    background-color: $color-neutral;
+    border-radius: 5px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img {
+      width: 5rem;
+      margin-bottom: 2rem;
+    }
+    &-p {
+      @include paragraph-light;
+      text-align: center;
+    }
+    &-author {
+      @include paragraph-light;
+      font-weight: $bold;
     }
   }
 }

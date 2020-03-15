@@ -28,9 +28,39 @@
     height: 50rem;
     border-radius: 10px;
     box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.3);
-
+    background-color: $color-secondary;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     @media only screen and (max-width: 1024px) {
       justify-self: center;
+      margin-top: 5rem;
+    }
+    @media only screen and(max-width: 450px) {
+      width: 30rem;
+    }
+
+    &-price {
+      font-family: $font-source-sans;
+      font-size: 7rem;
+      color: $font-secondary;
+      font-weight: $light;
+      margin-bottom: 3rem;
+    }
+    &-feature {
+      font-family: $font-open-sans;
+      font-size: $paragraph-1;
+      font-weight: $light;
+      color: $font-secondary;
+      margin-bottom: 1.5rem;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    &-cta {
+      @include button;
+      background-color: $color-danger;
       margin-top: 5rem;
     }
   }

@@ -7,6 +7,8 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
     />
     <title>Purpose Driven Planner | Start planning your day</title>
+    <link rel="stylesheet" href="./css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./css/owl.theme.default.min.css">
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
@@ -218,41 +220,41 @@
           <img src="./img/phone.svg" alt="">
         </div>
         <div class="features__container">
-          <!-- Feature row 1 -->
-          <div class="features__container-row">
+          <!-- features row 1 -->
+          <div class="features__row">
             <div class="features__block">
-              <div class="features__block-heading">
-                <img src="./img/tick.svg" alt="">
-                <h4>Feature Name</h4>
+              <img src="./img/tick.svg" alt="" class="features__block-image">
+              <div class="features__block-text">
+                <h4 class="features__block-h4">Feature name</h4>
+                <p class="features__block-p">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum sit omnis temporibus, ut non quaerat ratione incidunt vitae quisquam ducimus!</p>
               </div>
-              <p class="features__block-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates vel iusto quidem fugit corrupti culpa.</p>
             </div>
             <div class="features__block">
-              <div class="features__block-heading">
-                <img src="./img/tick.svg" alt="">
-                <h4>Feature Name</h4>
+              <img src="./img/tick.svg" alt="" class="features__block-image">
+              <div class="features__block-text">
+                <h4 class="features__block-h4">Feature name</h4>
+                <p class="features__block-p">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum sit omnis temporibus, ut non quaerat ratione incidunt vitae quisquam ducimus!</p>
               </div>
-              <p class="features__block-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam qui eum vel consequatur unde et.</p>
-            </div>
-          </div>
-          <!-- Feature row 2 -->
-          <div class="features__container-row">
-            <div class="features__block">
-              <div class="features__block-heading">
-                <img src="./img/tick.svg" alt="">
-                <h4>Feature Name</h4>
-              </div>
-              <p class="features__block-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates vel iusto quidem fugit corrupti culpa.</p>
-            </div>
-            <div class="features__block">
-              <div class="features__block-heading">
-                <img src="./img/tick.svg" alt="">
-                <h4>Feature Name</h4>
-              </div>
-              <p class="features__block-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam qui eum vel consequatur unde et.</p>
             </div>
           </div>
-        </div>
+          <!-- Features row 2 -->
+          <div class="features__row">
+            <div class="features__block">
+              <img src="./img/tick.svg" alt="" class="features__block-image">
+              <div class="features__block-text">
+                <h4 class="features__block-h4">Feature name</h4>
+                <p class="features__block-p">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum sit omnis temporibus, ut non quaerat ratione incidunt vitae quisquam ducimus!</p>
+              </div>
+            </div>
+            <div class="features__block">
+              <img src="./img/tick.svg" alt="" class="features__block-image">
+              <div class="features__block-text">
+                <h4 class="features__block-h4">Feature name</h4>
+                <p class="features__block-p">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum sit omnis temporibus, ut non quaerat ratione incidunt vitae quisquam ducimus!</p>
+              </div>
+            </div>
+          </div>
+        </div>  
       </div>
     </section>
     <!-- How it works section -->
@@ -311,23 +313,18 @@
           <p class="pricing__text-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam commodi itaque eius dolorum adipisci minima.</p>
           <p class="pricing__text-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, omnis non! Rerum, tenetur, officia neque possimus quos nisi ipsam optio officiis sunt inventore consectetur veniam.</p>
         </div>
-        <div class="pricing__card"></div>
+        <div class="pricing__card">
+          <p class="pricing__card-price">$9.99</p>
+          <p class="pricing__card-feature">Lorem ipsum dolor sit.</p>
+          <p class="pricing__card-feature">Lorem ipsum dolor sit.</p>
+          <p class="pricing__card-feature">Lorem ipsum dolor sit.</p>
+          <p class="pricing__card-feature">Lorem ipsum dolor sit.</p>
+          <a href="#" class="pricing__card-cta">Get Started</a>
+        </div>
       </div>
     </section>
 
-    <!-- Email newsletter -->
-    <section class="newsletter">
-      <div class="newsletter__content">
-        <div class="newsletter__heading">
-          <h2 class="newsletter__heading-h2">Join our email list</h2>
-          <h3 class="newsletter__heading-h3">Receive promotions and news</h3>
-        </div>
-        <div class="newsletter__form">
-          <input type="text" placeholder="Enter your email" required />
-          <a href="#" class="newsletter__subscribe">Subscribe</a>
-        </div>
-      </div>
-    </section>
+    
 
     <!-- Testimonials section -->
     <section class="testimonials">
@@ -338,40 +335,63 @@
             See what others say about PDP
           </h3>
         </div>
-        <div class="testimonials__cards">
-          <div class="testimonial__card">
-            <img src="./img/quote.svg" alt="" />
-            <p class="testimonial__card-text">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab
-              dolores eveniet veniam facilis vel consectetur odit ipsum optio
-              nobis officiis.
-            </p>
-            <p class="testimonial__card-author">--John Doe</p>
+        <div class="owl-carousel">
+          <div class="carousel__item">
+            <img src="./img/quote.svg" alt="">
+            <p class="carousel__item-p">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt, laboriosam quidem? Nobis, ratione reiciendis! Magni?</p>
+            <p class="carousel__item-author">-- Tony Robbins</p>
           </div>
-          <div class="testimonial__card">
-            <img src="./img/quote.svg" alt="" />
-            <p class="testimonial__card-text">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab
-              dolores eveniet veniam facilis vel consectetur odit ipsum optio
-              nobis officiis.
-            </p>
-            <p class="testimonial__card-author">--John Doe</p>
+          <div class="carousel__item">
+            <img src="./img/quote.svg" alt="">
+            <p class="carousel__item-p">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt, laboriosam quidem? Nobis, ratione reiciendis! Magni?</p>
+            <p class="carousel__item-author">-- Tony Robbins</p>
           </div>
-          <div class="testimonial__card">
-            <img src="./img/quote.svg" alt="" />
-            <p class="testimonial__card-text">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab
-              dolores eveniet veniam facilis vel consectetur odit ipsum optio
-              nobis officiis.
-            </p>
-            <p class="testimonial__card-author">--John Doe</p>
+          <div class="carousel__item">
+            <img src="./img/quote.svg" alt="">
+            <p class="carousel__item-p">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt, laboriosam quidem? Nobis, ratione reiciendis! Magni?</p>
+            <p class="carousel__item-author">-- Tony Robbins</p>
+          </div>
+          <div class="carousel__item">
+            <img src="./img/quote.svg" alt="">
+            <p class="carousel__item-p">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt, laboriosam quidem? Nobis, ratione reiciendis! Magni?</p>
+            <p class="carousel__item-author">-- Tony Robbins</p>
+          </div>
+          <div class="carousel__item">
+            <img src="./img/quote.svg" alt="">
+            <p class="carousel__item-p">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt, laboriosam quidem? Nobis, ratione reiciendis! Magni?</p>
+            <p class="carousel__item-author">-- Tony Robbins</p>
+          </div>
+          <div class="carousel__item">
+            <img src="./img/quote.svg" alt="">
+            <p class="carousel__item-p">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt, laboriosam quidem? Nobis, ratione reiciendis! Magni?</p>
+            <p class="carousel__item-author">-- Tony Robbins</p>
+          </div>
+          <div class="carousel__item">
+            <img src="./img/quote.svg" alt="">
+            <p class="carousel__item-p">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt, laboriosam quidem? Nobis, ratione reiciendis! Magni?</p>
+            <p class="carousel__item-author">-- Tony Robbins</p>
           </div>
         </div>
       </div>
     </section>
 
+
+    <!-- Email newsletter -->
+    <!-- <section class="newsletter">
+      <div class="newsletter__content">
+        <div class="newsletter__heading">
+          <h2 class="newsletter__heading-h2">Join our email list</h2>
+          <h3 class="newsletter__heading-h3">Receive promotions and news</h3>
+        </div>
+        <div class="newsletter__form">
+          <input type="text" placeholder="Enter your email" required />
+          <a href="#" class="newsletter__subscribe">Subscribe</a>
+        </div>
+      </div>
+    </section> -->
+
     <!-- FAQ section -->
-    <section class="faq" id="faq">
+    <!-- <section class="faq" id="faq">
       <div class="faq__container">
         <div class="faq__container-heading">
           <h2 class="faq__container-heading-h2">FAQ</h2>
@@ -485,8 +505,32 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="./js/carousel.js"></script>
+    <script src="./js/owl.carousel.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $(".owl-carousel").owlCarousel({
+          autoplay: true,
+          responsiveClass: true,
+          loop:true,
+          margin:40,
+          nav: true,
+          responsive: {
+            0: {
+              items: 1
+            },
+            760: {
+              items: 2
+            },
+            1150: {
+              items: 3
+            }
+          }
+        });
+      });
+    </script>
     <script src="./js/bundle.js"></script>
   </body>
 </html>
