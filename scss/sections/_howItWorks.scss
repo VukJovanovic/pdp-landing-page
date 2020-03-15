@@ -40,6 +40,9 @@
     display: flex;
     align-items: center;
     margin-bottom: 4rem;
+    @media only screen and(max-width: 1024px) {
+      padding: 0 2rem;
+    }
   }
   .howItWork__text-image {
     width: 6rem;

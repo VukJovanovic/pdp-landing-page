@@ -144,7 +144,7 @@
   }
   &__images {
     @media only screen and(max-width: 1024px) {
-      grid-row: 3 / 4;
+      display: none;
     }
   }
   &__container {
@@ -153,7 +153,6 @@
     grid-gap: 5rem;
     @media only screen and(max-width: 1024px) {
       grid-template-columns: 1fr;
-      grid-row: 2 / 3;
       margin-bottom: 5rem;
     }
   }
