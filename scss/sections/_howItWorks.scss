@@ -1,65 +1,70 @@
 .howItWorks {
-  padding: 10rem 0 15rem 0;
-  background-color: $color-primary;
-  width: 100vw;
-  height: max-content;
+	padding: 10rem 0 15rem 0;
+	background-color: $color-primary;
+	width: 100vw;
+	height: max-content;
 
-  @media only screen and(max-width: 800px) {
-    padding: 6rem 0;
-  }
+	@media only screen and(max-width: 800px) {
+		padding: 6rem 0;
+	}
 
-  &__heading {
-    border-left: 1px solid $color-danger;
-    padding-left: 2rem;
-    margin-bottom: 10rem;
-    @media only screen and(max-width: 800px) {
-      margin-bottom: 6rem;
-    }
+	&__heading {
+		border-left: 1px solid $color-danger;
+		padding-left: 2rem;
+		margin-bottom: 10rem;
+		@media only screen and(max-width: 800px) {
+			margin-bottom: 6rem;
+		}
 
-    &-h2 {
-      @include heading-2-dark;
-    }
-    &-h3 {
-      @include heading-3-dark;
-    }
-  }
-  .howItWork__image {
-    display: flex;
-    justify-content: center;
-    img {
-      width: 25rem;
-      height: 40rem;
-    }
-  }
-  .howItWork__text {
-    @media only screen and(max-width: 1024px) {
-      margin-bottom: 5rem;
-    }
-  }
-  .howItWork__text-block {
-    margin-bottom: 4rem;
-    @media only screen and(max-width: 1024px) {
-      padding: 0 2rem;
-    }
-  }
-  .howItWork__text-heading {
-    display: flex;
-    align-items: center;
-    margin-bottom: 2rem;
-    h4 {
-      @include heading-4-dark;
-      margin-bottom: 1rem;
-      margin-left: 0;
-    }
-  }
-  .howItWork__text-image {
-    width: 5rem;
-    margin-right: 3rem;
-  }
+		&-h2 {
+			@include heading-2-dark;
+		}
+		&-h3 {
+			@include heading-3-dark;
+		}
+	}
+	.howItWork__image {
+		display: flex;
+		justify-content: center;
+		img {
+			width: 25rem;
+			height: 40rem;
+		}
+	}
+	.howItWork__text {
+		@media only screen and(max-width: 1024px) {
+			margin-bottom: 5rem;
+		}
+	}
+	.howItWork__text-block {
+		margin-bottom: 4rem;
+		border-bottom: 1px solid $color-secondary;
+		padding-bottom: 2rem;
+		&:last-child {
+			border-bottom: none;
+		}
+		@media only screen and(max-width: 1024px) {
+			padding: 0 2rem 2rem 2rem;
+		}
+	}
+	.howItWork__text-heading {
+		display: flex;
+		align-items: center;
+		margin-bottom: 2rem;
+		h4 {
+			@include heading-4-dark;
+			margin-bottom: 1rem;
+			margin-left: 0;
+		}
+	}
+	.howItWork__text-image {
+		width: 5rem;
+		margin-right: 3rem;
+	}
 
-  .howItWork__text-content {
-    p {
-      @include paragraph-dark;
-    }
-  }
+	.howItWork__text-content {
+		p {
+			@include paragraph-dark;
+		}
+	}
 }
