@@ -196,8 +196,8 @@ a {
 @media only screen and (max-width: 1024px) {
   .features__container {
     grid-template-columns: 1fr;
-    grid-template-rows: -webkit-max-content;
-    grid-template-rows: max-content;
+    grid-template-rows: -webkit-max-content -webkit-max-content -webkit-max-content -webkit-max-content;
+    grid-template-rows: max-content max-content max-content max-content;
     margin-bottom: 5rem;
   }
 }
