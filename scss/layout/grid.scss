@@ -8,189 +8,190 @@
 .faq,
 .pricing,
 .features {
-  display: grid;
-  grid-template-columns: minmax(130px, 1fr) minmax(min-content, 1520px) minmax(
-      130px,
-      1fr
-    );
+	display: grid;
+	grid-template-columns: minmax(130px, 1fr) minmax(min-content, 1520px) minmax(
+			130px,
+			1fr
+		);
 
-  @media only screen and (max-width: 1300px) {
-    grid-template-columns: minmax(70px, 1fr) minmax(min-content, 1520px) minmax(
-        70px,
-        1fr
-      );
-  }
-  @media only screen and (max-width: 700px) {
-    grid-template-columns: minmax(30px, 1fr) minmax(min-content, 1520px) minmax(
-        30px,
-        1fr
-      );
-  }
+	@media only screen and (max-width: 1300px) {
+		grid-template-columns: minmax(70px, 1fr) minmax(min-content, 1520px) minmax(
+				70px,
+				1fr
+			);
+	}
+	@media only screen and (max-width: 700px) {
+		grid-template-columns: minmax(30px, 1fr) minmax(min-content, 1520px) minmax(
+				30px,
+				1fr
+			);
+	}
 }
 
 // Grid layout for HEADER
 .header {
-  &__content {
-    grid-column: 2 / 3;
-  }
+	&__content {
+		grid-column: 2 / 3;
+	}
 }
 
 // Grid layout for welcome section
 .welcome {
-  &__content {
-    grid-column: 2 / 3;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: max-content max-content;
-    align-content: center;
-    grid-column-gap: 4rem;
+	&__content {
+		grid-column: 2 / 3;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: max-content max-content;
+		align-content: center;
+		grid-column-gap: 4rem;
 
-    @media only screen and (max-width: 1070px) {
-      grid-template-columns: 1fr;
-      grid-template-rows: max-content;
-      padding-top: 10rem;
-      padding-bottom: 10rem;
-      grid-row-gap: 2rem;
-    }
-  }
-  &__video {
-    grid-column: 1 / 2;
-    grid-row: 1 / -1;
-    @media only screen and (max-width: 1070px) {
-      grid-row: 2 / 3;
-      grid-column: 1 / -1;
-    }
-  }
-  &__cta {
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
-    @media only screen and (max-width: 1070px) {
-      grid-column: 1 / -1;
-      grid-row: 3 / 4;
-    }
-  }
-  @media only screen and (max-width: 1070px) {
-    &__text {
-      grid-row: 1;
-    }
-  }
+		@media only screen and (max-width: 1070px) {
+			grid-template-columns: 1fr;
+			grid-template-rows: max-content;
+			padding-top: 10rem;
+			padding-bottom: 10rem;
+			grid-row-gap: 2rem;
+		}
+	}
+	&__video {
+		grid-column: 1 / 2;
+		grid-row: 1 / -1;
+		@media only screen and (max-width: 1070px) {
+			grid-row: 2 / 3;
+			grid-column: 1 / -1;
+		}
+	}
+	&__cta {
+		grid-column: 2 / 3;
+		grid-row: 2 / 3;
+		@media only screen and (max-width: 1070px) {
+			grid-column: 1 / -1;
+			grid-row: 3 / 4;
+		}
+	}
+	@media only screen and (max-width: 1070px) {
+		&__text {
+			grid-row: 1;
+		}
+	}
 }
 
 // Grid layout for about section
 .about {
-  &__content {
-    grid-column: 2 / 3;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    @media only screen and(max-width: 1024px) {
-      grid-template-columns: 2fr 1fr;
-      grid-gap: 4rem;
-    }
+	&__content {
+		grid-column: 2 / 3;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		@media only screen and(max-width: 1024px) {
+			grid-template-columns: 2fr 1fr;
+			grid-gap: 4rem;
+		}
 
-    @media only screen and(max-width: 800px) {
-      grid-template-columns: 1fr;
-      grid-gap: 0;
-    }
-  }
-  &__heading {
-    grid-column: 1 / -1;
-  }
-  &__cta {
-    grid-column: 1 / 2;
-  }
+		@media only screen and(max-width: 800px) {
+			grid-template-columns: 1fr;
+			grid-gap: 0;
+		}
+	}
+	&__heading {
+		grid-column: 1 / -1;
+	}
+	&__cta {
+		grid-column: 1 / 2;
+	}
 }
 
 // Grid layout for benefits section
 .benefits {
-  &__content {
-    grid-column: 2 / 3;
-  }
+	&__content {
+		grid-column: 2 / 3;
+	}
 
-  &__cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: center;
-    column-gap: 2rem;
+	&__cards {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		justify-content: center;
+		column-gap: 2rem;
 
-    @media only screen and (max-width: 1024px) {
-      grid-template-columns: 1fr 1fr;
-    }
-    @media only screen and (max-width: 580px) {
-      grid-template-columns: 1fr;
-    }
-    .benefits__card {
-      &:nth-child(3) {
-        @media only screen and (max-width: 1024px) {
-          grid-column: 1 / -1;
-        }
-      }
-    }
-  }
+		@media only screen and (max-width: 1024px) {
+			grid-template-columns: 1fr 1fr;
+		}
+		@media only screen and (max-width: 580px) {
+			grid-template-columns: 1fr;
+		}
+		.benefits__card {
+			&:nth-child(3) {
+				@media only screen and (max-width: 1024px) {
+					grid-column: 1 / -1;
+				}
+			}
+		}
+	}
 }
 
 // Grid layout for features section
 .features {
-  &__content {
-    grid-column: 2 / 3;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    align-items: center;
-    @media only screen and(max-width: 1024px) {
-      grid-template-columns: 1fr;
-    }
-  }
-  &__heading {
-    grid-column: 1 / -1;
-  }
-  &__images {
-    @media only screen and(max-width: 1024px) {
-      display: none;
-    }
-  }
-  &__container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 5rem;
-    @media only screen and(max-width: 1024px) {
-      grid-template-columns: 1fr;
-      margin-bottom: 5rem;
-    }
-  }
+	&__content {
+		grid-column: 2 / 3;
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		align-items: center;
+		@media only screen and(max-width: 1024px) {
+			grid-template-columns: 1fr;
+			grid-template-rows: max-content;
+		}
+	}
+	&__heading {
+		grid-column: 1 / -1;
+	}
+	&__images {
+		@media only screen and(max-width: 1024px) {
+			display: none;
+		}
+	}
+	&__container {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 5rem;
+		@media only screen and(max-width: 1024px) {
+			grid-template-columns: 1fr;
+			margin-bottom: 5rem;
+		}
+	}
 }
 
 // Grid layout for how it works section
 .howItWorks {
-  &__content {
-    grid-column: 2 / 3;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    @media only screen and(max-width: 1024px) {
-      grid-template-columns: 1fr;
-    }
-  }
-  &__heading {
-    grid-column: 1 / -1;
-  }
+	&__content {
+		grid-column: 2 / 3;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		align-items: center;
+		@media only screen and(max-width: 1024px) {
+			grid-template-columns: 1fr;
+		}
+	}
+	&__heading {
+		grid-column: 1 / -1;
+	}
 }
 
 // Grid layout for pricing section
 .pricing {
-  &__content {
-    grid-column: 2 / 3;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
+	&__content {
+		grid-column: 2 / 3;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		align-items: center;
 
-    @media only screen and (max-width: 1024px) {
-      grid-template-columns: 1fr;
-    }
-  }
+		@media only screen and (max-width: 1024px) {
+			grid-template-columns: 1fr;
+		}
+	}
 }
 
 // Grid styles for FAQ section
 .faq {
-  &__container {
-    grid-column: 2 / 3;
-  }
+	&__container {
+		grid-column: 2 / 3;
+	}
 }
