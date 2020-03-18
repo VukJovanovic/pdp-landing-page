@@ -1,74 +1,81 @@
 .testimonials {
-  padding: 10rem 0;
-  width: 100vw;
-  background-color: $color-primary;
-  @media only screen and(max-width: 800px) {
-    padding: 6rem 0;
-  }
-  &__heading {
-    text-align: center;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid $color-secondary;
-    width: max-content;
-    margin: 0 auto;
-    margin-bottom: 10rem;
-    @media only screen and(max-width: 800px) {
-      margin-bottom: 6rem;
-    }
-    &-h2 {
-      @include heading-2-dark;
-    }
-    &-h3 {
-      @include heading-3-dark;
-    }
-  }
-  &__content {
-    margin: 0 auto;
-    max-width: 1520px;
-    padding: 0 130px;
-    @media only screen and (max-width: 1300px) {
-      padding: 0 70px;
-    }
-    @media only screen and (max-width: 700px) {
-      padding: 0 30px;
-    }
-  }
-  .owl-dots {
-    text-align: center;
-    padding-top: 4rem;
-  }
-  .owl-dots button.owl-dot {
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    display: inline-block;
-    background: $color-neutral;
-    margin: 0 5px;
-  }
-  .owl-dots button.owl-dot.active {
-    background-color: $color-danger;
-  }
-  .owl-dots button.owl-dot:focus {
-    outline: none;
-  }
-  .carousel__item {
-    background-color: $color-neutral;
-    border-radius: 5px;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    img {
-      width: 5rem;
-      margin-bottom: 2rem;
-    }
-    &-p {
-      @include paragraph-light;
-      text-align: center;
-    }
-    &-author {
-      @include paragraph-light;
-      font-weight: $bold;
-    }
-  }
+	padding: 10rem 0;
+	width: 100vw;
+	background-color: $color-primary;
+	@media only screen and(max-width: 800px) {
+		padding: 6rem 0;
+	}
+	&__heading {
+		text-align: center;
+		padding-bottom: 2rem;
+		border-bottom: 1px solid $color-secondary;
+		width: max-content;
+		margin: 0 auto;
+		margin-bottom: 10rem;
+		@media only screen and(max-width: 800px) {
+			margin: 0;
+			margin-bottom: 6rem;
+			text-align: left;
+			padding-bottom: 0;
+			padding-left: 2rem;
+			border-bottom: none;
+			width: 100%;
+			border-left: 1px solid $color-secondary;
+		}
+		&-h2 {
+			@include heading-2-dark;
+		}
+		&-h3 {
+			@include heading-3-dark;
+		}
+	}
+	&__content {
+		margin: 0 auto;
+		max-width: 1520px;
+		padding: 0 130px;
+		@media only screen and (max-width: 1300px) {
+			padding: 0 70px;
+		}
+		@media only screen and (max-width: 700px) {
+			padding: 0 30px;
+		}
+	}
+	.owl-dots {
+		text-align: center;
+		padding-top: 4rem;
+	}
+	.owl-dots button.owl-dot {
+		width: 15px;
+		height: 15px;
+		border-radius: 50%;
+		display: inline-block;
+		background: $color-neutral;
+		margin: 0 5px;
+	}
+	.owl-dots button.owl-dot.active {
+		background-color: $color-danger;
+	}
+	.owl-dots button.owl-dot:focus {
+		outline: none;
+	}
+	.carousel__item {
+		background-color: #fff;
+		border-radius: 5px;
+		padding: 2rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		img {
+			width: 5rem;
+			margin-bottom: 2rem;
+		}
+		&-p {
+			@include paragraph-light;
+			text-align: center;
+		}
+		&-author {
+			@include paragraph-light;
+			font-weight: $bold;
+		}
+	}
 }

@@ -1,72 +1,58 @@
 .newsletter {
-  display: flex;
-  justify-content: center;
-  padding: 10rem 0;
-  background-color: $color-primary;
-  @media only screen and(max-width: 800px) {
-    padding: 6rem 0;
-  }
-  &__heading {
-    text-align: center;
-    border-bottom: 1px solid $color-secondary;
-    padding-bottom: 2rem;
-    margin-bottom: 5rem;
-    &-h2 {
-      font-family: $font-source-sans;
-      font-size: $heading-2;
-      letter-spacing: $heading-letter-spacing;
-      color: $font-secondary;
-      font-weight: $bold;
-    }
-    &-h3 {
-      font-family: $font-source-sans;
-      font-size: $heading-3;
-      color: $font-danger;
-      font-weight: $light;
-    }
-  }
+	display: flex;
+	justify-content: center;
+	padding: 10rem 0;
+	background-color: $color-primary;
+	@media only screen and(max-width: 800px) {
+		padding: 6rem 0;
+	}
+	&__heading {
+		text-align: center;
+		border-bottom: 1px solid $color-secondary;
+		padding-bottom: 2rem;
+		margin-bottom: 5rem;
+		&-h2 {
+			@include heading-2-dark;
+		}
+		&-h3 {
+			@include heading-3-dark;
+		}
+	}
 
-  &__form {
-    display: flex;
-    align-items: center;
+	&__form {
+		display: flex;
+		align-items: center;
 
-    @media only screen and(max-width: 800px) {
-      flex-direction: column;
-    }
-    input {
-      font-family: $font-open-sans;
-      border-radius: 5px;
-      font-weight: $light;
-      color: $font-primary;
-      font-size: $paragraph-1;
-      padding: 1rem 2rem;
-      width: 30rem;
-      outline: none;
-      border: none;
-      transition: all 0.4s;
-      margin-right: 5rem;
+		@media only screen and(max-width: 800px) {
+			flex-direction: column;
+		}
+		input {
+			font-family: $font-open-sans;
+			border-radius: 5px;
+			font-weight: $light;
+			color: $font-primary;
+			font-size: $paragraph-1;
+			padding: 1rem 2rem;
+			width: 30rem;
+			outline: none;
+			border: none;
+			transition: all 0.4s;
+			margin-right: 5rem;
 
-      @media only screen and(max-width: 800px) {
-        margin-right: 0;
-        margin-bottom: 3rem;
-      }
-    }
-    input::placeholder {
-      font-family: $font-source-sans;
-    }
-    input:focus {
-      width: 32rem;
-    }
-  }
-  &__subscribe {
-    font-family: $font-source-sans;
-    font-size: $paragraph-1;
-    color: $font-secondary;
-    font-weight: $light;
-    padding: 1rem 2rem;
-    width: 15rem;
-    text-align: center;
-    border-radius: 5px;
-    background-color: $color-danger;
-  }
+			@media only screen and(max-width: 800px) {
+				margin-right: 0;
+				margin-bottom: 3rem;
+			}
+		}
+		input::placeholder {
+			font-family: $font-source-sans;
+		}
+		input:focus {
+			width: 32rem;
+		}
+	}
+	&__subscribe {
+		@include button;
+		background-color: $color-danger;
+	}
 }

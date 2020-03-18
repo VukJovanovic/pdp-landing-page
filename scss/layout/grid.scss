@@ -7,7 +7,9 @@
 .howItWorks,
 .faq,
 .pricing,
-.features {
+.features,
+.contact,
+.footer {
 	display: grid;
 	grid-template-columns: minmax(130px, 1fr) minmax(min-content, 1520px) minmax(
 			130px,
@@ -137,6 +139,7 @@
 		align-items: center;
 		@media only screen and(max-width: 1024px) {
 			grid-template-columns: 1fr;
+			align-items: flex-start;
 		}
 	}
 	&__heading {
@@ -153,7 +156,6 @@
 		grid-gap: 5rem;
 		@media only screen and(max-width: 1024px) {
 			grid-template-columns: 1fr;
-			grid-template-rows: max-content max-content max-content max-content;
 			margin-bottom: 5rem;
 		}
 	}
@@ -192,6 +194,23 @@
 // Grid styles for FAQ section
 .faq {
 	&__container {
+		grid-column: 2 / 3;
+	}
+}
+
+// Contact grid layout
+.contact {
+	&__content {
+		grid-column: 2 / 3;
+	}
+}
+
+// Footer
+.footer {
+	&__content {
+		grid-column: 2 / 3;
+	}
+	&__copy {
 		grid-column: 2 / 3;
 	}
 }

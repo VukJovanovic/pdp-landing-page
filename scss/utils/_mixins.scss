@@ -1,100 +1,132 @@
 // ************** Common button styles ***************
 @mixin button {
-  display: block;
-  width: 25rem;
-  border-radius: 5px;
-  font-family: $font-source-sans;
-  font-size: $paragraph-2;
-  font-weight: $light;
-  color: $font-secondary;
-  padding: 1rem 0;
-  text-align: center;
-  transition: transform 0.4s;
-  &:hover {
-    transform: translateY(-5px);
-  }
+	display: block;
+	width: 25rem;
+	border-radius: 5px;
+	font-family: $font-source-sans;
+	font-size: $paragraph-2;
+	font-weight: $light;
+	color: $font-secondary;
+	padding: 1rem 0;
+	text-align: center;
+	transition: transform 0.4s;
+	&:hover {
+		transform: translateY(-5px);
+	}
 }
 
 // ************** Paragraph styles **************
 // Main paragraph style for light backgrounds
 @mixin paragraph-light {
-  font-size: $paragraph-1;
-  font-weight: $light;
-  font-family: $font-open-sans;
-  line-height: 3rem;
-  margin-bottom: 2rem;
-  color: &color-dark;
-  &:last-child {
-    margin-bottom: 0;
-  }
+	font-size: $paragraph-1;
+	font-weight: $light;
+	font-family: $font-open-sans;
+	line-height: 3rem;
+	margin-bottom: 2rem;
+	color: &color-dark;
+	&:last-child {
+		margin-bottom: 0;
+	}
 }
 
 @mixin paragraph-light-small {
-  font-size: $small;
-  font-weight: $light;
-  font-family: $font-open-sans;
-  line-height: 2rem;
-  margin-bottom: 2rem;
-  color: &color-dark;
-  &:last-child {
-    margin-bottom: 0;
-  }
+	font-size: $small;
+	font-weight: $light;
+	font-family: $font-open-sans;
+	line-height: 2rem;
+	margin-bottom: 2rem;
+	color: &color-dark;
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+@mixin paragraph-dark-small {
+	font-size: $small;
+	font-weight: $light;
+	font-family: $font-open-sans;
+	line-height: 2rem;
+	margin-bottom: 2rem;
+	color: $font-secondary;
+	&:last-child {
+		margin-bottom: 0;
+	}
 }
 
 // Main paragraph style for dark background
 @mixin paragraph-dark {
-  font-size: $paragraph-1;
-  font-family: $font-open-sans;
-  font-weight: $light;
-  color: $font-secondary;
-  line-height: 3rem;
+	font-size: $paragraph-1;
+	font-family: $font-open-sans;
+	font-weight: $light;
+	color: $font-secondary;
+	line-height: 3rem;
 }
 
 // **************  Heading styles ***************
 
 // heading 2 on light background
 @mixin heading-2-light {
-  font-family: $font-source-sans;
-  font-size: $heading-2;
-  letter-spacing: $heading-letter-spacing;
-  color: $font-primary;
-  font-weight: $bold;
+	font-family: $font-source-sans;
+	font-size: $heading-2;
+	letter-spacing: $heading-letter-spacing;
+	color: $font-primary;
+	font-weight: $bold;
 }
 // heading 3 on light background
 @mixin heading-3-light {
-  font-family: $font-source-sans;
-  font-size: $heading-3;
-  color: $font-danger;
-  font-weight: $light;
+	font-family: $font-source-sans;
+	font-size: $heading-3;
+	color: $font-danger;
+	font-weight: $light;
 }
 // heading 2 on dark background
 @mixin heading-2-dark {
-  font-family: $font-source-sans;
-  font-size: $heading-2;
-  letter-spacing: $heading-letter-spacing;
-  color: $font-secondary;
-  font-weight: $bold;
+	font-family: $font-source-sans;
+	font-size: $heading-2;
+	letter-spacing: $heading-letter-spacing;
+	color: $font-secondary;
+	font-weight: $bold;
 }
 // heading 2 on dark background
 @mixin heading-3-dark {
-  font-family: $font-source-sans;
-  font-size: $heading-3;
-  color: $font-danger;
-  font-weight: $light;
+	font-family: $font-source-sans;
+	font-size: $heading-3;
+	color: $font-danger;
+	font-weight: $light;
+}
+@mixin heading-3-light {
+	font-family: $font-source-sans;
+	font-size: $heading-3;
+	color: $font-primary;
+	font-weight: $bold;
+}
+
+@mixin heading-3-dark-2 {
+	font-family: $font-source-sans;
+	font-size: $heading-3;
+	color: $font-secondary;
+	font-weight: $light;
 }
 
 // heading 4 on dark background
 @mixin heading-4-dark {
-  font-size: $heading-3;
-  font-family: $font-source-sans;
-  font-weight: $bold;
-  color: $font-secondary;
-  margin-left: 3rem;
+	font-size: $heading-3;
+	font-family: $font-source-sans;
+	font-weight: $bold;
+	color: $font-secondary;
+	margin-left: 3rem;
+}
+
+@mixin heading-4-dark-small {
+	font-size: $paragraph-1;
+	font-family: $font-source-sans;
+	font-weight: $bold;
+	color: $font-secondary;
 }
 @mixin heading-4-light {
-  font-size: $heading-3;
-  font-family: $font-source-sans;
-  font-weight: $bold;
-  color: $font-primary;
-  margin-left: 3rem;
+	font-size: $heading-3;
+	font-family: $font-source-sans;
+	font-weight: $bold;
+	color: $font-primary;
+	margin-left: 3rem;
 }
