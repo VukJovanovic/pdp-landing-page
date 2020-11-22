@@ -42,7 +42,7 @@
 			width: 40rem;
 			padding: 1rem 1rem;
 			border-bottom: 1px solid $color-secondary;
-
+			-webkit-appearance: none;
 			font-family: $font-open-sans;
 			font-size: 1.6rem;
 			border-radius: 5px 5px 0 0;
@@ -115,6 +115,7 @@
 			cursor: pointer;
 			color: $color-neutral;
 			border-bottom: none;
+			-webkit-appearance: none;
 			&:focus {
 				background-color: $color-primary;
 			}

@@ -12,9 +12,10 @@
     align-items: center;
 
     &-logo {
-      font-family: $font-source-sans;
-      font-size: $small;
+      font-family: $font-open-sans;
+      font-size: $big;
       color: $font-secondary;
+      font-weight: $bold;
     }
   }
 }
