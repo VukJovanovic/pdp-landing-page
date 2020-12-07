@@ -238,16 +238,6 @@ ul {
 
 .pricing__content {
   grid-column: 2/3;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-@media only screen and (max-width: 1024px) {
-  .pricing__content {
-    grid-template-columns: 1fr;
-  }
 }
 
 .faq__container {
@@ -543,6 +533,7 @@ ul {
   right: 0;
   width: 100%;
   height: 100%;
+  z-index: 20;
 }
 .welcome__text {
   display: -webkit-box;
@@ -902,6 +893,11 @@ ul {
   height: auto;
 }
 
+#aboutMe .about__content {
+  -webkit-column-gap: 5rem;
+     -moz-column-gap: 5rem;
+          column-gap: 5rem;
+}
 #aboutMe .about__content .about__imageContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1300,10 +1296,20 @@ ul {
 .pricing__text-p:last-child {
   margin-bottom: 0;
 }
+.pricing__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
 .pricing__card {
   justify-self: right;
-  width: 40rem;
   min-height: 46rem;
+  width: 30rem;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
@@ -1324,7 +1330,11 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 2rem 0;
+  padding: 2rem 2rem;
+  margin-right: 3rem;
+}
+.pricing__card:last-child {
+  margin-right: 0;
 }
 @media only screen and (max-width: 1024px) {
   .pricing__card {
@@ -1337,18 +1347,45 @@ ul {
     width: 30rem;
   }
 }
+.pricing__card-cta {
+  background-color: #2bc48a;
+  font-size: 2rem;
+  font-family: "Source Sans Pro", sans-serif;
+  color: #f7ebec;
+  font-weight: 300;
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  text-align: center;
+}
 .pricing__card-price {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 7rem;
   color: #f7ebec;
   font-weight: 300;
   margin-bottom: 3rem;
+  position: relative;
+}
+.pricing__card-price::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 50%;
+  height: 2px;
+  background-color: #2bc48a;
 }
 .pricing__card-feature {
   font-family: "Open Sans", sans-serif;
   font-size: 1.8rem;
   font-weight: 300;
   color: #f7ebec;
+  padding: 0 2rem;
+  text-align: center;
   margin-bottom: 1.5rem;
 }
 .pricing__card-feature:last-child {

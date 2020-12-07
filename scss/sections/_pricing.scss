@@ -23,10 +23,15 @@
       @include paragraph-light;
     }
   }
+  &__cards{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
   &__card {
     justify-self: right;
-    width: 40rem;
     min-height: 46rem;
+    width: 30rem;
     height: max-content;
     border-radius: 10px;
     box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.3);
@@ -35,7 +40,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2rem 0;
+    padding: 2rem 2rem;
+    margin-right: 3rem;
+    &:last-child{
+      margin-right: 0;
+    }
     @media only screen and (max-width: 1024px) {
       justify-self: center;
       margin-top: 5rem;
@@ -43,19 +52,44 @@
     @media only screen and(max-width: 450px) {
       width: 30rem;
     }
-
+    &-cta{
+      background-color: $color-danger;
+      font-size: 2rem;
+      font-family: $font-source-sans;
+      color: $font-secondary;
+      font-weight: $light;
+      padding: 1rem 2rem;
+      margin-top: 2rem;
+      border-radius: 10px;
+      width: 100%;
+      text-align: center;
+    }
     &-price {
       font-family: $font-source-sans;
       font-size: 7rem;
       color: $font-secondary;
       font-weight: $light;
       margin-bottom: 3rem;
+      position: relative;
+
+      &::after{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50%;
+        height: 2px;
+        background-color: $color-danger;
+      }
     }
     &-feature {
       font-family: $font-open-sans;
       font-size: $paragraph-1;
       font-weight: $light;
       color: $font-secondary;
+      padding: 0 2rem;
+      text-align: center;
       margin-bottom: 1.5rem;
       &:last-child {
         margin-bottom: 2rem;
