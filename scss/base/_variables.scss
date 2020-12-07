@@ -11,7 +11,7 @@ $font-secondary: #f7ebec;
 $font-danger:  #2bc48a;
 
 // Z-indexes
-$header-index: 20;
-$sidebar-index: 22;
-$sidebar-overlay: 21;
+$header-index: 10000;
+$sidebar-index: 10001;
+$sidebar-overlay: 10000;
 $btn-scrollTop: 23;

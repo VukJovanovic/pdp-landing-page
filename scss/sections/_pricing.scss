@@ -18,14 +18,16 @@
     }
   }
   &__text {
+    grid-column: 1 / -1;
     &-p {
       @include paragraph-light;
     }
   }
   &__card {
     justify-self: right;
-    width: 35rem;
-    height: 50rem;
+    width: 40rem;
+    min-height: 46rem;
+    height: max-content;
     border-radius: 10px;
     box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.3);
     background-color: $color-secondary;
@@ -33,6 +35,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 2rem 0;
     @media only screen and (max-width: 1024px) {
       justify-self: center;
       margin-top: 5rem;
@@ -55,13 +58,16 @@
       color: $font-secondary;
       margin-bottom: 1.5rem;
       &:last-child {
-        margin-bottom: 0;
+        margin-bottom: 2rem;
       }
     }
-    &-cta {
-      @include button;
-      background-color: $color-danger;
-      margin-top: 5rem;
-    }
   }
+}
+
+#smart-button-container{
+  margin-top: 2rem !important; 
+}
+
+#smart-button-container > * label{
+  color: $font-secondary !important;
 }

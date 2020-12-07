@@ -4,11 +4,18 @@
   background-color: $color-primary;
 
   &__video {
-    height: 40rem;
-    max-width: 60rem;
-    background-color: $color-secondary;
-    @media only screen and (max-width: 1070px) {
-      height: 30rem;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%;
+    iframe{
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
     }
   }
   &__text {

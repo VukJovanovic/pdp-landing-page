@@ -1,15 +1,15 @@
 .howItWorks {
 	padding: 10rem 0 15rem 0;
-	background-color: $color-primary;
+	background-color: #fff;
 	width: 100vw;
 	height: max-content;
-
+	
 	@media only screen and(max-width: 800px) {
 		padding: 6rem 0;
 	}
 
 	&__heading {
-		border-left: 1px solid $color-danger;
+		border-left: 1px solid $color-primary;
 		padding-left: 2rem;
 		margin-bottom: 10rem;
 		@media only screen and(max-width: 800px) {
@@ -17,28 +17,31 @@
 		}
 
 		&-h2 {
-			@include heading-2-dark;
+			@include heading-2-light;
 		}
 		&-h3 {
 			@include heading-3-dark;
+			color: $font-primary;
 		}
 	}
 	.howItWork__image {
-		display: flex;
-		justify-content: center;
-		img {
-			width: 25rem;
-			height: 40rem;
-		}
+		img{
+			width: 100%;
+			height: auto;
+    	}
 	}
 	.howItWork__text {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 3rem;
+		margin-right: 2rem;
 		@media only screen and(max-width: 1024px) {
 			margin-bottom: 5rem;
+			grid-template-columns: 1fr;
 		}
 	}
 	.howItWork__text-block {
 		margin-bottom: 4rem;
-		border-bottom: 1px solid $color-secondary;
 		padding-bottom: 2rem;
 		&:last-child {
 			border-bottom: none;
@@ -51,20 +54,24 @@
 		display: flex;
 		align-items: center;
 		margin-bottom: 2rem;
+		height: 60px;
 		h4 {
 			@include heading-4-dark;
 			margin-bottom: 1rem;
 			margin-left: 0;
+			color: $font-primary;
 		}
 	}
 	.howItWork__text-image {
 		width: 5rem;
+		height: 5rem;
 		margin-right: 3rem;
 	}
 
 	.howItWork__text-content {
 		p {
 			@include paragraph-dark;
+			color: $font-primary;
 		}
 	}
 }

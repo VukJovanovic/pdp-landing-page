@@ -46,18 +46,27 @@
   }
   &__imageContainer {
     display: flex;
-    justify-content: center;
     align-items: center;
     @media only screen and(max-width: 1024px) {
-      justify-content: flex-end;
+			margin-top: 5rem;
+		}
+    img{
+      width: 100%;
+      height: auto;
     }
-    @media only screen and(max-width: 800px) {
-      justify-content: center;
-      margin: 5rem 0rem;
-    }
-    img {
-      width: 25rem;
-      height: 40rem;
+  }
+}
+
+
+#aboutMe{
+  .about__content{
+    .about__imageContainer{
+      display: flex;
+      align-items: center;
+      img {
+        width: 100%;
+        height: auto;
+      }
     }
   }
 }

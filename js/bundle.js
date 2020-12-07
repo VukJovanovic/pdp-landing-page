@@ -1990,8 +1990,7 @@ exports.closeMenu = exports.openMenu = void 0;
 var sidebarOv = document.querySelector('.sidebarOverlay');
 var sidebar = document.querySelector('.sidebar');
 var closeSidebar = document.querySelector('.sidebar__close');
-var sidebarLinks = document.querySelectorAll('.sidebarNavigation__link');
-var sidebarSocialLinks = document.querySelectorAll('.sidebar__social-link');
+var sidebarLinks = document.querySelectorAll('.sidebarNavigation__link'); // const sidebarSocialLinks = document.querySelectorAll('.sidebar__social-link');
 
 var openMenu = function openMenu() {
   TweenMax.to(sidebar, 0.4, {
@@ -2016,16 +2015,11 @@ var openMenu = function openMenu() {
       delay: delay
     });
     delay += 0.1;
-  }
+  } // for (let i = 0; i < sidebarSocialLinks.length; i++) {
+  //   TweenMax.to(sidebarSocialLinks[i], 0.4, { opacity: 1, y: 0, delay });
+  //   delay += 0.1;
+  // }
 
-  for (var _i = 0; _i < sidebarSocialLinks.length; _i++) {
-    TweenMax.to(sidebarSocialLinks[_i], 0.4, {
-      opacity: 1,
-      y: 0,
-      delay: delay
-    });
-    delay += 0.1;
-  }
 };
 
 exports.openMenu = openMenu;
@@ -2041,16 +2035,11 @@ var closeMenu = function closeMenu() {
       delay: delay
     });
     delay += 0.1;
-  }
+  } // for (let i = sidebarSocialLinks.length - 1; i >= 0; i--) {
+  //   TweenMax.to(sidebarSocialLinks[i], 0.4, { opacity: 0, y: '-10px', delay });
+  //   delay += 0.1;
+  // }
 
-  for (var _i2 = sidebarSocialLinks.length - 1; _i2 >= 0; _i2--) {
-    TweenMax.to(sidebarSocialLinks[_i2], 0.4, {
-      opacity: 0,
-      y: '-10px',
-      delay: delay
-    });
-    delay += 0.1;
-  }
 
   TweenMax.to(closeSidebar, 0.4, {
     opacity: 0,
@@ -2142,11 +2131,16 @@ var aboutBtnMobile = document.getElementById('aboutBtn-mobile');
 var pricingBtnMobile = document.getElementById('pricingBtn-mobile');
 var contactBtnDesktop = document.getElementById('contactBtn-desktop');
 var contactBtnMobile = document.getElementById('contactBtn-mobile');
+var getStartedBtn = document.querySelector('.getStartedBtn');
 aboutBtnDesktop.addEventListener('click', function (e) {
   e.preventDefault();
   (0, _jump.default)('.about');
 });
 pricingBtnDesktop.addEventListener('click', function (e) {
+  e.preventDefault();
+  (0, _jump.default)('.pricing');
+});
+getStartedBtn.addEventListener('click', function (e) {
   e.preventDefault();
   (0, _jump.default)('.pricing');
 });
@@ -2174,7 +2168,56 @@ contactBtnMobile.addEventListener('click', function (e) {
 buttonScrollTop.addEventListener('click', function (e) {
   e.preventDefault();
   (0, _jump.default)('.welcome');
+}); // mailchimp form
+
+var mcForm = $('mc-embedded-subscribe-form');
+var mcButton = $('mc-embedded-subscribe');
+var formResult = $('mc-result');
+$('mc-embedded-subscribe-form').bind('click', function (e) {
+  e.preventDefault();
+
+  if (isValidEmail) {
+    submitMcForm($mcForm);
+  }
 });
+
+var isValidEmail = function isValidEmail() {
+  var email = document.getElementById('mce-EMAIL').value;
+  var reg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+
+  if (reg.test(email) && email.length > 0) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+var submitMcForm = function submitMcForm($form, formResult) {
+  $.ajax({
+    type: $form.attr("method"),
+    url: $form.attr("action"),
+    data: $form.serialize(),
+    cache: false,
+    dataType: "json",
+    contentType: 'application/json; charset=utf-8',
+    error: function error(_error) {
+      alert('Could not connect to the registration server. Please try again later.');
+    },
+    success: function success(data) {
+      if (data.result != "success") {
+        var message = data.msg || "Sorry. Unable to subscribe. Please try again.";
+
+        if (data.msg && data.msg.indexOf("already subscribed") >= 0) {
+          message = "You're already subscribed. Thank you.";
+        }
+
+        formResult.html('<p>' + message + '</p>');
+      } else {
+        console.log(data.msg);
+      }
+    }
+  });
+};
 },{"underscore":"../node_modules/underscore/underscore.js","jump.js":"../node_modules/jump.js/dist/jump.module.js","./animations":"animations.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -2203,7 +2246,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59810" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57096" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

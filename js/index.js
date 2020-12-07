@@ -73,6 +73,7 @@ const aboutBtnMobile = document.getElementById('aboutBtn-mobile');
 const pricingBtnMobile = document.getElementById('pricingBtn-mobile');
 const contactBtnDesktop = document.getElementById('contactBtn-desktop');
 const contactBtnMobile = document.getElementById('contactBtn-mobile');
+const getStartedBtn = document.querySelector('.getStartedBtn');
 
 aboutBtnDesktop.addEventListener('click', e => {
   e.preventDefault();
@@ -80,6 +81,11 @@ aboutBtnDesktop.addEventListener('click', e => {
 });
 
 pricingBtnDesktop.addEventListener('click', e => {
+  e.preventDefault();
+  jump('.pricing');
+});
+
+getStartedBtn.addEventListener('click', e => {
   e.preventDefault();
   jump('.pricing');
 });
@@ -111,3 +117,53 @@ buttonScrollTop.addEventListener('click', e => {
   e.preventDefault();
   jump('.welcome');
 });
+
+
+// mailchimp form
+
+const mcForm = $('mc-embedded-subscribe-form');
+const mcButton = $('mc-embedded-subscribe');
+const formResult = $('mc-result');
+
+$('mc-embedded-subscribe-form').bind('click', function(e){
+  e.preventDefault();
+  if(isValidEmail){
+    submitMcForm($mcForm);
+  }
+})
+
+const isValidEmail = () =>{
+  const email = document.getElementById('mce-EMAIL').value;
+  const reg =  /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+
+  if(reg.test(email) && email.length > 0){
+    return true;
+  } else{
+    return false;
+  }
+}
+
+const submitMcForm = ($form, formResult) => {
+  $.ajax({
+    type: $form.attr("method"),
+    url: $form.attr("action"),
+    data: $form.serialize(),
+    cache: false,
+    dataType: "json",
+    contentType: 'application/json; charset=utf-8',
+    error: function (error) {
+      alert('Could not connect to the registration server. Please try again later.')
+    },
+    success: function (data) {
+        if (data.result != "success") {
+            var message = data.msg || "Sorry. Unable to subscribe. Please try again.";
+            if (data.msg && data.msg.indexOf("already subscribed") >= 0) {
+                message = "You're already subscribed. Thank you.";
+            }
+            formResult.html('<p>' + message + '</p>');
+        } else {
+          console.log(data.msg);
+        }
+    }
+  })
+}

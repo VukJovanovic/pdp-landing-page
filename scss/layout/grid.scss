@@ -85,13 +85,7 @@
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		@media only screen and(max-width: 1024px) {
-			grid-template-columns: 2fr 1fr;
-			grid-gap: 4rem;
-		}
-
-		@media only screen and(max-width: 800px) {
 			grid-template-columns: 1fr;
-			grid-gap: 0;
 		}
 	}
 	&__heading {
@@ -99,6 +93,13 @@
 	}
 	&__cta {
 		grid-column: 1 / 2;
+	}
+}
+#aboutMe{
+	.about__content {
+		@media only screen and(max-width: 1024px) {
+			grid-template-columns: 1fr;
+		}
 	}
 }
 
@@ -182,7 +183,7 @@
 	&__content {
 		grid-column: 2 / 3;
 		display: grid;
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: 1fr 1fr 1fr;
 		align-items: center;
 
 		@media only screen and (max-width: 1024px) {
