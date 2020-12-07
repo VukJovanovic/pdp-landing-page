@@ -1,0 +1,73 @@
+.container{
+    width: 100vw;
+    min-height: 100vh;
+    background-color: $color-secondary;
+    display: flex;
+    padding: 10rem 5rem 10rem 5rem;
+    align-items: center;
+    flex-direction: column;
+
+    @media only screen and(max-width: 600px){
+        padding: 10rem 2rem;
+    }
+
+    &__title{
+        margin-bottom: 10rem;
+        font-size: 3rem;
+        color: $color-neutral;
+        font-family: $font-open-sans;
+        font-weight: $bold;
+        text-align: center;
+    }
+}
+
+.form__container{
+    background-color: $color-primary;
+    padding: 5rem;
+    border-radius: 15px;
+    @media only screen and(max-width: 600px){
+        padding: 5rem 2rem;
+    }
+    &-title{
+        font-size: 3rem;
+        color: $color-neutral;
+        font-family: $font-open-sans;
+        font-weight: $bold;
+        margin-bottom: 2rem;
+    }
+    &-subtitle{
+        font-size: 2rem;
+        color: $color-danger;
+        font-family: $font-source-sans;
+        font-weight: $light;
+        margin-bottom: 4rem;
+    }
+    .mc-field-group{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2rem;
+        label{
+            margin-bottom: 1rem;
+            font-family: $font-source-sans;
+            font-weight: $light;
+            color: $color-neutral;
+            font-size: 1.8rem;
+        }
+        input{
+            padding: .5rem 1rem;
+            height: 4rem;
+            border-radius: 5px;
+        }
+    }
+    .button{
+        padding: 1rem 2rem;
+        font-size: 1.8rem;
+        outline: none;
+        border: none;
+        margin-top: 1rem;
+        border-radius: 5px;
+        color: $color-neutral;
+        background-color: $color-danger;
+        cursor: pointer;
+    }
+}

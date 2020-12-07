@@ -74,10 +74,15 @@ const pricingBtnMobile = document.getElementById('pricingBtn-mobile');
 const contactBtnDesktop = document.getElementById('contactBtn-desktop');
 const contactBtnMobile = document.getElementById('contactBtn-mobile');
 const getStartedBtn = document.querySelector('.getStartedBtn');
+const welcomeCta = document.querySelector('.welcome__cta-btn');
 
 aboutBtnDesktop.addEventListener('click', e => {
   e.preventDefault();
   jump('.about');
+});
+welcomeCta.addEventListener('click', e => {
+  e.preventDefault();
+  jump('.pricing');
 });
 
 pricingBtnDesktop.addEventListener('click', e => {

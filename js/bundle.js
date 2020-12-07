@@ -2132,9 +2132,14 @@ var pricingBtnMobile = document.getElementById('pricingBtn-mobile');
 var contactBtnDesktop = document.getElementById('contactBtn-desktop');
 var contactBtnMobile = document.getElementById('contactBtn-mobile');
 var getStartedBtn = document.querySelector('.getStartedBtn');
+var welcomeCta = document.querySelector('.welcome__cta-btn');
 aboutBtnDesktop.addEventListener('click', function (e) {
   e.preventDefault();
   (0, _jump.default)('.about');
+});
+welcomeCta.addEventListener('click', function (e) {
+  e.preventDefault();
+  (0, _jump.default)('.pricing');
 });
 pricingBtnDesktop.addEventListener('click', function (e) {
   e.preventDefault();
@@ -2246,7 +2251,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57096" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57617" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -1306,6 +1306,17 @@ ul {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
+@media only screen and (max-width: 1024px) {
+  .pricing__cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
 .pricing__card {
   justify-self: right;
   min-height: 46rem;
@@ -1332,6 +1343,19 @@ ul {
           align-items: center;
   padding: 2rem 2rem;
   margin-right: 3rem;
+}
+@media only screen and (max-width: 1024px) {
+  .pricing__card {
+    margin: 0;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .pricing__card:nth-child(2) {
+    margin-right: 0;
+  }
+  .pricing__card:nth-child(3) {
+    margin-top: 3rem;
+  }
 }
 .pricing__card:last-child {
   margin-right: 0;
@@ -1868,6 +1892,94 @@ ul {
 }
 .footer__copy:last-child {
   margin-bottom: 0;
+}
+
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #022e43;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10rem 5rem 10rem 5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media only screen and (max-width: 600px) {
+  .container {
+    padding: 10rem 2rem;
+  }
+}
+.container__title {
+  margin-bottom: 10rem;
+  font-size: 3rem;
+  color: #f7ebec;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  text-align: center;
+}
+
+.form__container {
+  background-color: #0a202e;
+  padding: 5rem;
+  border-radius: 15px;
+}
+@media only screen and (max-width: 600px) {
+  .form__container {
+    padding: 5rem 2rem;
+  }
+}
+.form__container-title {
+  font-size: 3rem;
+  color: #f7ebec;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+.form__container-subtitle {
+  font-size: 2rem;
+  color: #2bc48a;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 300;
+  margin-bottom: 4rem;
+}
+.form__container .mc-field-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 2rem;
+}
+.form__container .mc-field-group label {
+  margin-bottom: 1rem;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 300;
+  color: #f7ebec;
+  font-size: 1.8rem;
+}
+.form__container .mc-field-group input {
+  padding: 0.5rem 1rem;
+  height: 4rem;
+  border-radius: 5px;
+}
+.form__container .button {
+  padding: 1rem 2rem;
+  font-size: 1.8rem;
+  outline: none;
+  border: none;
+  margin-top: 1rem;
+  border-radius: 5px;
+  color: #f7ebec;
+  background-color: #2bc48a;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=/main.css.map */
