@@ -59,8 +59,9 @@
 		<!-- Header -->
 		<header class="header">
 			<div class="header__content">
-				<a href="#" class="header__content-logo desktopLogo">Purpose Driven Planner</a>
-				<a href="#" class="header__content-logo mobileLogo">PDP</a>
+				<a href="#" class="header__content-logo">
+					<img src="./img/pdp-logo.svg" alt="">
+				</a>
 				<nav class="header__content-nav">
 					<!-- Desktop navigation -->
 					<ul class="desktopNavigation">
@@ -372,7 +373,7 @@
 							<p class="carousel__item-p">
 								This is good shit. There is so much truth to this.
 							</p>
-							<p class="carousel__item-author">-- Tony Robbins</p>
+							<p class="carousel__item-author">-- Youtube</p>
 						</div>
 					</div>
 				</div>
@@ -461,31 +462,23 @@
 		<section class="contact">
 			<div class="contact__content">
 				<form action="" class="contact__form">
-					<h4 class="contact__form-heading">Send us an email</h4>
-					<div class="form__group">
-						<input type="text" placeholder="Your name" required />
+					<h2 class="contact__form-heading">Contact us</h2>
+					<div class="contact__form-group">
+						<input type="text" placeholder="Enter your name">
 					</div>
-					<div class="form__group">
-						<input type="email" placeholder="Your email" required />
+					<div class="contact__form-group">
+						<input type="email" placeholder="Enter your email">
 					</div>
-					<div class="form__group">
-						<textarea
-							name=""
-							id=""
-							cols="30"
-							rows="5"
-							placeholder="Your message"
-						></textarea>
+					<div class="contact__form-group">
+						<textarea id="" cols="30" rows="5" placeholder="Enter your message"></textarea>
 					</div>
-					<div class="form__group">
-						<input type="submit" class="form__btn" value="Send" />
-					</div>
+					<button type="submit">Send</button>
 				</form>
-				<div class="contact__detail">
-					<h3 class="contact__detail-h3">Contact information</h3>
-					<div class="contact__detail-group">
-						<img src="./img/envelope.svg" alt="" />
-						<p class="contact__detail-p">purposedrivenplanner@gmail.com</p>
+				<div class="contact__information">
+					<h2 class="contact__form-heading">Contact information</h2>
+					<div class="contact__links">
+						<img src="./img/envelope.svg" alt="">
+						<p>purposedrivenplanner@gmail.com</p>
 					</div>
 				</div>
 			</div>
@@ -507,30 +500,30 @@
 
 		<!-- Footer -->
 		<footer class="footer">
-			<!-- <div class="footer__content">
+			<div class="footer__content">
 				<ul class="footer__navigation">
 					<li class="footer__navigation-item">
-						<a href="#" class="footer__navigation-link">About</a>
+						<a href="#" id="footerAbout" class="footer__navigation-link">About</a>
 					</li>
 					<li class="footer__navigation-item">
-						<a href="#" class="footer__navigation-link">Benefits</a>
+						<a href="#" id="footerBenefits" class="footer__navigation-link">Benefits</a>
 					</li>
 					<li class="footer__navigation-item">
-						<a href="#" class="footer__navigation-link">Features</a>
+						<a href="#" id="footerFeatures" class="footer__navigation-link">Features</a>
 					</li>
 					<li class="footer__navigation-item">
-						<a href="#" class="footer__navigation-link">Pricing</a>
+						<a href="#" id="footerPricing" class="footer__navigation-link">Pricing</a>
 					</li>
 				</ul>
 				<ul class="footer__legal">
 					<li class="footer__legal-item">
-						<a href="#" class="footer__legal-link">Terms of use</a>
+						<a href="/termsofuse.html" class="footer__legal-link">Terms of use</a>
 					</li>
 					<li class="footer__doc-item">
-						<a href="#" class="footer__legal-link">Privacy policy</a>
+						<a href="/privacypolicy.html" class="footer__legal-link">Privacy policy</a>
 					</li>
 				</ul>
-			</div> -->
+			</div>
 			<p class="footer__copy">
 				All rights reserved &copy; Purpose Driven Planner
 			</p>

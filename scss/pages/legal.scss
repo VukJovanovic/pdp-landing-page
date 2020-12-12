@@ -1,0 +1,31 @@
+.legalContainer{
+    padding: 4rem 2rem;
+    @media only screen and(min-width: 600px){
+        max-width: 70rem;
+        margin: 0 auto;
+    }
+    &__heading{
+        font-size: 3rem;
+        font-family: $font-open-sans;
+        margin-bottom: 2rem;
+    }
+    &__subheading{
+        font-size: 2rem;
+        font-family: $font-open-sans;
+        margin-bottom: 1rem;
+    }
+    &__text{
+        font-size: 1.7rem;
+        font-family: $font-open-sans;
+        margin-bottom: 2rem;
+    }
+    ul{
+        padding-left: 2rem;
+        list-style: disc;
+        li{
+            font-size: 1.7rem;
+            font-family: $font-open-sans;
+            margin-bottom: 1rem;
+        }
+    }
+}
