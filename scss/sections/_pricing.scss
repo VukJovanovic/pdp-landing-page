@@ -47,6 +47,39 @@
     align-items: center;
     padding: 2rem 2rem;
     margin-right: 3rem;
+    position: relative;
+    &-oldPrice{
+      position: absolute;
+      top: -15px;
+      right: -15px;
+      z-index: 30;
+      font-size: 3rem;
+      width: 10rem;
+      height: 10rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      border-radius: 10px;
+      background-color: $color-primary;
+      color: $color-neutral;
+      font-family: $font-source-sans;
+      font-weight: $bold;
+      span{
+        display: block;
+        position: absolute;
+        top: 50%;
+        width: 90%;
+        height: 2px;
+        background-color: $color-danger;
+        &:nth-child(1){
+          transform: rotate(-45deg);
+        }
+        &:nth-child(2){
+          transform: rotate(45deg);
+        }
+      }
+    }
     @media only screen and(max-width: 1024px){
       margin: 0; 
     } 
@@ -81,6 +114,7 @@
       border-radius: 10px;
       width: 100%;
       text-align: center;
+      position: relative;
     }
     &-price {
       font-family: $font-source-sans;

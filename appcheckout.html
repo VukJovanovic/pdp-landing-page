@@ -139,7 +139,6 @@
                         return actions.order.capture().then(function(details) {
                             firebase.auth().createUserWithEmailAndPassword(document.querySelector('#email').value, document.querySelector('#passwordConfirm').value)
                                 .then((user) => {
-                                    alert('Transaction completed by ' + details.payer.name.given_name + '!');
                                     window.location('/thankyou.html');
                                 })
                                 .catch((error) => {
