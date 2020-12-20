@@ -1,30 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Purpose Driven Planner | First Week Free PDF Version</title>
     <link rel="stylesheet" href="./css/main.css" />
 </head>
+
 <body>
     <div class="checkoutContainer">
         <div class="checkout__header">
             <div class="checkout__header-heading">
                 <h1>Purpose Driven Planner</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis itaque voluptas sit eveniet ipsam quaerat!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis itaque voluptas sit eveniet ipsam
+                    quaerat!</p>
             </div>
             <div class="checkout__header-logo">
                 <img src="./img/pdp-logo.svg" alt="">
             </div>
         </div>
         <div class="checkout__content">
-            <form name="freepdf" method="POST" data-netlify="true" class="checkoutForm">
+            <form action="" method="post" class="checkoutForm">
                 <h2 class="checkoutForm__heading">Checkout Form</h2>
                 <div class="checkoutForm__group">
                     <label for="">Email:</label>
-                    <input type="email" name="email" placeholder="Enter your email here" required id="">
+                    <input type="email" name="email" placeholder="Enter your email here" required id="email">
                 </div>
-                <button type="submit">Get Your PDF Here</button>
+                <button type="submit" id="freePdfButton">Get Your PDF Here</button>
             </form>
             <div class="checkout__content-benefits">
                 <h2>Lorem ipsum dolor sit amet.</h2>
@@ -41,8 +44,49 @@
             </div>
         </div>
         <footer class="checkout__footer">
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem perferendis libero aliquam asperiores. Sunt ullam ipsa quas autem magni impedit.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem perferendis libero aliquam asperiores.
+                Sunt ullam ipsa quas autem magni impedit.</p>
         </footer>
     </div>
+
+    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+    <script>
+        const firebaseApp = firebase.initializeApp({
+            apiKey: 'AIzaSyCUgUFUERm9rrm47vmBc-V95lgxBUHZ0sM',
+            authDomain: 'pdplanner-a30ab.firebaseapp.com',
+            databaseURL: 'https://pdplanner-a30ab.firebaseio.com/',
+            projectId: 'pdplanner-a30ab',
+            storageBucket: 'pdplanner-a30ab.appspot.com',
+            messagingSenderId: '738390097709',
+            appId: '1:738390097709:web:0d28ce750c3f940277dda4',
+            measurementId: 'G-XXKW1DJ1PZ'
+        })
+
+        const form = document.querySelector('.checkoutForm')
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            const emailsRef = firebaseApp.database().ref('emails')
+            const newEntry = emailsRef.push()
+            newEntry.set({
+                email: document.querySelector("#email").value
+            })
+            setTimeout(() => {
+                window.location = '/landing/freepdfthankyou.html'
+            }, 300);
+        });
+    </script>
 </body>
+
 </html>

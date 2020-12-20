@@ -1,48 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
-		/>
-		<title>Purpose Driven Planner | Start planning your day</title>
-		<link rel="stylesheet" href="./css/owl.carousel.min.css" />
-		<link rel="stylesheet" href="./css/owl.theme.default.min.css" />
-		<link rel="stylesheet" href="./css/main.css" />
-	</head>
-	<body>
-		<!-- button to scroll on top of the page -->
-		<a href="#" class="btn__scrollTop">
-			<img src="./img/next.svg" alt="" />
-		</a>
 
-		<!-- Sidebar -->
-		<div class="sidebar">
-			<a href="#" class="sidebar__close"
-				><img src="./img/cancel.svg" alt="" />
-			</a>
-			<ul class="sidebarNavigation">
-				<li class="sidebarNavigation__item">
-					<a href="#" id="aboutBtn-mobile" class="sidebarNavigation__link">
-						About
-					</a>
-				</li>
-				<li class="sidebarNavigation__item">
-					<a href="#" id="pricingBtn-mobile" class="sidebarNavigation__link"
-						>Pricing</a
-					>
-				</li>
-				<li class="sidebarNavigation__item">
-					<a href="#" class="sidebarNavigation__link" id="contactBtn-mobile"
-						>Contact</a
-					>
-				</li>
-				<li class="sidebarNavigation__item">
-					<a href="/login" class="sidebarNavigation__link sidebarLoginBtn">Log In</a>
-				</li>
-			</ul>
-			<!-- <div class="sidebar__social">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<title>Purpose Driven Planner | Start planning your day</title>
+	<link rel="stylesheet" href="./css/owl.carousel.min.css" />
+	<link rel="stylesheet" href="./css/owl.theme.default.min.css" />
+	<link rel="stylesheet" href="./css/main.css" />
+</head>
+
+<body>
+	<!-- button to scroll on top of the page -->
+	<a href="#" class="btn__scrollTop">
+		<img src="./img/next.svg" alt="" />
+	</a>
+
+	<!-- Sidebar -->
+	<div class="sidebar">
+		<a href="#" class="sidebar__close"><img src="./img/cancel.svg" alt="" />
+		</a>
+		<ul class="sidebarNavigation">
+			<li class="sidebarNavigation__item">
+				<a href="#" id="aboutBtn-mobile" class="sidebarNavigation__link">
+					About
+				</a>
+			</li>
+			<li class="sidebarNavigation__item">
+				<a href="#" id="pricingBtn-mobile" class="sidebarNavigation__link">Pricing</a>
+			</li>
+			<li class="sidebarNavigation__item">
+				<a href="#" class="sidebarNavigation__link" id="contactBtn-mobile">Contact</a>
+			</li>
+			<li class="sidebarNavigation__item">
+				<a href="/login" class="sidebarNavigation__link sidebarLoginBtn">Log In</a>
+			</li>
+		</ul>
+		<!-- <div class="sidebar__social">
 				<a href="#" class="sidebar__social-link"
 					><img src="./img/instagram.svg" alt=""
 				/></a>
@@ -53,368 +47,338 @@
 					><img src="./img/brand.svg" alt=""
 				/></a>
 			</div> -->
+	</div>
+	<div class="sidebarOverlay"></div>
+
+	<!-- Header -->
+	<header class="header">
+		<div class="header__content">
+			<a href="#" class="header__content-logo">
+				<img src="./img/pdp-logo.svg" alt="">
+			</a>
+			<nav class="header__content-nav">
+				<!-- Desktop navigation -->
+				<ul class="desktopNavigation">
+					<li class="desktopNavigation__item">
+						<a href="#" id="aboutBtn-desktop" class="desktopNavigation__item-link hoverUnderline">About</a>
+					</li>
+					<li class="desktopNavigation__item">
+						<a href="#" id="pricingBtn-desktop"
+							class="desktopNavigation__item-link hoverUnderline">Pricing</a>
+					</li>
+					<li class="desktopNavigation__item">
+						<a href="#" id="contactBtn-desktop"
+							class="desktopNavigation__item-link hoverUnderline">Contact</a>
+					</li>
+					<li class="desktopNavigation__item">
+						<a href="/login" class="desktopNavigation__item-link logInBtn">Log In</a>
+					</li>
+					<li class="desktopNavigation__item">
+						<a href="#" class="desktopNavigation__item-link getStartedBtn">Get Started</a>
+					</li>
+				</ul>
+				<!-- Mobile navigation -->
+				<div class="mobileNavigation">
+					<a href="#" class="getStartedBtn">Get Started</a>
+					<a href="#" class="mobileNavigation__burger" id="mobileBurger">
+						<span></span>
+						<span></span>
+						<span></span>
+					</a>
+				</div>
+			</nav>
 		</div>
-		<div class="sidebarOverlay"></div>
+	</header>
 
-		<!-- Header -->
-		<header class="header">
-			<div class="header__content">
-				<a href="#" class="header__content-logo">
-					<img src="./img/pdp-logo.svg" alt="">
-				</a>
-				<nav class="header__content-nav">
-					<!-- Desktop navigation -->
-					<ul class="desktopNavigation">
-						<li class="desktopNavigation__item">
-							<a
-								href="#"
-								id="aboutBtn-desktop"
-								class="desktopNavigation__item-link hoverUnderline"
-								>About</a
-							>
-						</li>
-						<li class="desktopNavigation__item">
-							<a
-								href="#"
-								id="pricingBtn-desktop"
-								class="desktopNavigation__item-link hoverUnderline"
-								>Pricing</a
-							>
-						</li>
-						<li class="desktopNavigation__item">
-							<a
-								href="#"
-								id="contactBtn-desktop"
-								class="desktopNavigation__item-link hoverUnderline"
-								>Contact</a
-							>
-						</li>
-						<li class="desktopNavigation__item">
-							<a href="/login" class="desktopNavigation__item-link logInBtn"
-								>Log In</a
-							>
-						</li>
-						<li class="desktopNavigation__item">
-							<a href="#" class="desktopNavigation__item-link getStartedBtn"
-								>Get Started</a
-							>
-						</li>
-					</ul>
-					<!-- Mobile navigation -->
-					<div class="mobileNavigation">
-						<a href="#" class="getStartedBtn">Get Started</a>
-						<a href="#" class="mobileNavigation__burger" id="mobileBurger">
-							<span></span>
-							<span></span>
-							<span></span>
-						</a>
+	<!-- Welcome section -->
+	<section class="welcome">
+		<div class="welcome__content">
+			<div class="welcome__video">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/zDb51HD0znY" frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen></iframe>
+			</div>
+			<div class="welcome__text">
+				<h1 class="welcome__text-heading">Purpose Driven Planner</h1>
+				<p class="welcome__text-quote">
+					Pursue your goals feeling empowered! 🔥
+				</p>
+				<p class="welcome__text-paragraph">
+					Throw away your to-do list, there’s a better way for you to plan
+					your day.
+				</p>
+			</div>
+			<div class="welcome__cta">
+				<p class="welcome__cta-text">
+					By the end of the course you will become a person in control of
+					his/her emotions, actions and day by day tasks filled with a massive
+					sense of purpose.
+				</p>
+				<p class="welcome__cta-text">
+					Join now by clicking the button down below!
+				</p>
+				<a href="#" class="welcome__cta-btn">Start planning today</a>
+			</div>
+			<div class="welcome__video"></div>
+		</div>
+	</section>
+
+	<!-- About section -->
+	<section class="about">
+		<div class="about__content">
+			<div class="about__heading">
+				<h2 class="about__heading-h2">About</h2>
+				<h3 class="about__heading-h3">Purpose Driven Planner</h3>
+			</div>
+			<div class="about__text">
+				<p class="about__text-p">
+					The “Purpose Driven Planner” is a 4 week course throughout which
+					you’ll learn how to effectively plan your day for maximum results in
+					all areas of your life. Its motto is “Design your life, don’t make
+					it a chore”.
+				</p>
+				<p class="about__text-p">
+					PDP consists of practical tools and ways of organizing tested
+					throughout years of studies and struggle, not just for efficiency,
+					because there are a lot of people who are very efficient “high
+					achievers”, they get a lot done, but yet they feel miserable, but
+					also for getting a deep sense of purpose and meaning behind the
+					planning methods.
+				</p>
+				<p class="about__text-p">
+					You will also get more than x hours of video material where I’ll
+					guide you through the logic and strategies on how to use the planner
+					which will get imprinted in your way of thinking. You will also get
+					countless other advice on productivity, self-management, emotional
+					intelligence, self-discipline, power habits etc.
+				</p>
+			</div>
+			<div class="about__imageContainer about__imageContainer-1">
+				<img src="./img/pdpappwelcome.png" alt="" />
+			</div>
+		</div>
+	</section>
+
+	<!-- Benefits section -->
+	<section class="benefits">
+		<div class="benefits__content">
+			<div class="benefits__heading">
+				<h2 class="benefits__heading-h2">Benefits</h2>
+				<h3 class="benefits__heading-h3">
+					“Design your life, don’t make it a chore!”
+				</h3>
+			</div>
+			<div class="benefits__cards">
+				<div class="benefits__card">
+					<div class="benefits__card-heading">
+						<img src="./img/calendar.svg" alt="" class="benefits__card-icon" />
+						<h4>Better time management</h4>
 					</div>
-				</nav>
-			</div>
-		</header>
-
-		<!-- Welcome section -->
-		<section class="welcome">
-			<div class="welcome__content">
-				<div class="welcome__video">
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/zDb51HD0znY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				</div>
-				<div class="welcome__text">
-					<h1 class="welcome__text-heading">Purpose Driven Planner</h1>
-					<p class="welcome__text-quote">
-						Pursue your goals feeling empowered! 🔥
-					</p>
-					<p class="welcome__text-paragraph">
-						Throw away your to-do list, there’s a better way for you to plan
-						your day.
+					<p class="benefits__card-paragraph">
+						You will learn how to manage your time more effectively. With
+						practical tools you will see how you can do more in less amount of
+						time while being able to commit fully to every aspect of your
+						life.
 					</p>
 				</div>
-				<div class="welcome__cta">
-					<p class="welcome__cta-text">
-						By the end of the course you will become a person in control of
-						his/her emotions, actions and day by day tasks filled with a massive
-						sense of purpose.
-					</p>
-					<p class="welcome__cta-text">
-						Join now by clicking the button down below!
-					</p>
-					<a href="#" class="welcome__cta-btn">Start planning today</a>
-				</div>
-				<div class="welcome__video"></div>
-			</div>
-		</section>
-
-		<!-- About section -->
-		<section class="about">
-			<div class="about__content">
-				<div class="about__heading">
-					<h2 class="about__heading-h2">About</h2>
-					<h3 class="about__heading-h3">Purpose Driven Planner</h3>
-				</div>
-				<div class="about__text">
-					<p class="about__text-p">
-						The “Purpose Driven Planner” is a 4 week course throughout which
-						you’ll learn how to effectively plan your day for maximum results in
-						all areas of your life. Its motto is “Design your life, don’t make
-						it a chore”.
-					</p>
-					<p class="about__text-p">
-						PDP consists of practical tools and ways of organizing tested
-						throughout years of studies and struggle, not just for efficiency,
-						because there are a lot of people who are very efficient “high
-						achievers”, they get a lot done, but yet they feel miserable, but
-						also for getting a deep sense of purpose and meaning behind the
-						planning methods.
-					</p>
-					<p class="about__text-p">
-						You will also get more than x hours of video material where I’ll
-						guide you through the logic and strategies on how to use the planner
-						which will get imprinted in your way of thinking. You will also get
-						countless other advice on productivity, self-management, emotional
-						intelligence, self-discipline, power habits etc.
+				<div class="benefits__card">
+					<div class="benefits__card-heading">
+						<img src="./img/goal.svg" alt="" class="benefits__card-icon" />
+						<h4>Self-development</h4>
+					</div>
+					<p class="benefits__card-paragraph">
+						This course is packed with practical self-improvement material.
+						You will develop powerful habits, higher emotional intelligence,
+						stronger work ethic, greater self-discipline and most important of
+						all, better understanding of yourself.
 					</p>
 				</div>
-				<div class="about__imageContainer about__imageContainer-1">
-					<img src="./img/pdpappwelcome.png" alt="" />
+				<div class="benefits__card">
+					<div class="benefits__card-heading">
+						<img src="./img/target.svg" alt="" class="benefits__card-icon" />
+						<h4>Sense of purpose</h4>
+					</div>
+					<p class="benefits__card-paragraph">
+						You will know your “why” behind everything you do. Unlike any
+						other planner where you can efficiently manage your time, here we
+						are also putting focus on the fulfillment aspect, not just getting
+						a lot of things done.
+					</p>
 				</div>
 			</div>
-		</section>
+		</div>
+	</section>
 
-		<!-- Benefits section -->
-		<section class="benefits">
-			<div class="benefits__content">
-				<div class="benefits__heading">
-					<h2 class="benefits__heading-h2">Benefits</h2>
-					<h3 class="benefits__heading-h3">
-						“Design your life, don’t make it a chore!”
-					</h3>
-				</div>
-				<div class="benefits__cards">
-					<div class="benefits__card">
-						<div class="benefits__card-heading">
-							<img
-								src="./img/calendar.svg"
-								alt=""
-								class="benefits__card-icon"
-							/>
-							<h4>Better time management</h4>
-						</div>
-						<p class="benefits__card-paragraph">
-							You will learn how to manage your time more effectively. With
-							practical tools you will see how you can do more in less amount of
-							time while being able to commit fully to every aspect of your
-							life.
-						</p>
+	<!-- How it works section -->
+	<section class="howItWorks">
+		<div class="howItWorks__content">
+			<div class="howItWorks__heading">
+				<h2 class="howItWorks__heading-h2">Features</h2>
+				<h3 class="howItWorks__heading-h3">What you’ll get after purchasing the course.</h3>
+			</div>
+			<div class="howItWork__text">
+				<!-- How it works block 1 -->
+				<div class="howItWork__text-block">
+					<div class="howItWork__text-heading">
+						<img src="./img/video.svg" class="howItWork__text-image" alt="" />
+						<h4>X hours of video material</h4>
 					</div>
-					<div class="benefits__card">
-						<div class="benefits__card-heading">
-							<img src="./img/goal.svg" alt="" class="benefits__card-icon" />
-							<h4>Self-development</h4>
-						</div>
-						<p class="benefits__card-paragraph">
-							This course is packed with practical self-improvement material.
-							You will develop powerful habits, higher emotional intelligence,
-							stronger work ethic, greater self-discipline and most important of
-							all, better understanding of yourself.
-						</p>
-					</div>
-					<div class="benefits__card">
-						<div class="benefits__card-heading">
-							<img src="./img/target.svg" alt="" class="benefits__card-icon" />
-							<h4>Sense of purpose</h4>
-						</div>
-						<p class="benefits__card-paragraph">
-							You will know your “why” behind everything you do. Unlike any
-							other planner where you can efficiently manage your time, here we
-							are also putting focus on the fulfillment aspect, not just getting
-							a lot of things done.
+					<div class="howItWork__text-content">
+						<p>
+							I will guide you through the planner, teach you how to use it
+							and share with you my knowledge.
 						</p>
 					</div>
 				</div>
-			</div>
-		</section>
-
-		<!-- How it works section -->
-		<section class="howItWorks">
-			<div class="howItWorks__content">
-				<div class="howItWorks__heading">
-					<h2 class="howItWorks__heading-h2">Features</h2>
-					<h3 class="howItWorks__heading-h3">What you’ll get after purchasing the course.</h3>
-				</div>
-				<div class="howItWork__text">
-					<!-- How it works block 1 -->
-					<div class="howItWork__text-block">
-						<div class="howItWork__text-heading">
-							<img
-								src="./img/video.svg"
-								class="howItWork__text-image"
-								alt=""
-							/>
-							<h4>X hours of video material</h4>
-						</div>
-						<div class="howItWork__text-content">
-							<p>
-								I will guide you through the planner, teach you how to use it
-								and share with you my knowledge.
-							</p>
-						</div>
+				<!-- How it works block 2 -->
+				<div class="howItWork__text-block">
+					<div class="howItWork__text-heading">
+						<img src="./img/planner.svg" class="howItWork__text-image" alt="" />
+						<h4>4 different planners</h4>
 					</div>
-					<!-- How it works block 2 -->
-					<div class="howItWork__text-block">
-						<div class="howItWork__text-heading">
-							<img
-								src="./img/planner.svg"
-								class="howItWork__text-image"
-								alt=""
-							/>
-							<h4>4 different planners</h4>
-						</div>
-						<div class="howItWork__text-content">
-							<p>
-								Each week out of the 4 will have a planner for itself. As you
-								progress so will your planner structure.
-							</p>
-						</div>
-					</div>
-					<!-- How it works block 3 -->
-					<div class="howItWork__text-block">
-						<div class="howItWork__text-heading">
-							<img
-								src="./img/repair.svg"
-								class="howItWork__text-image"
-								alt=""
-							/>
-							<h4>Tools of the day</h4>
-						</div>
-						<div class="howItWork__text-content">
-							<p>
-								Various tools for various areas of personal development.
-							</p>
-						</div>
-					</div>
-					<div class="howItWork__text-block">
-						<div class="howItWork__text-heading">
-							<img
-								src="./img/strategy.svg"
-								class="howItWork__text-image"
-								alt=""
-							/>
-							<h4>Powerful mindset shifts</h4>
-						</div>
-						<div class="howItWork__text-content">
-							<p>
-								Practical quotes that helped me through my self-improvement
-								journey.
-							</p>
-						</div>
+					<div class="howItWork__text-content">
+						<p>
+							Each week out of the 4 will have a planner for itself. As you
+							progress so will your planner structure.
+						</p>
 					</div>
 				</div>
-				<div class="howItWork__image">
-					<img src="./img/pdpapp2.png" alt="" />
-				</div>
-			</div>
-		</section>
-
-
-			<!-- Testimonials section -->
-			<section class="testimonials">
-				<div class="testimonials__content">
-					<div class="testimonials__heading">
-						<h2 class="testimonials__heading-h2">Testimonials</h2>
-						<h3 class="testimonials__heading-h3">
-							See what others say about my principles on my Youtube channel.
-						</h3>
+				<!-- How it works block 3 -->
+				<div class="howItWork__text-block">
+					<div class="howItWork__text-heading">
+						<img src="./img/repair.svg" class="howItWork__text-image" alt="" />
+						<h4>Tools of the day</h4>
 					</div>
-					<div class="owl-carousel">
-						<div class="carousel__item">
-							<img src="./img/quote.svg" alt="" />
-							<p class="carousel__item-p">
-								Really wish more people could grasp this mindset. They would be much happier, and their ambition and success would be meaningful.
-							</p>
-							<p class="carousel__item-author">-- Youtube</p>
-						</div>
-						<div class="carousel__item">
-							<img src="./img/quote.svg" alt="" />
-							<p class="carousel__item-p">
-								You changed me to another level. I will update after following these principles for 1 month.
-							</p>
-							<p class="carousel__item-author">-- Youtube</p>
-						</div>
-						<div class="carousel__item">
-							<img src="./img/quote.svg" alt="" />
-							<p class="carousel__item-p">
-								This speaks to me on a spiritual level.
-							</p>
-							<p class="carousel__item-author">-- Youtube</p>
-						</div>
-						<div class="carousel__item">
-							<img src="./img/quote.svg" alt="" />
-							<p class="carousel__item-p">
-								Awesome video bro!
-							</p>
-							<p class="carousel__item-author">-- Youtube</p>
-						</div>
-						<div class="carousel__item">
-							<img src="./img/quote.svg" alt="" />
-							<p class="carousel__item-p">
-								That was the most clear answer I have ever heard, reggarding this common question, so well done my friend.
-							</p>
-							<p class="carousel__item-author">-- Youtube</p>
-						</div>
-						<div class="carousel__item">
-							<img src="./img/quote.svg" alt="" />
-							<p class="carousel__item-p">
-								Damn this is deep!
-							</p>
-							<p class="carousel__item-author">-- Youtube</p>
-						</div>
-						<div class="carousel__item">
-							<img src="./img/quote.svg" alt="" />
-							<p class="carousel__item-p">
-								This is good shit. There is so much truth to this.
-							</p>
-							<p class="carousel__item-author">-- Youtube</p>
-						</div>
+					<div class="howItWork__text-content">
+						<p>
+							Various tools for various areas of personal development.
+						</p>
 					</div>
 				</div>
-			</section>
-
-		<!-- Pricing section -->
-		<section class="pricing">
-			<div class="pricing__content">
-				<div class="pricing__text">
-					<div class="pricing__heading">
-						<h2 class="pricing__heading-h2">Pricing</h2>
-						<h3 class="pricing__heading-h3">Check out our versions for Purpose Driven Planner</h3>
+				<div class="howItWork__text-block">
+					<div class="howItWork__text-heading">
+						<img src="./img/strategy.svg" class="howItWork__text-image" alt="" />
+						<h4>Powerful mindset shifts</h4>
 					</div>
-				</div>
-				<div class="pricing__cards">
-					<div class="pricing__card">
-						<p class="pricing__card-feature">First week planner</p>
-						<p class="pricing__card-price">Free</p>
-						<p class="pricing__card-feature">Get our first week from the PDP app for free by entering your email.</p>
-						<a href="/landing/firstweekpdf.html" class="pricing__card-cta">Get your first week here</a>
-					</div>
-					<div class="pricing__card">
-						<p class="pricing__card-feature">PDP in PDF version</p>
-						<p class="pricing__card-price">$9.99</p>
-						<p class="pricing__card-feature">You will receive a PDF version of our complete planner from PDP app.</p>
-						<a href="/landing/pdfversioncheckout.html" class="pricing__card-cta">Get your PDF planner here</a>
-					</div>
-					<div class="pricing__card">
-						<p class="pricing__card-feature">Full PDP App</p>
-						<p class="pricing__card-oldPrice"><span></span><span></span>$99.99</p>
-						<p class="pricing__card-price pricing__card-price--discount">$47.00</p>
-						<p class="pricing__card-feature">You get our full application with full video course, where you can interact with the planner.</p>
-						<a href="/landing/appcheckout.html" class="pricing__card-cta">Get started now</a>
+					<div class="howItWork__text-content">
+						<p>
+							Practical quotes that helped me through my self-improvement
+							journey.
+						</p>
 					</div>
 				</div>
 			</div>
-		</section>
+			<div class="howItWork__image">
+				<img src="./img/pdpapp2.png" alt="" />
+			</div>
+		</div>
+	</section>
 
 
-		<!-- FAQ section -->
-		<!-- <section class="faq" id="faq">
+	<!-- Testimonials section -->
+	<section class="testimonials">
+		<div class="testimonials__content">
+			<div class="testimonials__heading">
+				<h2 class="testimonials__heading-h2">Testimonials</h2>
+				<h3 class="testimonials__heading-h3">
+					See what others say about my principles on my Youtube channel.
+				</h3>
+			</div>
+			<div class="owl-carousel">
+				<div class="carousel__item">
+					<img src="./img/quote.svg" alt="" />
+					<p class="carousel__item-p">
+						Really wish more people could grasp this mindset. They would be much happier, and their ambition
+						and success would be meaningful.
+					</p>
+					<p class="carousel__item-author">-- Youtube</p>
+				</div>
+				<div class="carousel__item">
+					<img src="./img/quote.svg" alt="" />
+					<p class="carousel__item-p">
+						You changed me to another level. I will update after following these principles for 1 month.
+					</p>
+					<p class="carousel__item-author">-- Youtube</p>
+				</div>
+				<div class="carousel__item">
+					<img src="./img/quote.svg" alt="" />
+					<p class="carousel__item-p">
+						This speaks to me on a spiritual level.
+					</p>
+					<p class="carousel__item-author">-- Youtube</p>
+				</div>
+				<div class="carousel__item">
+					<img src="./img/quote.svg" alt="" />
+					<p class="carousel__item-p">
+						Awesome video bro!
+					</p>
+					<p class="carousel__item-author">-- Youtube</p>
+				</div>
+				<div class="carousel__item">
+					<img src="./img/quote.svg" alt="" />
+					<p class="carousel__item-p">
+						That was the most clear answer I have ever heard, reggarding this common question, so well done
+						my friend.
+					</p>
+					<p class="carousel__item-author">-- Youtube</p>
+				</div>
+				<div class="carousel__item">
+					<img src="./img/quote.svg" alt="" />
+					<p class="carousel__item-p">
+						Damn this is deep!
+					</p>
+					<p class="carousel__item-author">-- Youtube</p>
+				</div>
+				<div class="carousel__item">
+					<img src="./img/quote.svg" alt="" />
+					<p class="carousel__item-p">
+						This is good shit. There is so much truth to this.
+					</p>
+					<p class="carousel__item-author">-- Youtube</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Pricing section -->
+	<section class="pricing">
+		<div class="pricing__content">
+			<div class="pricing__text">
+				<div class="pricing__heading">
+					<h2 class="pricing__heading-h2">Pricing</h2>
+					<h3 class="pricing__heading-h3">Check out our versions for Purpose Driven Planner</h3>
+				</div>
+			</div>
+			<div class="pricing__cards">
+				<div class="pricing__card">
+					<p class="pricing__card-feature">First week planner</p>
+					<p class="pricing__card-price">Free</p>
+					<p class="pricing__card-feature">Get our first week from the PDP app for free by entering your
+						email.</p>
+					<a href="/landing/firstweekpdf.html" class="pricing__card-cta">Get your first week here</a>
+				</div>
+				<div class="pricing__card">
+					<p class="pricing__card-feature">PDP in PDF version</p>
+					<p class="pricing__card-price">$19.99</p>
+					<p class="pricing__card-feature">You will receive a PDF version of our complete planner from PDP
+						app.</p>
+					<a href="/landing/pdfversioncheckout.html" class="pricing__card-cta">Get your PDF planner here</a>
+				</div>
+				<div class="pricing__card">
+					<p class="pricing__card-feature">Full PDP App</p>
+					<p class="pricing__card-oldPrice"><span></span><span></span>$99.99</p>
+					<p class="pricing__card-price pricing__card-price--discount">$47.00</p>
+					<p class="pricing__card-feature">You get our full application with full video course, where you can
+						interact with the planner.</p>
+					<a href="/landing/appcheckout.html" class="pricing__card-cta">Get started now</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- FAQ section -->
+	<!-- <section class="faq" id="faq">
 			<div class="faq__container">
 				<div class="faq__container-heading">
 					<h2 class="faq__container-heading-h2">FAQ</h2>
@@ -440,53 +404,62 @@
 			</div>
 		</section> -->
 
-		<!-- About section -->
-		<section class="about" id="aboutMe">
-			<div class="about__content">
-				<div class="about__heading">
-					<h2 class="about__heading-h2">About The</h2>
-					<h3 class="about__heading-h3">Person who is behind this course</h3>
+	<!-- About section -->
+	<section class="about" id="aboutMe">
+		<div class="about__content">
+			<div class="about__heading">
+				<h2 class="about__heading-h2">About The</h2>
+				<h3 class="about__heading-h3">Person who is behind this course</h3>
+			</div>
+			<div class="about__text">
+				<p class="about__text-p">
+					My name is Stefan Tosic, there’s a slim chance you came across one of my videos on Youtube and
+					possibly know who I am, but for those who don’t I am a 7 years lifetime natural bodybuilder, fitness
+					and self-development Youtuber, college student of IT and business, amateur kick-boxer, guitar
+					player…Oh yeah, the list goes on. Not saying this to brag but to showcase how I’ve managed to joggle
+					multiple activities and roles at a very young age and have decent success in all fields of my life
+					while still feeling driven more than ever to head out for more.
+				</p>
+				<p class="about__text-p">
+					I’m not here to sell you on how to become a millionaire, because I am not one. I am not here to
+					whisper “sweet nothings” in your ears because I don’t want to waste neither your time, nor mine. I’m
+					here to tell you to get your act together but use a smarter approach, I want to save you from making
+					the same mistakes I made of going always 110% in with all my being and burning out all the time.
+					It’s neither the most effective approach nor the healthiest one.
+				</p>
+			</div>
+			<div class="about__imageContainer about__imageContainer-1">
+				<img src="./img/aboutstefan.jpg" alt="" />
+			</div>
+		</div>
+	</section>
+	<section class="contact">
+		<div class="contact__content">
+			<form action="" class="contact__form">
+				<h2 class="contact__form-heading">Contact us</h2>
+				<div class="contact__form-group">
+					<input type="text" placeholder="Enter your name">
 				</div>
-				<div class="about__text">
-					<p class="about__text-p">
-						My name is Stefan Tosic, there’s a slim chance you came across one of my videos on Youtube and possibly know who I am, but for those who don’t I am a 7 years lifetime natural bodybuilder, fitness and self-development Youtuber, college student of IT and business, amateur kick-boxer, guitar player…Oh yeah, the list goes on. Not saying this to brag but to showcase how I’ve managed to joggle multiple activities and roles at a very young age and have decent success in all fields of my life while still feeling driven more than ever to head out for more.
-					</p>
-					<p class="about__text-p">
-						I’m not here to sell you on how to become a millionaire, because I am not one. I am not here to whisper “sweet nothings” in your ears because I don’t want to waste neither your time, nor mine. I’m here to tell you to get your act together but use a smarter approach,  I want to save you from making the same mistakes I made of going always 110% in with all my being and burning out all the time. It’s neither the most effective approach nor the healthiest one.
-					</p>
+				<div class="contact__form-group">
+					<input type="email" placeholder="Enter your email">
 				</div>
-				<div class="about__imageContainer about__imageContainer-1">
-					<img src="./img/aboutstefan.jpg" alt="" />
+				<div class="contact__form-group">
+					<textarea id="" cols="30" rows="5" placeholder="Enter your message"></textarea>
+				</div>
+				<button type="submit">Send</button>
+			</form>
+			<div class="contact__information">
+				<h2 class="contact__form-heading">Contact information</h2>
+				<div class="contact__links">
+					<img src="./img/envelope.svg" alt="">
+					<p>purposedrivenplanner@gmail.com</p>
 				</div>
 			</div>
-		</section>
-		<section class="contact">
-			<div class="contact__content">
-				<form action="" class="contact__form">
-					<h2 class="contact__form-heading">Contact us</h2>
-					<div class="contact__form-group">
-						<input type="text" placeholder="Enter your name">
-					</div>
-					<div class="contact__form-group">
-						<input type="email" placeholder="Enter your email">
-					</div>
-					<div class="contact__form-group">
-						<textarea id="" cols="30" rows="5" placeholder="Enter your message"></textarea>
-					</div>
-					<button type="submit">Send</button>
-				</form>
-				<div class="contact__information">
-					<h2 class="contact__form-heading">Contact information</h2>
-					<div class="contact__links">
-						<img src="./img/envelope.svg" alt="">
-						<p>purposedrivenplanner@gmail.com</p>
-					</div>
-				</div>
-			</div>
-		</section>
+		</div>
+	</section>
 
-		<!-- Email newsletter -->
-		<!-- <section class="newsletter">
+	<!-- Email newsletter -->
+	<!-- <section class="newsletter">
 			<div class="newsletter__content">
 				<div class="newsletter__heading">
 					<h2 class="newsletter__heading-h2">Join our email list</h2>
@@ -499,62 +472,64 @@
 			</div>
 		</section> -->
 
-		<!-- Footer -->
-		<footer class="footer">
-			<div class="footer__content">
-				<ul class="footer__navigation">
-					<li class="footer__navigation-item">
-						<a href="#" id="footerAbout" class="footer__navigation-link">About</a>
-					</li>
-					<li class="footer__navigation-item">
-						<a href="#" id="footerBenefits" class="footer__navigation-link">Benefits</a>
-					</li>
-					<li class="footer__navigation-item">
-						<a href="#" id="footerFeatures" class="footer__navigation-link">Features</a>
-					</li>
-					<li class="footer__navigation-item">
-						<a href="#" id="footerPricing" class="footer__navigation-link">Pricing</a>
-					</li>
-				</ul>
-				<ul class="footer__legal">
-					<li class="footer__legal-item">
-						<a href="/landing/termsofuse.html" class="footer__legal-link">Terms of use</a>
-					</li>
-					<li class="footer__doc-item">
-						<a href="/landing/privacypolicy.html" class="footer__legal-link">Privacy policy</a>
-					</li>
-				</ul>
-			</div>
-			<p class="footer__copy">
-				All rights reserved &copy; Purpose Driven Planner
-			</p>
-		</footer>
-		<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
-		<script src="./js/carousel.js"></script>
-		<script src="./js/owl.carousel.min.js"></script>
-		<script>
-			$(document).ready(function() {
-				$('.owl-carousel').owlCarousel({
-					autoplay: true,
-					responsiveClass: true,
-					loop: true,
-					margin: 40,
-					nav: true,
-					responsive: {
-						0: {
-							items: 1
-						},
-						760: {
-							items: 2
-						},
-						1150: {
-							items: 3
-						}
+	<!-- Footer -->
+	<footer class="footer">
+		<div class="footer__content">
+			<ul class="footer__navigation">
+				<li class="footer__navigation-item">
+					<a href="#" id="footerAbout" class="footer__navigation-link">About</a>
+				</li>
+				<li class="footer__navigation-item">
+					<a href="#" id="footerBenefits" class="footer__navigation-link">Benefits</a>
+				</li>
+				<li class="footer__navigation-item">
+					<a href="#" id="footerFeatures" class="footer__navigation-link">Features</a>
+				</li>
+				<li class="footer__navigation-item">
+					<a href="#" id="footerPricing" class="footer__navigation-link">Pricing</a>
+				</li>
+			</ul>
+			<ul class="footer__legal">
+				<li class="footer__legal-item">
+					<a href="/landing/termsofuse.html" class="footer__legal-link">Terms of use</a>
+				</li>
+				<li class="footer__doc-item">
+					<a href="/landing/privacypolicy.html" class="footer__legal-link">Privacy policy</a>
+				</li>
+			</ul>
+		</div>
+		<p class="footer__copy">
+			All rights reserved &copy; Purpose Driven Planner
+		</p>
+	</footer>
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"
+		integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+	<script src="./js/carousel.js"></script>
+	<script src="./js/owl.carousel.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			$('.owl-carousel').owlCarousel({
+				autoplay: true,
+				responsiveClass: true,
+				loop: true,
+				margin: 40,
+				nav: true,
+				responsive: {
+					0: {
+						items: 1
+					},
+					760: {
+						items: 2
+					},
+					1150: {
+						items: 3
 					}
-				});
+				}
 			});
-		</script>
-		<script src="./js/bundle.js"></script>
-	</body>
+		});
+	</script>
+	<script src="./js/bundle.js"></script>
+</body>
+
 </html>
