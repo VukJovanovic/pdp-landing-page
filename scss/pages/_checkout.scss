@@ -15,8 +15,8 @@
 }
 .checkout__header{
     display: flex;
-    justify-content: space-between;
     padding-bottom: 2rem;
+    justify-content: center;
     border-bottom: 1px solid $color-danger;
     @media only screen and(max-width: 660px){
        flex-direction: column-reverse;
@@ -38,6 +38,7 @@
         }   
     }
     &-logo{
+        margin-left: 5rem;
         width: 10rem;
         @media only screen and(max-width: 660px){
             margin: 0 auto;
@@ -48,13 +49,14 @@
 .checkout__content{
     margin-top: 3rem;
     display: flex;
-    justify-content: space-between;
     margin-bottom: 3rem;
+    justify-content: center;
     @media only screen and(max-width: 660px){
         flex-direction: column;
         align-items: center;
     }
     &-benefits{
+        margin-left: 5rem;
         max-width: 50rem;
         h2{
             font-size: 2.5rem;
@@ -82,12 +84,15 @@
 .checkout__footer{
     padding-top: 2rem;
     border-top: 1px solid $color-danger;
+    display: flex;
+    justify-content: center;
     p{
         color: $color-neutral;
         font-size: 1.6rem;
         margin-bottom: 1rem;
         font-family: $font-open-sans;
         font-weight: $light;
+        max-width: 50rem;
     }
 }
 
