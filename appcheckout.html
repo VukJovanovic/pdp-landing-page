@@ -139,7 +139,7 @@
                         return actions.order.capture().then(function(details) {
                             firebase.auth().createUserWithEmailAndPassword(document.querySelector('#email').value, document.querySelector('#passwordConfirm').value)
                                 .then((user) => {
-                                    window.location('/thankyou.html');
+                                    window.location('/landing/thankyou.html');
                                 })
                                 .catch((error) => {
                                     alert('Please contact support, something went wrong. purposedrivenplanner@gmail.com');
