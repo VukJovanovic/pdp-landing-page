@@ -1,0 +1,204 @@
+.checkoutContainer{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    background-color: $color-primary;
+    flex-direction: column;
+    padding: 5rem 10rem;
+
+    @media only screen and(max-width: 1024px){
+        padding: 5rem 5rem;
+    }
+    @media only screen and(max-width: 720px){
+        padding: 2rem 2rem;
+    }
+}
+.checkout__header{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid $color-danger;
+    @media only screen and(max-width: 660px){
+       flex-direction: column-reverse;
+    }
+    &-heading{
+        h1{
+            font-size: 3rem;
+            font-family: $font-source-sans;
+            font-weight: $bold;
+            color: $color-danger;
+            margin-bottom: 2rem;
+        }
+        p{
+            font-size: 1.8rem;
+            font-family: $font-open-sans;
+            color: $color-neutral;
+            font-weight: $light;
+            max-width: 50rem;
+        }   
+    }
+    &-logo{
+        width: 10rem;
+        @media only screen and(max-width: 660px){
+            margin: 0 auto;
+        }
+    }
+}
+
+.checkout__content{
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    @media only screen and(max-width: 660px){
+        flex-direction: column;
+        align-items: center;
+    }
+    &-benefits{
+        max-width: 50rem;
+        h2{
+            font-size: 2.5rem;
+            font-family: $font-source-sans;
+            font-weight: $bold;
+            color: $color-danger;
+            margin-bottom: 2rem;
+        }
+        p{
+            display: flex;
+            align-items: center;
+            color: $color-neutral;
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            font-family: $font-open-sans;
+            font-weight: $light;
+
+            img{
+                width: 2rem;
+                margin-right: 1rem;
+            }
+        }
+    }
+}
+.checkout__footer{
+    padding-top: 2rem;
+    border-top: 1px solid $color-danger;
+    p{
+        color: $color-neutral;
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+        font-family: $font-open-sans;
+        font-weight: $light;
+    }
+}
+
+.checkoutForm{
+    max-width: 40rem;
+    flex: 0 0 100%;
+    padding: 2rem;
+    background-color: $color-secondary;
+    border-radius: 15px;
+    @media only screen and(max-width: 840px){
+        max-width: 30rem;
+    }
+    @media only screen and(max-width: 660px){
+        margin-bottom: 4rem;
+    }
+    &__heading{
+        font-size: 2rem;
+        font-family: $font-source-sans;
+        font-weight: $bold;
+        color: $color-neutral;
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid $color-primary;
+    }
+    &__group{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2rem;
+        label{
+            margin-bottom: 1rem;
+            font-size: 1.6rem;
+            font-family: $font-open-sans;
+            font-weight: $light;
+            color: $color-neutral;
+        }
+        input{
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+            border: none;
+            font-size: 1.6rem;
+            font-family: $font-open-sans;
+        }
+    }
+    
+    button{
+        width: 25rem;
+        height: 4.5rem;
+        display: block;
+        margin: 0 auto;
+        margin-top: 3rem;
+        border-radius: 10px;
+        border: none;
+        background-color: $color-danger;
+        color: $color-neutral;
+        font-family: $font-source-sans;
+        font-weight: $bold;
+        font-size: 1.8rem;
+        cursor: pointer;
+        transition: transform .3s;
+        &:hover{
+            transform: translateY(-4px);
+        }
+        @media only screen and(max-width: 840px){
+            width: 100%;
+        }
+    }
+}
+
+.mb-3{
+    margin-bottom: 3rem;
+}
+
+.checkoutError{
+    font-size: 1.7rem;
+    font-family: $font-source-sans;
+    font-weight: $light;
+    color: $color-danger;
+    margin-bottom: 1rem;
+}
+
+.checkoutError.hidden{
+    display: none;
+}
+
+
+.thankContainer{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: $color-primary;
+    padding: 2rem;
+    h1{
+        font-size: 4rem;
+        font-weight: $bold;
+        font-family: $font-source-sans;
+        color: $color-neutral;
+        margin-bottom: 3rem;
+    }
+    p{
+        font-size: 2rem;
+        font-weight: $bold;
+        font-family: $font-open-sans;
+        color: $color-neutral;
+
+        a{
+            margin-left: 1rem;
+            color: $color-danger;
+            border-bottom: 1px solid $color-danger;
+        }
+    }
+}
