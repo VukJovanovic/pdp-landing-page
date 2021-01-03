@@ -93,16 +93,28 @@
 
                             onApprove: function (data, actions) {
                                 return actions.order.capture().then(function (details) {
-                                    alert('Transaction completed by ' + details.payer.name.given_name + '!');
-                                    let myForm = document.getElementById('pdfpaid');
-                                    let formData = new FormData(myForm)
-                                    fetch('/', {
+                                    const name = details.payer.name.given_name
+                                    const mailEl = document.querySelector('#email')
+
+                                    const message = {
+                                        to: mailEl.value,
+                                        subject: 'Thank you for purchasing PDF version of PDPlanner',
+                                        text: 'You can find your planner at this link: https://firebasestorage.googleapis.com/v0/b/pdplanner-a30ab.appspot.com/o/PDP-FULL-4-WEEK-E-BOOK1.pdf?alt=media&token=41d9192a-0ac5-49ee-82df-6075b06d754a'
+                                    }
+
+                                    fetch('http://104.131.172.97:3000/', {
                                         method: 'POST',
-                                        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                                        body: new URLSearchParams(formData).toString()
-                                    }).then(() => console.log('Form successfully submitted')).catch((error) =>
-                                        alert(error))
-                                    window.location = '/landing/pdfthankyou.html';
+                                        headers: {
+                                            'Accept': 'application/json',
+                                            'Content-Type': 'application/json'
+                                        },
+                                        body: JSON.stringify(message)
+                                    }).then(_ => {
+                                        window.location = '/landing/pdfthankyou.html';
+                                    }).catch(_ => {
+                                        alert("Error, please contact support: purposedrivenplanner@gmail.com")
+                                    })
+
                                 });
                             },
 

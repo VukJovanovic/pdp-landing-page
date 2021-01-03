@@ -82,9 +82,28 @@
             newEntry.set({
                 email: document.querySelector("#email").value
             })
-            setTimeout(() => {
+
+
+            const mailEl = document.querySelector('#email')
+
+            const message = {
+                to: mailEl.value,
+                subject: 'Thank you for taking interest in free PDF version of PDPlanner',
+                text: 'You can find your planner at this link: <a href="https://firebasestorage.googleapis.com/v0/b/pdplanner-a30ab.appspot.com/o/PDP-FREE-E-BOOK.pdf?alt=media&token=cc9934b5-dfa8-4328-85a8-505d1ad06f4d">PDF Version of PDPlanner</a>'
+            }
+
+            fetch('http://104.131.172.97:3000/', {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(message)
+            }).then(_ => {
                 window.location = '/landing/freepdfthankyou.html'
-            }, 300);
+            }).catch(_ => {
+                alert("Error, please contact support: purposedrivenplanner@gmail.com")
+            })
         });
     </script>
 </body>

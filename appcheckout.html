@@ -141,7 +141,26 @@
                                 return actions.order.capture().then(function (details) {
                                     firebase.auth().createUserWithEmailAndPassword(document.querySelector('#email').value, document.querySelector('#passwordConfirm').value)
                                         .then((user) => {
-                                            window.location = '/landing/thankyou.html';
+                                            const mailEl = document.querySelector('#email')
+
+                                            const message = {
+                                                to: mailEl.value,
+                                                subject: 'Thank you for purchasing PDPlanner',
+                                                text: 'You can find your planner at this link: https://www.thepurposedrivenplanner.com/'
+                                            }
+                                            fetch('http://104.131.172.97:3000/', {
+                                                method: 'POST',
+                                                headers: {
+                                                    'Accept': 'application/json',
+                                                    'Content-Type': 'application/json'
+                                                },
+                                                body: JSON.stringify(message)
+                                            }).catch(_ => {
+                                                alert("Error happened you will not recieve confirmation mail, but you still can access app with your credentials, please contact support: purposedrivenplanner@gmail.com")
+                                            }).finally(_ => {
+                                                window.location = '/landing/thankyou.html';
+                                            })
+
                                         })
                                         .catch((error) => {
                                             alert('Please contact support, something went wrong. purposedrivenplanner@gmail.com');
