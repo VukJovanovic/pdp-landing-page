@@ -110,24 +110,9 @@
 	}
 
 	&__cards {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
+		display: flex;
+		flex-wrap: wrap;
 		justify-content: center;
-		column-gap: 2rem;
-
-		@media only screen and (max-width: 1024px) {
-			grid-template-columns: 1fr 1fr;
-		}
-		@media only screen and (max-width: 580px) {
-			grid-template-columns: 1fr;
-		}
-		.benefits__card {
-			&:nth-child(3) {
-				@media only screen and (max-width: 1024px) {
-					grid-column: 1 / -1;
-				}
-			}
-		}
 	}
 }
 

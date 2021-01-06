@@ -21,46 +21,12 @@
   }
 
   &__card {
-    border-right: 1px solid $color-secondary;
     padding: 2rem;
-
+    max-width: 40rem;
     &:last-child {
       border-right: none;
     }
-
-    // when grdi colapses in two columns we want the third card to be in the middle
-    &:nth-child(3) {
-      @media only screen and (max-width: 1024px) {
-        width: 40rem;
-        justify-self: center;
-        border-top: 1px solid $color-secondary;
-        margin-top: 2rem;
-      }
-    }
-
-    // when grid colapses in 2 columns we delete the right border of the card
-    @media only screen and (max-width: 1024px) {
-      &:nth-child(2) {
-        border-right: none;
-      }
-    }
-    // when grid colapses in one column we delete all the right borders and add bottom borders
-    @media only screen and (max-width: 580px) {
-      &:nth-child(1) {
-        border-right: none;
-      }
-      border-bottom: 1px solid $color-secondary;
-      margin-bottom: 3rem;
-      &:last-child {
-        border-bottom: none;
-        margin-bottom: 0;
-      }
-      &:nth-child(3) {
-        width: 100%;
-        border-top: none;
-        margin-top: 0;
-      }
-    }
+    margin-bottom: 4rem;
 
     &-heading {
       display: flex;
@@ -77,4 +43,8 @@
       @include paragraph-dark;
     }
   }
+}
+
+.benefits__card--border-right{
+  // border-right: 1px solid $color-secondary;
 }
