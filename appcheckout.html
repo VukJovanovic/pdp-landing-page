@@ -26,7 +26,8 @@
             <div class="checkout__header-heading">
                 <h1>Purpose Driven Planner</h1>
                 <p>
-                    A High-Level Course For Those People Looking To Amplify Their Performance In Any Aspect Of Life While Tearing Down The Barriers That Are Constantly Holding Them Back.
+                    A High-Level Course For Those People Looking To Amplify Their Performance In Any Aspect Of Life
+                    While Tearing Down The Barriers That Are Constantly Holding Them Back.
                 </p>
             </div>
             <div class="checkout__header-logo">
@@ -146,8 +147,29 @@
 
                                             const message = {
                                                 to: mailEl.value,
-                                                subject: 'Thank you for purchasing PDPlanner',
-                                                text: 'You can find your planner at this link: https://www.thepurposedrivenplanner.com/'
+                                                subject: 'Thank You For Your Purchase',
+                                                text: `
+Dear purpose driven student,
+Welcome to the Purpose Driven Planner customer community. We’re honored that you’ve chosen to work with us.
+
+It’s our utmost priority to ensure you have an excellent experience with our product and team from day one. 
+You’ve purchased the full Purpose Driven Planner course, here is the login form:
+
+https://www.thepurposedrivenplanner.com/
+
+We wish you great success from implementing the planner in your life and hope we see more of you in the future.
+Visit our website and start planning today: thepurposedrivenplanner.com 
+Here’s just a reminder of all the benefits Purpose Driven Planner provides you with:
+    • Better time management
+    • Sense of wholeness
+    • Increased energy levels
+    • Mindset shifts
+    • Years of time saved
+
+Feel free to write us an e-mail and we’ll make sure we respond with a personalized comeback within the next 24 hours.
+
+Best regards,
+PDP team`
                                             }
                                             fetch('http://104.131.172.97:3000/', {
                                                 method: 'POST',
@@ -179,18 +201,29 @@
             </form>
             <div class="checkout__content-benefits">
                 <h2>Here’s Just A Fraction Of What You Get:</h2>
-                <p><img src="./img/tick.svg" alt="">Better time management: Your day will last 240 hours in productivity time.</p>
-                <p><img src="./img/tick.svg" alt=""> Sense of wholeness: Your family, friends and passions will not get left behind due to lack of your organizational skills.</p>
-                <p><img src="./img/tick.svg" alt=""> Increased energy levels: So high on you won’t be able to sleep at night, coming from a deep sense of purpose.</p>
-                <p><img src="./img/tick.svg" alt=""> Mindset shifts: You will think like a top productive CEO in combination with the person who’s fulfillment level doesn’t drop below level 10.</p>
-                <p><img src="./img/tick.svg" alt=""> Years of time saved: Over 30 of the most efficient self-development, practical psychology books, seminars and more than 7 years of trial and error packed into 2 hours of video material where every second counts.</p>
-                <p><img src="./img/tick.svg" alt=""> More than 2 hours of video material: I will guide you through the planner, teach you how to use it and share with you my knowledge.</p>
-                <p><img src="./img/tick.svg" alt=""> Fast and interactive web application for planning which will replace your pen and paper.</p>
-                <p><img src="./img/tick.svg" alt=""> Lifetime access: Your journey doesn't end after four weeks, you can visit the planner, re-watch the videos and implement the planning methods for as long as you like.</p>
+                <p><img src="./img/tick.svg" alt="">Better time management: Your day will last 240 hours in productivity
+                    time.</p>
+                <p><img src="./img/tick.svg" alt=""> Sense of wholeness: Your family, friends and passions will not get
+                    left behind due to lack of your organizational skills.</p>
+                <p><img src="./img/tick.svg" alt=""> Increased energy levels: So high on you won’t be able to sleep at
+                    night, coming from a deep sense of purpose.</p>
+                <p><img src="./img/tick.svg" alt=""> Mindset shifts: You will think like a top productive CEO in
+                    combination with the person who’s fulfillment level doesn’t drop below level 10.</p>
+                <p><img src="./img/tick.svg" alt=""> Years of time saved: Over 30 of the most efficient
+                    self-development, practical psychology books, seminars and more than 7 years of trial and error
+                    packed into 2 hours of video material where every second counts.</p>
+                <p><img src="./img/tick.svg" alt=""> More than 2 hours of video material: I will guide you through the
+                    planner, teach you how to use it and share with you my knowledge.</p>
+                <p><img src="./img/tick.svg" alt=""> Fast and interactive web application for planning which will
+                    replace your pen and paper.</p>
+                <p><img src="./img/tick.svg" alt=""> Lifetime access: Your journey doesn't end after four weeks, you can
+                    visit the planner, re-watch the videos and implement the planning methods for as long as you like.
+                </p>
             </div>
         </div>
         <footer class="checkout__footer">
-            <p>“A vision without a task is but a dream, a task without a vision is drudgery, a vision and a task are the hope of the World.” From a church in Sussex, England, ca. 1730.</p>
+            <p>“A vision without a task is but a dream, a task without a vision is drudgery, a vision and a task are the
+                hope of the World.” From a church in Sussex, England, ca. 1730.</p>
         </footer>
     </div>
 
