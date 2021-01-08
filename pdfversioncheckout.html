@@ -14,7 +14,8 @@
             <div class="checkout__header-heading">
                 <h1>Purpose Driven Planner</h1>
                 <p>
-                    A High-Level Course For Those People Looking To Amplify Their Performance In Any Aspect Of Life While Tearing Down The Barriers That Are Constantly Holding Them Back.
+                    A High-Level Course For Those People Looking To Amplify Their Performance In Any Aspect Of Life
+                    While Tearing Down The Barriers That Are Constantly Holding Them Back.
                 </p>
             </div>
             <div class="checkout__header-logo">
@@ -99,8 +100,30 @@
 
                                     const message = {
                                         to: mailEl.value,
-                                        subject: 'Thank you for purchasing PDF version of PDPlanner',
-                                        text: 'You can find your planner at this link: https://firebasestorage.googleapis.com/v0/b/pdplanner-a30ab.appspot.com/o/PDP-FULL-4-WEEK-E-BOOK1.pdf?alt=media&token=41d9192a-0ac5-49ee-82df-6075b06d754a'
+                                        subject: 'Thank You For Your Purchase',
+                                        text: `
+Dear purpose driven student,
+Welcome to the Purpose Driven Planner customer community. We’re honored that you’ve chosen to work with us.
+
+It’s our utmost priority to ensure you have an excellent experience with our product and team from day one. 
+You’ve purchased the full Purpose Driven Planner course in PDF form, so here it is:
+
+https://firebasestorage.googleapis.com/v0/b/pdplanner-a30ab.appspot.com/o/PDP-FULL-4-WEEK-E-BOOK1.pdf?alt=media&token=41d9192a-0ac5-49ee-82df-6075b06d754a
+
+We wish you great success from implementing the planner in your life and hope we see more of you in the future.
+In the meantime feel free to check out our website: thepurposedrivenplanner.com 
+It is our best wish for you to take the full online PDP course in the future.
+Here’s just a reminder of all the benefits Purpose Driven Planner provides you with:
+    • Better time management
+    • Sense of wholeness
+    • Increased energy levels
+    • Mindset shifts
+    • Years of time saved
+
+Feel free to write us an e-mail and we’ll make sure we respond with a personalized comeback within the next 24 hours.
+
+Best regards,
+PDP team`
                                     }
 
                                     fetch('http://104.131.172.97:3000/', {
@@ -152,7 +175,8 @@
             </div>
         </div>
         <footer class="checkout__footer">
-            <p>“A vision without a task is but a dream, a task without a vision is drudgery, a vision and a task are the hope of the World.” From a church in Sussex, England, ca. 1730.</p>
+            <p>“A vision without a task is but a dream, a task without a vision is drudgery, a vision and a task are the
+                hope of the World.” From a church in Sussex, England, ca. 1730.</p>
         </footer>
     </div>
 </body>
