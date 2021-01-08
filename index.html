@@ -8,6 +8,9 @@
 	<link rel="stylesheet" href="./css/owl.carousel.min.css" />
 	<link rel="stylesheet" href="./css/owl.theme.default.min.css" />
 	<link rel="stylesheet" href="./css/main.css" />
+	<link rel="icon" 
+      type="image/png" 
+      href="./img/pdp-logo.svg">
 </head>
 
 <body>
@@ -36,17 +39,17 @@
 				<a href="/login" class="sidebarNavigation__link sidebarLoginBtn">Log In</a>
 			</li>
 		</ul>
-		<!-- <div class="sidebar__social">
-				<a href="#" class="sidebar__social-link"
+		<div class="sidebar__social">
+				<a href="https://www.instagram.com/stefantosicyt/" class="sidebar__social-link"
 					><img src="./img/instagram.svg" alt=""
 				/></a>
-				<a href="#" class="sidebar__social-link"
+				<a href="https://www.facebook.com/StefanTosicFitnessPage" class="sidebar__social-link"
 					><img src="./img/facebook.svg" alt=""
 				/></a>
-				<a href="#" class="sidebar__social-link"
-					><img src="./img/brand.svg" alt=""
+				<a href="https://www.youtube.com/user/fanstechannel" class="sidebar__social-link"
+					><img src="./img/youtube.svg" alt=""
 				/></a>
-			</div> -->
+			</div>
 	</div>
 	<div class="sidebarOverlay"></div>
 
@@ -79,7 +82,7 @@
 				</ul>
 				<!-- Mobile navigation -->
 				<div class="mobileNavigation">
-					<a href="#" class="getStartedBtn">Get Started</a>
+					<a href="#" class="getStartedBtn" id="mobileGetStarted">Get Started</a>
 					<a href="#" class="mobileNavigation__burger" id="mobileBurger">
 						<span></span>
 						<span></span>
@@ -398,18 +401,18 @@
 			</div>
 			<div class="pricing__cards">
 				<div class="pricing__card">
-					<p class="pricing__card-feature">First week planner</p>
+					<p class="pricing__card-feature">First Week Planner</p>
 					<p class="pricing__card-price">Free</p>
 					<p class="pricing__card-feature">Get our first week from the PDP app for free by entering your
 						email.</p>
 					<a href="/landing/firstweekpdf.html" class="pricing__card-cta">Get your first week here</a>
 				</div>
 				<div class="pricing__card">
-					<p class="pricing__card-feature">PDP in PDF version</p>
+					<p class="pricing__card-feature">PDP E-book Version</p>
 					<p class="pricing__card-price">$19.99</p>
-					<p class="pricing__card-feature">You will receive a PDF version of our complete planner from PDP
+					<p class="pricing__card-feature">You will receive a E-book version of our complete planner from PDP
 						app.</p>
-					<a href="/landing/pdfversioncheckout.html" class="pricing__card-cta">Get your PDF planner here</a>
+					<a href="/landing/pdfversioncheckout.html" class="pricing__card-cta">Get Your E-book Planner</a>
 				</div>
 				<div class="pricing__card">
 					<p class="pricing__card-feature">Full PDP App</p>
@@ -476,22 +479,22 @@
 				</p>
 			</div>
 			<div class="about__imageContainer about__imageContainer-1">
-				<img src="./img/aboutme.png" alt="" />
+				<img src="./img/aboutstefan.jpg" alt="" />
 			</div>
 		</div>
 	</section>
 	<section class="contact">
 		<div class="contact__content">
-			<form action="" class="contact__form">
+			<form name="contact" method="POST" data-netlify="true" class="contact__form">
 				<h2 class="contact__form-heading">Contact us</h2>
 				<div class="contact__form-group">
-					<input type="text" placeholder="Enter your name">
+					<input type="text" name="name" placeholder="Enter your name">
 				</div>
 				<div class="contact__form-group">
-					<input type="email" placeholder="Enter your email">
+					<input type="email" name="email" placeholder="Enter your email">
 				</div>
 				<div class="contact__form-group">
-					<textarea id="" cols="30" rows="5" placeholder="Enter your message"></textarea>
+					<textarea id="" name="message" cols="30" rows="5" placeholder="Enter your message"></textarea>
 				</div>
 				<button type="submit">Send</button>
 			</form>
@@ -499,7 +502,19 @@
 				<h2 class="contact__form-heading">Contact information</h2>
 				<div class="contact__links">
 					<img src="./img/envelope.svg" alt="">
-					<p>purposedrivenplanner@gmail.com</p>
+					<a href="mailto:purposedrivenplanner@gmail.com">purposedrivenplanner@gmail.com</a>
+				</div>
+				<h2 class="contact__information-heading">Contact me on social media</h2>
+				<div class="contact__social">
+					<a href="https://www.instagram.com/stefantosicyt/" class="contact__social-link">
+						<img src="./img/instagram.svg" alt="">
+					</a>
+					<a href="https://www.facebook.com/StefanTosicFitnessPage" class="contact__social-link">	
+						<img src="./img/facebook.svg" alt="">
+					</a>
+					<a href="https://www.youtube.com/user/fanstechannel" class="contact__social-link">
+						<img src="./img/youtube.svg" alt="">
+					</a>
 				</div>
 			</div>
 		</div>
@@ -558,6 +573,7 @@
 		$(document).ready(function () {
 			$('.owl-carousel').owlCarousel({
 				autoplay: true,
+				autoplayTimeout:10000,
 				responsiveClass: true,
 				loop: true,
 				margin: 40,
