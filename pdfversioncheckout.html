@@ -54,6 +54,12 @@
                 <script>
                     function initPayPalButton() {
                         paypal.Buttons({
+                            // Configure environment
+                        env: 'production',
+                        client:
+                            {
+                            production: 'AQLuogVEWzYxD2INeMiS2sgzH8yebEYOKUygKv8K2lJOYseo_M0Ch70ojObZP8rTtek9nufNAcktk4PN' //Enter your live client ID here
+                            },
                             style: {
                                 shape: 'pill',
                                 color: 'white',
