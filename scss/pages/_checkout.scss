@@ -65,20 +65,26 @@
             color: $color-danger;
             margin-bottom: 2rem;
         }
-        p{
+        .checkout__benefit{
             display: flex;
             align-items: center;
-            color: $color-neutral;
-            font-size: 1.6rem;
-            margin-bottom: 1rem;
-            font-family: $font-open-sans;
-            font-weight: $light;
-
             img{
                 width: 2rem;
                 margin-right: 1rem;
             }
+            p{
+                color: $color-neutral;
+                font-size: 1.6rem;
+                margin-bottom: 1rem;
+                font-family: $font-open-sans;
+                font-weight: $light;
+                
+                span{
+                    font-weight: $bold;
+                }
+            }
         }
+        
         @media only screen and(max-width: 660px){
            margin-left: 0;
         }

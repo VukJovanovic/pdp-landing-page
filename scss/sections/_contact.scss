@@ -69,6 +69,14 @@
 		h2{
 			color: #fff;
 		}
+
+		&-heading{
+			margin-top: 3rem;
+			font-size: 1.8rem;
+			margin-bottom: 1.5rem;
+			font-family: "Source Sans Pro", sans-serif;
+			font-weight: 400;
+		}
 	}
 
 	&__links{
@@ -79,10 +87,20 @@
 			height: 2rem;
 			margin-right: 1rem;
 		}
-		p{
+		a{
 			font-size: 1.5rem;
 			font-family: $font-source-sans;
 			color: #fff;
+		}
+	}
+	&__social{
+		display: flex;
+		align-items: center;
+		&-link{
+			margin-right: 2rem;
+			img{
+				width: 3rem;
+			}
 		}
 	}
 }

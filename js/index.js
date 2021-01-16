@@ -75,6 +75,7 @@ const contactBtnDesktop = document.getElementById('contactBtn-desktop');
 const contactBtnMobile = document.getElementById('contactBtn-mobile');
 const getStartedBtn = document.querySelector('.getStartedBtn');
 const welcomeCta = document.querySelector('.welcome__cta-btn');
+const mobileGetStarted = document.querySelector("#mobileGetStarted");
 
 // footer navigation
 const footerAbout = document.getElementById('footerAbout');
@@ -104,6 +105,11 @@ getStartedBtn.addEventListener('click', e => {
 contactBtnDesktop.addEventListener('click', e => {
   e.preventDefault();
   jump('.contact');
+});
+
+mobileGetStarted.addEventListener('click', e => {
+  e.preventDefault();
+  jump('.pricing');
 });
 
 // footer nav
