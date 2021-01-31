@@ -97,7 +97,10 @@
                 // document.getElementById(‘post-message-data’).innerHTML = ev.data;
                 const password = JSON.parse(ev.data)['Enter your password'];
                 firebase.auth().createUserWithEmailAndPassword(JSON.parse(ev.data).email, password ).then(()=> {
-                    window.location = '/landing/thankyou.html';
+                    setTimeout(()=> {
+                        window.location = '/landing/thankyou.html';
+                    }, 3000)
+                    
                 }).catch((error) => {
                                             alert('Please contact support, something went wrong. purposedrivenplanner@gmail.com');
                                         });
