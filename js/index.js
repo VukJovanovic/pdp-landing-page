@@ -153,6 +153,3 @@ buttonScrollTop.addEventListener('click', e => {
   jump('.welcome');
 });
 
-
-// mailchimp form
-
