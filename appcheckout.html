@@ -2,6 +2,16 @@
 <html lang="en">
 
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RWCBFS0WEB"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-RWCBFS0WEB');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <title>Purpose Driven Planner | Checkout for pdf version of the planner</title>
@@ -26,7 +36,8 @@
         <div class="checkout__content">
             <form action="" class="checkoutForm">
                 <p class="checkoutError">Password must contain more than 6 characters</p>
-                <div class="gumroad-product-embed" data-gumroad-product-id="XaNVH"><a href="https://gumroad.com/l/XaNVH">Loading...</a></div>
+                <div class="gumroad-product-embed" data-gumroad-product-id="XaNVH"><a
+                        href="https://gumroad.com/l/XaNVH">Loading...</a></div>
             </form>
             <div class="checkout__content-benefits">
                 <h2>Here’s Just A Fraction Of What You Get:</h2>
@@ -36,31 +47,39 @@
                 </div>
                 <div class="checkout__benefit">
                     <img src="./img/tick.svg" alt="">
-                    <p><span>Sense of wholeness: </span>Your family, friends and passions will not get left behind due to lack of your organizational skills.</p>
+                    <p><span>Sense of wholeness: </span>Your family, friends and passions will not get left behind due
+                        to lack of your organizational skills.</p>
                 </div>
                 <div class="checkout__benefit">
                     <img src="./img/tick.svg" alt="">
-                    <p><span>Increased energy levels: </span>So high on you won’t be able to sleep at night, coming from a deep sense of purpose.</p>
+                    <p><span>Increased energy levels: </span>So high on you won’t be able to sleep at night, coming from
+                        a deep sense of purpose.</p>
                 </div>
                 <div class="checkout__benefit">
                     <img src="./img/tick.svg" alt="">
-                    <p><span>Mindset shifts: </span>You will think like a top productive CEO in combination with the person who’s fulfillment level doesn’t drop below level 10.</p>
+                    <p><span>Mindset shifts: </span>You will think like a top productive CEO in combination with the
+                        person who’s fulfillment level doesn’t drop below level 10.</p>
                 </div>
                 <div class="checkout__benefit">
                     <img src="./img/tick.svg" alt="">
-                    <p><span>Years of time saved: </span>Over 30 of the most efficient self-development, practical psychology books, seminars and more than 7 years of trial and error packed into 2 hours of video material where every second counts.</p>
+                    <p><span>Years of time saved: </span>Over 30 of the most efficient self-development, practical
+                        psychology books, seminars and more than 7 years of trial and error packed into 2 hours of video
+                        material where every second counts.</p>
                 </div>
                 <div class="checkout__benefit">
                     <img src="./img/tick.svg" alt="">
-                    <p><span>More than 2 hours of video material: </span>I will guide you through the planner, teach you how to use it and share with you my knowledge.</p>
+                    <p><span>More than 2 hours of video material: </span>I will guide you through the planner, teach you
+                        how to use it and share with you my knowledge.</p>
                 </div>
                 <div class="checkout__benefit">
                     <img src="./img/tick.svg" alt="">
-                    <p><span>Fast and interactive web application </span>for planning which will replace your pen and paper.</p>
+                    <p><span>Fast and interactive web application </span>for planning which will replace your pen and
+                        paper.</p>
                 </div>
                 <div class="checkout__benefit">
                     <img src="./img/tick.svg" alt="">
-                    <p><span>Lifetime access: </span>Your journey doesn't end after four weeks, you can visit the planner, re-watch the videos and implement the planning methods for as long as you like.</p>
+                    <p><span>Lifetime access: </span>Your journey doesn't end after four weeks, you can visit the
+                        planner, re-watch the videos and implement the planning methods for as long as you like.</p>
                 </div>
             </div>
         </div>
@@ -82,32 +101,32 @@
     <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
     <script>
         const firebaseApp = firebase.initializeApp({
-                            apiKey: 'AIzaSyCUgUFUERm9rrm47vmBc-V95lgxBUHZ0sM',
-                            authDomain: 'pdplanner-a30ab.firebaseapp.com',
-                            databaseURL: 'https://pdplanner-a30ab.firebaseio.com/',
-                            projectId: 'pdplanner-a30ab',
-                            storageBucket: 'pdplanner-a30ab.appspot.com',
-                            messagingSenderId: '738390097709',
-                            appId: '1:738390097709:web:0d28ce750c3f940277dda4',
-                            measurementId: 'G-XXKW1DJ1PZ'
-                        })
-        var gumroadSaleListener = function(ev) {
+            apiKey: 'AIzaSyCUgUFUERm9rrm47vmBc-V95lgxBUHZ0sM',
+            authDomain: 'pdplanner-a30ab.firebaseapp.com',
+            databaseURL: 'https://pdplanner-a30ab.firebaseio.com/',
+            projectId: 'pdplanner-a30ab',
+            storageBucket: 'pdplanner-a30ab.appspot.com',
+            messagingSenderId: '738390097709',
+            appId: '1:738390097709:web:0d28ce750c3f940277dda4',
+            measurementId: 'G-XXKW1DJ1PZ'
+        })
+        var gumroadSaleListener = function (ev) {
 
-        if (ev.data && JSON.parse(ev.data).post_message_name === "sale") {
+            if (ev.data && JSON.parse(ev.data).post_message_name === "sale") {
                 // document.getElementById(‘post-message-data’).innerHTML = ev.data;
                 const password = JSON.parse(ev.data)['Enter your password'];
-                firebase.auth().createUserWithEmailAndPassword(JSON.parse(ev.data).email, password ).then(()=> {
-                    setTimeout(()=> {
+                firebase.auth().createUserWithEmailAndPassword(JSON.parse(ev.data).email, password).then(() => {
+                    setTimeout(() => {
                         window.location = '/landing/thankyou.html';
                     }, 3000)
-                    
+
                 }).catch((error) => {
-                                            alert('Please contact support, something went wrong. purposedrivenplanner@gmail.com');
-                                        });
+                    alert('Please contact support, something went wrong. purposedrivenplanner@gmail.com');
+                });
+            }
         }
-    }
         window.addEventListener('message', gumroadSaleListener, false);
-    
+
     </script>
 </body>
 
